@@ -44,6 +44,7 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
 
 
     public static final ResourceKey<LootTable> TUNA_SANDWICH_LOOT = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("chests/tuna_sandwich_loot"));
+    public static final ResourceKey<LootTable> MOUNTAIN_SALT_LOOT = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("chests/mountain_salt_loot"));
 
     public static final ResourceKey<LootTable> COD_ROE_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/cod_roe_drop"));
     public static final ResourceKey<LootTable> SALMON_ROE_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/salmon_roe_drop"));
@@ -191,6 +192,14 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                                             .add(LootItem.lootTableItem(Content.TUNA_SANDWICH).setWeight(10))
                                             .add(EmptyLootItem.emptyItem().setWeight(90))
                             ));
+            output.accept(MOUNTAIN_SALT_LOOT,
+                    LootTable.lootTable()
+                            .withPool(
+                                    LootPool.lootPool()
+                                            .setRolls(UniformGenerator.between(0, 2))
+                                            .add(LootItem.lootTableItem(Content.MOUNTAIN_SALT).setWeight(5))
+                                            .add(EmptyLootItem.emptyItem().setWeight(95))
+                            ));
         }
     }
 
@@ -206,6 +215,10 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(BuiltInLootTables.SIMPLE_DUNGEON.location()).build()
                     }, TUNA_SANDWICH_LOOT));
+            add("add_mountain_salt_to_shipwreck", new AddTableLootModifier(
+                    new LootItemCondition[]{
+                            LootTableIdCondition.builder(BuiltInLootTables.SHIPWRECK_TREASURE.location()).build()
+                    }, MOUNTAIN_SALT_LOOT));
             add("add_roe_to_cod", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("minecraft", "entities/cod")).build()

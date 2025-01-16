@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-03T10:51:40.5921586	Loot Tables
+// 1.21.1	2025-01-15T20:56:45.3523747	Loot Tables
 c4022ad9a200aa5d6db4f63fcddfc96fd6a7d9e0 data/croptopia/loot_table/blocks/almond_crop.json
 8e42a1453e5e83bbe99d3ba599a3ef4f9172bba6 data/croptopia/loot_table/blocks/almond_sapling.json
 56d10b3aa8b110f30381def6b45bcb0b9cd5f15d data/croptopia/loot_table/blocks/apple_crop.json
@@ -116,6 +116,7 @@ afaa0c3e5e48857bd91086d476f11b29294ea2d3 data/croptopia/loot_table/blocks/sweetp
 6eaaee0178f298b61ba7f82c6863d2ae80696cf1 data/croptopia/loot_table/blocks/walnut_sapling.json
 008a172228de3ef9b38d49324897f47362fe482b data/croptopia/loot_table/blocks/yam_crop.json
 bb4a3eb52b65789877f6091f464465fe875715d0 data/croptopia/loot_table/blocks/zucchini_crop.json
+bc7efa93efb826de5c655554996c5b5d0ed0b580 data/croptopia/loot_table/chests/mountain_salt_loot.json
 6628372941957e2130ca420de1cb655086cfc905 data/croptopia/loot_table/chests/tuna_sandwich_loot.json
 9593981a437688e20e8c4f21c1f2afa154c4052e data/croptopia/loot_table/entities/cod_roe_drop.json
 667b4ab443b96bd181d039a05219c63b6286c38d data/croptopia/loot_table/entities/glowing_squid_glowing_calamari_drop.json

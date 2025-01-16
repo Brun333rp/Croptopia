@@ -441,6 +441,13 @@ public class CroptopiaItemModelProvider extends BlockStateProvider {
         provider.basicItem(Content.SUNNY_SIDE_EGGS);
         provider.basicItem(Content.SWEET_CREPES);
         provider.basicItem(Content.THE_BIG_BREAKFAST);
+
+        provider.basicItem(Content.COOKED_RAVAGER_MEAT.asItem());
+        provider.basicItem(Content.DRAGON_EGG_OMELETTE);
+        provider.basicItem(Content.MOUNTAIN_SALT);
+        provider.basicItem(Content.NETHER_STAR_CAKE);
+        provider.basicItem(Content.RAW_RAVAGER_MEAT);
+        provider.basicItem(Content.TRANSCENDENTAL_BREAKFAST);
     }
 
     @Override
