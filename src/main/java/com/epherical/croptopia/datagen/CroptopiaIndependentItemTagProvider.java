@@ -94,12 +94,12 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
                 createSeedSaplingTag("seeds", crop.getLowercaseName(), crop.getSeedItem());
             }
         }
-        for (TreeCrop crop : TreeCrop.TREE_CROPS) {
+        /*for (TreeCrop crop : TreeCrop.TREE_CROPS) {
             createSeedSaplingTag("saplings", crop.getLowercaseName(), crop.getSaplingItem());
         }
         for (Tree crop : Tree.copy()) {
             createSeedSaplingTag("saplings", crop.getLowercaseName(), crop.getSapling());
-        }
+        }*/
     }
 
     protected void generateOtherEnums(HolderLookup.Provider arg) {
