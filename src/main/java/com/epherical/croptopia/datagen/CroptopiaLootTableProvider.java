@@ -23,6 +23,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -51,6 +52,7 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
     public static final ResourceKey<LootTable> TROPICAL_ROE_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/tropical_roe_drop"));
     public static final ResourceKey<LootTable> GLOWING_SQUID_GLOW_CALAMARI = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/glowing_squid_glowing_calamari_drop"));
     public static final ResourceKey<LootTable> SQUID_CALAMARI_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/squid_calamari_drop"));
+    public static final ResourceKey<LootTable> RAVAGER_MEAT_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/ravager_meat_drop"));
 
     public static final ResourceKey<LootTable> CROPTOPIA_FISHING_TABLE = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("gameplay/fishing"));
 
@@ -176,6 +178,14 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                                             .add(LootItem.lootTableItem(Content.CALAMARI)
                                                     .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1))))
                             ));
+            output.accept(RAVAGER_MEAT_DROP,
+                    LootTable.lootTable()
+                            .withPool(
+                                    LootPool.lootPool()
+                                            .setRolls(ConstantValue.exactly(1))
+                                            .add(LootItem.lootTableItem(Content.RAW_RAVAGER_MEAT)
+                                                    .apply(EnchantedCountIncreaseFunction.lootingMultiplier(this.reg, UniformGenerator.between(0.0F, 1.0F)))
+                                            )));
         }
     }
 
@@ -235,6 +245,10 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("minecraft", "entities/squid")).build()
                     }, SQUID_CALAMARI_DROP));
+            add("add_ravager_meat_to_ravager", new AddTableLootModifier(
+                    new LootItemCondition[]{
+                            LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("minecraft", "entities/ravager")).build()
+                    }, RAVAGER_MEAT_DROP));
             add("add_glowing_calamari_to_glowing_squid", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("minecraft", "entities/glow_squid")).build()

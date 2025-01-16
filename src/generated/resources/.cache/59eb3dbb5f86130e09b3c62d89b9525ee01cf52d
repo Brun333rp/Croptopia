@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-15T20:56:45.3523747	Loot Tables
+// 1.21.1	2025-01-15T21:41:54.130407	Loot Tables
 c4022ad9a200aa5d6db4f63fcddfc96fd6a7d9e0 data/croptopia/loot_table/blocks/almond_crop.json
 8e42a1453e5e83bbe99d3ba599a3ef4f9172bba6 data/croptopia/loot_table/blocks/almond_sapling.json
 56d10b3aa8b110f30381def6b45bcb0b9cd5f15d data/croptopia/loot_table/blocks/apple_crop.json
@@ -120,6 +120,7 @@ bc7efa93efb826de5c655554996c5b5d0ed0b580 data/croptopia/loot_table/chests/mounta
 6628372941957e2130ca420de1cb655086cfc905 data/croptopia/loot_table/chests/tuna_sandwich_loot.json
 9593981a437688e20e8c4f21c1f2afa154c4052e data/croptopia/loot_table/entities/cod_roe_drop.json
 667b4ab443b96bd181d039a05219c63b6286c38d data/croptopia/loot_table/entities/glowing_squid_glowing_calamari_drop.json
+8880f351c2ff07befe86bd14a7fde694bf7f6b5b data/croptopia/loot_table/entities/ravager_meat_drop.json
 6ac19d5a88b153d4a4520dd0fe1b9b64606be257 data/croptopia/loot_table/entities/salmon_roe_drop.json
 845e8aad50636533397d6fbddd4ef1700537fe81 data/croptopia/loot_table/entities/squid_calamari_drop.json
 6a0b273a5328eca923fe5cfa04876de0cd9b30c1 data/croptopia/loot_table/entities/tropical_roe_drop.json
