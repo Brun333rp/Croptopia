@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-15T21:15:52.4578877	Recipes
+// 1.21.1	2025-01-15T22:11:48.7716896	Recipes
 00503c28945633cd89fa2b3b8316b2a62f6173d6 data/croptopia/advancement/recipes/food/almond_brittle.json
 d95b094c31cfa9936a79b1c9b8fbbccfdc864c4f data/croptopia/advancement/recipes/food/artichoke_dip.json
 d7951ac3274d1887856d6535e23095cb106a6b36 data/croptopia/advancement/recipes/food/baked_beans_from_blackbean.json
@@ -390,7 +390,7 @@ d3f18b1cd465cd82a56569c35b6e733fd1eb0838 data/croptopia/recipe/toast_from_bread.
 20b1bdb3d65b13b0abcd56d468d71c9cff1296c4 data/croptopia/recipe/tomato_juice.json
 691a9f64c8870491e05a56fd6d6b409f74f71b0d data/croptopia/recipe/tomato_seed.json
 b19db2613f3252fca1884aa2edb2c7f6dbab03d6 data/croptopia/recipe/tortilla.json
-8e8fe00cb59064a9ac5b7995af7ebb2fd04fa0b2 data/croptopia/recipe/transcendental_breakfast.json
+20233a223da8e1fcc9c6257f833ffb8f0574fd84 data/croptopia/recipe/transcendental_breakfast.json
 48c9bbda492e9e8212420b0f0237f804cf5708b5 data/croptopia/recipe/tuna_roll.json
 f7c7171a10e280d47851a96273a9cb95837b7d99 data/croptopia/recipe/turmeric_seed.json
 f36d800013052f56aff7bf48a4e5c14ceacacce6 data/croptopia/recipe/turnip_seed.json

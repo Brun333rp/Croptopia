@@ -16,12 +16,15 @@
     },
     "5": {
       "item": "croptopia:cooked_ravager_meat"
+    },
+    "6": {
+      "item": "croptopia:the_big_breakfast"
     }
   },
   "pattern": [
-    " 1 ",
+    "616",
     "234",
-    " 5 "
+    "656"
   ],
   "result": {
     "count": 1,

@@ -729,14 +729,15 @@ public class CroptopiaRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_nether_star", has(Items.NETHER_STAR))
                 .save(exporter);
         ShapedRecipeBuilder.shaped(FOOD, TRANSCENDENTAL_BREAKFAST, 1)
-                .pattern(" 1 ")
+                .pattern("616")
                 .pattern("234")
-                .pattern(" 5 ")
+                .pattern("656")
                 .define('1', MOUNTAIN_SALT)
                 .define('2', NETHER_STAR_CAKE)
                 .define('3', TUNA_SANDWICH)
                 .define('4', DRAGON_EGG_OMELETTE)
                 .define('5', COOKED_RAVAGER_MEAT)
+                .define('6', THE_BIG_BREAKFAST)
                 .unlockedBy("has_nether_star_cake", has(NETHER_STAR_CAKE))
                 .save(exporter);
         //cooked frog leg	furnace
