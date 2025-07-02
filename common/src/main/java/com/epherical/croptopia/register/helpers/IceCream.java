@@ -1,0 +1,52 @@
+package com.epherical.croptopia.register.helpers;
+
+import com.epherical.croptopia.register.Content;
+import com.epherical.croptopia.util.ItemConvertibleWithPlural;
+import com.epherical.croptopia.util.RegisterFunction;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.epherical.croptopia.CroptopiaCommon.createGroup;
+import static com.epherical.croptopia.CroptopiaCommon.createIdentifier;
+import static com.epherical.croptopia.util.FoodConstructor.ICE_CREAM_7;
+import static com.epherical.croptopia.util.FoodConstructor.createFood;
+
+public class IceCream implements ItemLike {
+    private static final List<IceCream> INSTANCES = new ArrayList<>();
+
+    private final String name;
+    private final ItemConvertibleWithPlural crop;
+    private Item item;
+
+    public IceCream(String name, ItemConvertibleWithPlural crop) {
+        Content.ITEM_REGISTER.reg(this::registerItem);
+        this.name = name;
+        this.crop = crop;
+        INSTANCES.add(this);
+    }
+
+    @Override
+    public Item asItem() {
+        return item;
+    }
+
+    public ItemConvertibleWithPlural getCrop() {
+        return crop;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public void registerItem(RegisterFunction<Item> register) {
+        this.item = register.register(createIdentifier(name), () -> new Item(createGroup().food(createFood(ICE_CREAM_7))));
+    }
+
+    public static List<IceCream> copy() {
+        return INSTANCES;
+    }
+
+}
