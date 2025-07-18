@@ -1,9 +1,11 @@
 package com.epherical.croptopia.datagen;
 
+import com.epherical.croptopia.blocks.LeafCropBlock;
 import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.register.helpers.FarmlandCrop;
 import com.epherical.croptopia.register.helpers.Tree;
 import com.epherical.croptopia.register.helpers.TreeCrop;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,6 +16,7 @@ import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -23,10 +26,13 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.CopyBlockState;
 import net.minecraft.world.level.storage.loot.functions.EnchantedCountIncreaseFunction;
+import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
@@ -85,15 +91,32 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                                                     .apply(ApplyBonusCount.addBonusBinomialDistributionCount(registries.holderOrThrow(Enchantments.FORTUNE), 0.5714286F, 3))))));
         }
         for (TreeCrop treeCrop : TreeCrop.TREE_CROPS) {
+            LootItemFunction.Builder copyState = CopyBlockState.copyState(treeCrop.asBlock())
+                    .copy(LeafCropBlock.AGE);
             LootItemCondition.Builder ageCondition = LootItemBlockStatePropertyCondition.hasBlockStateProperties(treeCrop.asBlock())
                     .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlockStateProperties.AGE_3, 3));
+
+            LootItemCondition.Builder shearsCondition =
+                    MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
+
+            LootItemCondition.Builder notShearsCondition = shearsCondition.invert();
+
             this.add(treeCrop.asBlock(),
                     this.applyExplosionDecay(treeCrop.asBlock(),
                             LootTable.lootTable()
-                                    .withPool(LootPool.lootPool().add(LootItem.lootTableItem(treeCrop.asItem()).when(ageCondition)))
+                                    .withPool(LootPool.lootPool()
+                                            .add(LootItem.lootTableItem(treeCrop.asItem())
+                                                    .when(notShearsCondition)
+                                                    .when(ageCondition)))
                                     .withPool(LootPool.lootPool()
                                             .add(LootItem.lootTableItem(treeCrop.getSaplingItem()).setWeight(5))
-                                            .add(EmptyLootItem.emptyItem().setWeight(95)))));
+                                            .add(EmptyLootItem.emptyItem().setWeight(95)))
+                                    .withPool(LootPool.lootPool()
+                                            .add(LootItem.lootTableItem(treeCrop.getLeavesItem())
+                                                    .when(shearsCondition)
+                                                    .apply(copyState)))
+                    )
+            );
             this.dropSelf(treeCrop.getSaplingBlock());
         }
         for (Tree tree : Tree.copy()) {

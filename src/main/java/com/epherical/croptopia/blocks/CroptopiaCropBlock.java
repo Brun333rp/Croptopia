@@ -1,9 +1,7 @@
 package com.epherical.croptopia.blocks;
 
-import com.epherical.croptopia.CroptopiaMod;
 import com.epherical.croptopia.items.SeedItem;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
