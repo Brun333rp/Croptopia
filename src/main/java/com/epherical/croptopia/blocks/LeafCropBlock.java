@@ -58,7 +58,7 @@ public class LeafCropBlock extends CroptopiaCropBlock {
     }
 
     @Override
-    public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         return true;
     }
 
