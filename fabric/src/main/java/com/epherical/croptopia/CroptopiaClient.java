@@ -14,8 +14,7 @@ public class CroptopiaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         FUNCTIONS.registerBlockLayers(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderType.cutoutMipped()));
-        BlockColors colors = Minecraft.getInstance().getBlockColors();
-        ColorProviderRegistry.ITEM.register(FUNCTIONS.registerItemColors(colors), FUNCTIONS.items());
+        ColorProviderRegistry.ITEM.register(FUNCTIONS.registerItemColors(), FUNCTIONS.items());
         ColorProviderRegistry.BLOCK.register(FUNCTIONS.registerLeafColors(), FUNCTIONS.leaves());
     }
 }

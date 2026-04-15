@@ -1,6 +1,7 @@
 package com.epherical.croptopia.client;
 
 import com.epherical.croptopia.register.helpers.TreeCrop;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColor;
@@ -25,10 +26,10 @@ public class ClientFunctions {
                         : FoliageColor.getDefaultColor();
     }
 
-    public ItemColor registerItemColors(BlockColors colors) {
+    public ItemColor registerItemColors() {
         return (stack, tintIndex) -> {
             BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
-            return colors.getColor(blockstate, null, null, tintIndex);
+            return Minecraft.getInstance().getBlockColors().getColor(blockstate, null, null, tintIndex);
         };
     }
 

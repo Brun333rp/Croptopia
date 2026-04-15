@@ -13,6 +13,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FarmBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
+import static com.epherical.croptopia.common.Tags.FARMLANDS;
+
 public class SeedItem extends ItemNameBlockItem {
 
     private TagKey<Biome> category;
@@ -30,7 +32,7 @@ public class SeedItem extends ItemNameBlockItem {
         BlockPos hitPos = context.getClickedPos();
         Level world = context.getLevel();
         BlockState state = world.getBlockState(hitPos);
-        if (state.getBlock() instanceof FarmBlock && context.getClickedFace() == Direction.UP) {
+        if (state.is(FARMLANDS) || state.is(FARMLANDS) || (state.getBlock() instanceof FarmBlock && context.getClickedFace() == Direction.UP)) {
             return super.useOn(context);
         }
         return InteractionResult.FAIL;

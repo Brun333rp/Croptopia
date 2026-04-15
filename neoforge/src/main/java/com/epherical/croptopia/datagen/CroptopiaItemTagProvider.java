@@ -5,14 +5,18 @@ import com.epherical.croptopia.CroptopiaNeoForge;
 import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.register.helpers.Tree;
 import com.epherical.croptopia.register.helpers.TreeCrop;
+import com.epherical.croptopia.register.helpers.Utensil;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -46,6 +50,18 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
         tag(ItemTags.COW_FOOD)
                 .add(Content.BARLEY.asItem())
                 .add(Content.CORN.asItem());
+
+        generateToolsTags(Tags.Items.TOOLS);
+
+    }
+
+    protected void generateToolsTags(TagKey<Item> key) {
+        IntrinsicTagAppender<Item> tag = tag(key);
+        for (Utensil utensil : Utensil.copy()) {
+            tag.add(utensil.asItem());
+        }
+        IntrinsicTagAppender<Item> c = tag(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "tools/knife")));
+        c.add(Content.KNIFE.asItem());
     }
 
     protected void generateSeedsEatenByTag(TagKey<Item> key) {

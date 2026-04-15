@@ -85,7 +85,6 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
             this.add(farmlandCrop.asBlock(),
                     this.applyExplosionDecay(farmlandCrop.asBlock(),
                             LootTable.lootTable()
-                                    .withPool(LootPool.lootPool().add(LootItem.lootTableItem(farmlandCrop.asItem())))
                                     .withPool(LootPool.lootPool().when(ageCondition)
                                             .add(LootItem.lootTableItem(farmlandCrop.asItem())
                                                     .apply(ApplyBonusCount.addBonusBinomialDistributionCount(registries.holderOrThrow(Enchantments.FORTUNE), 0.5714286F, 3))))));

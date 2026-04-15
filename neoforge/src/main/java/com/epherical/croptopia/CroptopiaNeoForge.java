@@ -179,9 +179,8 @@ public class CroptopiaNeoForge {
             functions.registerBlockLayers(block -> ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped()));
             BlockColors colors = Minecraft.getInstance().getBlockColors();
             ItemColors itemColors = Minecraft.getInstance().getItemColors();
-            itemColors.register(functions.registerItemColors(colors), functions.items());
+            itemColors.register(functions.registerItemColors(), functions.items());
             colors.register(functions.registerLeafColors(), functions.leaves());
-
         }
 
         @SubscribeEvent
