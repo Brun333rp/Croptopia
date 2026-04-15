@@ -1,0 +1,10 @@
+{
+  "values": [
+    "croptopia:spinach",
+    "#c:vegetables/spinach",
+    "croptopia:spinach",
+    "#c:crops/spinach",
+    "croptopia:spinach_seed",
+    "#c:seeds/spinach"
+  ]
+}

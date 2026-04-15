@@ -1,0 +1,6 @@
+{
+  "parent": "croptopia:block/crop_cross",
+  "textures": {
+    "cross": "croptopia:block/artichoke_crop_stage2"
+  }
+}

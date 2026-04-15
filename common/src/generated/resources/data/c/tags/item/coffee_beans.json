@@ -1,0 +1,8 @@
+{
+  "values": [
+    "croptopia:coffee_beans",
+    "#c:crops/coffee_beans",
+    "croptopia:coffee_seed",
+    "#c:seeds/coffee_beans"
+  ]
+}

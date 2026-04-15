@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_bacon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "croptopia:cooked_bacon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:blt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_bacon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:blt"
+    ]
+  }
+}

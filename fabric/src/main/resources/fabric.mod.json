@@ -16,7 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.epherical.croptopia.Croptopia"
+      "com.epherical.croptopia.CroptopiaFabric"
+    ],
+    "client": [
+      "com.epherical.croptopia.CroptopiaClient"
     ]
   },
   "mixins": [
@@ -27,7 +30,8 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version}",
-    "java": ">=${java_version}"
+    "java": ">=${java_version}",
+    "epherolib": "*"
   },
   "suggests": {
     "another-mod": "*"

@@ -122,9 +122,9 @@ public class CroptopiaNeoForge {
     public CroptopiaNeoForge(IEventBus modEventBus, ModContainer modContainer) {
         CroptopiaCommon.init();
 
-        config.addSerializer(TreeConfiguration.class, TreeConfiguration.Serializer.INSTANCE);
-        config.addSerializer(ResourceLocation.class, IdentifierSerializer.INSTANCE);
-        config.loadConfig(MiscNames.MOD_ID);
+        //config.addSerializer(TreeConfiguration.class, TreeConfiguration.Serializer.INSTANCE);
+        //config.addSerializer(ResourceLocation.class, IdentifierSerializer.INSTANCE);
+        //config.loadConfig(MiscNames.MOD_ID);
 
 
         modEventBus.addListener(this::commonSetup);

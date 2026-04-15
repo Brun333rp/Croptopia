@@ -1,0 +1,10 @@
+{
+  "values": [
+    "croptopia:rice",
+    "#c:grain/rice",
+    "croptopia:rice",
+    "#c:crops/rice",
+    "croptopia:rice_seed",
+    "#c:seeds/rice"
+  ]
+}

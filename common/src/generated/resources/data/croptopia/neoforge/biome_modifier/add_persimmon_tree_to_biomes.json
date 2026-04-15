@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#croptopia:has_tree/persimmon",
+  "features": "croptopia:persimmon_tree_placed",
+  "step": "vegetal_decoration"
+}

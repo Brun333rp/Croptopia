@@ -1,0 +1,186 @@
+{
+  "values": [
+    "minecraft:forest",
+    "minecraft:flower_forest",
+    "minecraft:birch_forest",
+    "minecraft:dark_forest",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:taiga",
+    "minecraft:snowy_taiga",
+    "minecraft:grove",
+    {
+      "id": "biomeswevegone:aspen_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:black_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:borealis_grove",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:cherry_blossom_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:cika_woods",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:coniferous_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:ebony_woods",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:forgotten_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:maple_taiga",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:red_oak_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:autumnal_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:autumnal_taiga",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:redwood_thicket",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:frosted_taiga",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:frosted_coniferous_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:fragment_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:twilight_meadow",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:weeping_witch_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:temperate_rainforest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:zelkova_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:birch_taiga",
+      "required": false
+    },
+    {
+      "id": "terralith:cloud_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:lavender_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:lavender_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:moonlight_grove",
+      "required": false
+    },
+    {
+      "id": "terralith:moonlight_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:temperate_highlands",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:bamboo_grove",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:cherry_blossom_grove",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:mediterranean_forest",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:mystic_grove",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:orchard",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:pumpkin_patch",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:redwood_forest",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:seasonal_forest",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:seasonal_orchard",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:woodland",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:bog",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:coniferous_forest",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:field",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:fir_cleaning",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:maple_woods",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:tundra",
+      "required": false
+    }
+  ]
+}

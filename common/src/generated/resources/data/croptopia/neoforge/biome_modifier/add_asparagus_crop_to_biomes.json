@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#croptopia:has_crop/asparagus",
+  "features": "croptopia:asparagus_crop_placed",
+  "step": "vegetal_decoration"
+}

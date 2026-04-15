@@ -14,7 +14,7 @@ public class BlockBreakEvent {
     @SubscribeEvent
     public void onInteractionWithTool(BlockEvent.BlockToolModificationEvent event) {
         Player player = event.getPlayer();
-        if (!event.isSimulated() && event.getHeldItemStack().getItem() instanceof AxeItem) {
+        if (!event.isSimulated() && event.getHeldItemStack().getItem() instanceof AxeItem && !event.isCanceled()) {
             BlockState state = event.getState();
             if (state.is(Content.CINNAMON.getLog()) || state.is(Content.CINNAMON.getWood())) {
                 if (player != null && !player.isCreative()) {

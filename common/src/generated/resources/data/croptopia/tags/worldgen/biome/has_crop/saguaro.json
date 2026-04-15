@@ -1,0 +1,69 @@
+{
+  "values": [
+    "minecraft:desert",
+    {
+      "id": "biomeswevegone:atacama_desert",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:windswept_dunes",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:windswept_desert",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:mojave_desert",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:red_rock_valley",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:firecracker_shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:ancient_sands",
+      "required": false
+    },
+    {
+      "id": "terralith:bryce_canyon",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_canyon",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_oasis",
+      "required": false
+    },
+    {
+      "id": "terralith:desert_spires",
+      "required": false
+    },
+    {
+      "id": "terralith:hot_shrubland",
+      "required": false
+    },
+    {
+      "id": "terralith:painted_mountains",
+      "required": false
+    },
+    {
+      "id": "terralith:red_oasis",
+      "required": false
+    },
+    {
+      "id": "terralith:sandstone_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:warped_mesa",
+      "required": false
+    }
+  ]
+}

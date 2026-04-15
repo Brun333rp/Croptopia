@@ -14,6 +14,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -36,6 +37,12 @@ public class CroptopiaConfig extends CommonConfig {
 
     public CroptopiaConfig(AbstractConfigurationLoader.Builder<?, ?> loaderBuilder, String configName) {
         super(loaderBuilder, configName);
+    }
+
+
+    @Override
+    public Path getConfigPath(String modID) {
+        return super.getConfigPath(modID);
     }
 
     /*@Override*/

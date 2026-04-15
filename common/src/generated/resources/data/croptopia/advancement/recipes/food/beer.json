@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hops": {
+      "conditions": {
+        "items": [
+          {
+            "items": "croptopia:hops"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:beer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hops"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:beer"
+    ]
+  }
+}

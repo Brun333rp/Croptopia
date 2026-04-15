@@ -38,6 +38,14 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
         generateMisc();
         generateSeedsEatenByTag(ItemTags.CHICKEN_FOOD);
         generateSeedsEatenByTag(ItemTags.PARROT_FOOD);
+
+        tag(ItemTags.PIG_FOOD)
+                .add(Content.YAM.asItem())
+                .add(Content.SWEETPOTATO.asItem());
+
+        tag(ItemTags.COW_FOOD)
+                .add(Content.BARLEY.asItem())
+                .add(Content.CORN.asItem());
     }
 
     protected void generateSeedsEatenByTag(TagKey<Item> key) {

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#croptopia:has_crop/bellpepper",
+  "features": "croptopia:bellpepper_crop_placed",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "croptopia:block/elderberry_crop_stage1"
+  }
+}

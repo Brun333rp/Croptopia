@@ -1,0 +1,45 @@
+{
+  "values": [
+    "minecraft:flower_forest",
+    "minecraft:plains",
+    "minecraft:forest",
+    "minecraft:sunflower_plains",
+    "minecraft:windswept_forest",
+    {
+      "id": "biomesoplenty:orchard",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:orchard",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:aspen_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:red_oak_forest",
+      "required": false
+    },
+    {
+      "id": "terralith:birch_taiga",
+      "required": false
+    },
+    {
+      "id": "terralith:blooming_valley",
+      "required": false
+    },
+    {
+      "id": "terralith:blooming_plateau",
+      "required": false
+    },
+    {
+      "id": "terralith:highlands",
+      "required": false
+    },
+    {
+      "id": "terralith:steppe",
+      "required": false
+    }
+  ]
+}

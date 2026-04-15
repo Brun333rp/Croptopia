@@ -1,0 +1,47 @@
+{
+  "values": [
+    "minecraft:flower_forest",
+    "minecraft:windswept_forest",
+    "minecraft:forest",
+    {
+      "id": "biomesoplenty:maple_woods",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:orchard",
+      "required": false
+    },
+    {
+      "id": "minecraft:flower_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:autumnal_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:aspen_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:jacaranda_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:autumnal_taiga",
+      "required": false
+    },
+    {
+      "id": "minecraft:windswept_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:red_oak_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:orchard",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "croptopia:celery",
+    "#c:vegetables/celery",
+    "croptopia:celery",
+    "#c:crops/celery",
+    "croptopia:celery_seed",
+    "#c:seeds/celery"
+  ]
+}

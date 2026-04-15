@@ -1,0 +1,33 @@
+{
+  "values": [
+    "minecraft:dark_forest",
+    {
+      "id": "biomesoplenty:forested_field",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:maple_woods",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:weeping_witch_forest",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:dacite_ridges",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:ebony_woods",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:maple_taiga",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:twilight_meadow",
+      "required": false
+    }
+  ]
+}

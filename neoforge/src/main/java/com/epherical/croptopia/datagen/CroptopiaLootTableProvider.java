@@ -54,7 +54,7 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
     public static final ResourceKey<LootTable> SQUID_CALAMARI_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/squid_calamari_drop"));
     public static final ResourceKey<LootTable> RAVAGER_MEAT_DROP = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("entities/ravager_meat_drop"));
 
-    public static final ResourceKey<LootTable> CROPTOPIA_FISHING_TABLE = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("gameplay/fishing"));
+    public static final ResourceKey<LootTable> CROPTOPIA_FISHING_TABLE = ResourceKey.create(Registries.LOOT_TABLE, createIdentifier("gameplay/fishing/fish"));
 
 
     public CroptopiaLootTableProvider(HolderLookup.Provider registries) {

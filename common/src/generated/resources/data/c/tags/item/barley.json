@@ -1,0 +1,10 @@
+{
+  "values": [
+    "croptopia:barley",
+    "#c:grain/barley",
+    "croptopia:barley",
+    "#c:crops/barley",
+    "croptopia:barley_seed",
+    "#c:seeds/barley"
+  ]
+}
