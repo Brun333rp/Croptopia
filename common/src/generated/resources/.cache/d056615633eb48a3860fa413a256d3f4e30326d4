@@ -1,7 +1,7 @@
-// 1.21.1	2026-04-14T23:15:53.490882	Global Loot Modifiers : croptopia
+// 1.21.1	2026-04-15T17:12:52.5967834	Global Loot Modifiers : croptopia
 c267d18b47e8afdce0ed181831d80092e1ee886d data/croptopia/loot_modifiers/add_calamari_to_squid.json
 0be38c5fe1a181e377daf354e1b67778b025b129 data/croptopia/loot_modifiers/add_croptopia_fish_to_aquaculture.json
-2f8a15e2bd56184f74060ac2161a41f593a7b075 data/croptopia/loot_modifiers/add_croptopia_fish_to_minecraft.json
+946d5e32bd19cba5f2aa683aed01a1f249907086 data/croptopia/loot_modifiers/add_croptopia_fish_to_minecraft.json
 be619ce95b76ddc80a0a600a599bd7578d8ce871 data/croptopia/loot_modifiers/add_glowing_calamari_to_glowing_squid.json
 7c94aff9c20d44868234f467b64d43c4c0c1ac2c data/croptopia/loot_modifiers/add_mountain_salt_to_shipwreck.json
 9953b696078d9d7e37c785dfd5dcaea1093b29ce data/croptopia/loot_modifiers/add_ravager_meat_to_ravager.json

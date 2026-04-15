@@ -28,6 +28,7 @@ import com.mojang.logging.LogUtils;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
@@ -177,7 +178,10 @@ public class CroptopiaNeoForge {
         public static void onClientSetup(FMLClientSetupEvent event) {
             functions.registerBlockLayers(block -> ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped()));
             BlockColors colors = Minecraft.getInstance().getBlockColors();
+            ItemColors itemColors = Minecraft.getInstance().getItemColors();
+            itemColors.register(functions.registerItemColors(colors), functions.items());
             colors.register(functions.registerLeafColors(), functions.leaves());
+
         }
 
         @SubscribeEvent
