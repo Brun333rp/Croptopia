@@ -33,7 +33,7 @@
     "java": ">=${java_version}",
     "epherolib": "*"
   },
-  "suggests": {
-    "another-mod": "*"
+  "recommends": {
+    "patchouli": "*"
   }
 }

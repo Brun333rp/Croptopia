@@ -259,7 +259,7 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
                     }, CROPTOPIA_FISHING_TABLE));
             add("add_croptopia_fish_to_minecraft", new AddTableLootModifier(
                     new LootItemCondition[]{
-                            LootTableIdCondition.builder(BuiltInLootTables.FISHING.location()).build()
+                            LootTableIdCondition.builder(BuiltInLootTables.FISHING_FISH.location()).build()
                     }, CROPTOPIA_FISHING_TABLE));
         }
     }
