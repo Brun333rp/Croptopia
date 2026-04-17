@@ -12,11 +12,15 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.NoiseThresholdProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
@@ -24,8 +28,10 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
 import java.util.List;
+import java.util.Random;
 
 public class CroptopiaWorldGeneration {
 
@@ -59,18 +65,30 @@ public class CroptopiaWorldGeneration {
 
     private List<PlacementModifier> modifiers() {
         return List.of(
-                NoiseThresholdCountPlacement.of(-0.7, 0, 8),
-                RarityFilter.onAverageOnceEvery(5),
+                NoiseThresholdCountPlacement.of(-0.8, 15, 4),
+                RarityFilter.onAverageOnceEvery(16),
+
                 InSquarePlacement.spread(),
-                CountPlacement.of(6),
-                RandomOffsetPlacement.horizontal(UniformInt.of(-3, 3)),
                 PlacementUtils.HEIGHTMAP,
-                PlacementUtils.isEmpty(),
-                BiomeFilter.biome());
+                BiomeFilter.biome(),
+                CountPlacement.of(32),
+                RandomOffsetPlacement.ofTriangle(6, 2),
+                BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE));
     }
 
     private SimpleBlockConfiguration createCropConfiguration(Block block) {
-        return new SimpleBlockConfiguration(SimpleStateProvider.simple(block.defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7)));
+        Random random = new Random();
+        return new SimpleBlockConfiguration(
+                new NoiseThresholdProvider(
+                        random.nextLong(100, 10000000L),
+                        new NormalNoise.NoiseParameters(0, random.nextDouble(1.0, 5.0)),
+                        0.005F,
+                        -0.8F,
+                        0.25F,
+                        block.defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7),
+                        List.of(Blocks.AIR.defaultBlockState()), List.of(Blocks.AIR.defaultBlockState())
+                )
+        );
     }
 
     private ConfiguredFeature<SimpleBlockConfiguration, ?> createCropPatch(Block block) {

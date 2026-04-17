@@ -170,7 +170,7 @@ public class TreeCrop implements ItemConvertibleWithPlural, BlockConvertible {
             item = Items.APPLE;
         }
         saplingItem = register.register(createIdentifier(name() + "_sapling"), (id) -> new CroptopiaSaplingItem(saplingBlock, leaves, leafType, createGroup(id).useItemDescriptionPrefix()));
-        leavesItem = register.register(createIdentifier(name() + "_crop"), (id) -> new BlockItem(leaves, createGroup(id)));
+        leavesItem = register.register(createIdentifier(name() + "_crop"), (id) -> new BlockItem(leaves, createGroup(id).useBlockDescriptionPrefix()));
     }
 
     public void registerBlock(RegisterFunction<Block> register) {

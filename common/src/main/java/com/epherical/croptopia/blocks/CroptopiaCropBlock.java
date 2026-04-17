@@ -64,6 +64,7 @@ public class CroptopiaCropBlock extends CropBlock {
     protected boolean mayPlaceOn(BlockState floor, BlockGetter world, BlockPos pos) {
         return super.mayPlaceOn(floor, world, pos)
                 || floor.is(BlockTags.DIRT)
+                || floor.is(BlockTags.GRASS_BLOCKS)
                 || floor.is(BlockTags.SAND)
                 || floor.is(com.epherical.croptopia.common.Tags.FARMLAND)
                 || floor.is(com.epherical.croptopia.common.Tags.FARMLANDS);

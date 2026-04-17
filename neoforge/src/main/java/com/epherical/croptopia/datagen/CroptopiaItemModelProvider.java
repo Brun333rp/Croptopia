@@ -1,13 +1,11 @@
 package com.epherical.croptopia.datagen;
 
 import com.epherical.croptopia.register.Content;
-import com.epherical.croptopia.register.helpers.FarmlandCrop;
 import com.epherical.croptopia.register.helpers.Tree;
 import com.epherical.croptopia.register.helpers.TreeCrop;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
@@ -15,7 +13,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.Block;
 
@@ -451,37 +448,6 @@ public class CroptopiaItemModelProvider extends ModelProvider {
         provider.basicItem(Content.NETHER_STAR_CAKE);
         provider.basicItem(Content.RAW_RAVAGER_MEAT);
         provider.basicItem(Content.TRANSCENDENTAL_BREAKFAST);
-
-        simpleBlockStage1Item(provider, Content.ALMOND.asBlock());
-        simpleBlockStage1Item(provider, Content.APPLE.asBlock());
-        simpleBlockStage1Item(provider, Content.APRICOT.asBlock());
-        simpleBlockStage1Item(provider, Content.AVOCADO.asBlock());
-        simpleBlockStage1Item(provider, Content.BANANA.asBlock());
-        simpleBlockStage1Item(provider, Content.CASHEW.asBlock());
-        simpleBlockStage1Item(provider, Content.CHERRY.asBlock());
-        simpleBlockStage1Item(provider, Content.COCONUT.asBlock());
-        simpleBlockStage1Item(provider, Content.DATE.asBlock());
-        simpleBlockStage1Item(provider, Content.DRAGONFRUIT.asBlock());
-        simpleBlockStage1Item(provider, Content.FIG.asBlock());
-        simpleBlockStage1Item(provider, Content.GRAPEFRUIT.asBlock());
-        simpleBlockStage1Item(provider, Content.KUMQUAT.asBlock());
-        simpleBlockStage1Item(provider, Content.LEMON.asBlock());
-        simpleBlockStage1Item(provider, Content.LIME.asBlock());
-        simpleBlockStage1Item(provider, Content.MANGO.asBlock());
-        simpleBlockStage1Item(provider, Content.NECTARINE.asBlock());
-        simpleBlockStage1Item(provider, Content.NUTMEG.asBlock());
-        simpleBlockStage1Item(provider, Content.ORANGE.asBlock());
-        simpleBlockStage1Item(provider, Content.PEACH.asBlock());
-        simpleBlockStage1Item(provider, Content.PEAR.asBlock());
-        simpleBlockStage1Item(provider, Content.PECAN.asBlock());
-        simpleBlockStage1Item(provider, Content.PERSIMMON.asBlock());
-        simpleBlockStage1Item(provider, Content.PLUM.asBlock());
-        simpleBlockStage1Item(provider, Content.STARFRUIT.asBlock());
-        simpleBlockStage1Item(provider, Content.WALNUT.asBlock());
-
-
-
-
     }
 
     protected void simpleBlockStage1Item(ItemModels provider, Block block) {
@@ -497,57 +463,22 @@ public class CroptopiaItemModelProvider extends ModelProvider {
 
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
-        registerItemModels(new ItemModels(itemModels));
+        ItemModels models = new ItemModels(itemModels);
+        registerItemModels(models);
         blockModels.createTintedLeaves(Content.CINNAMON.getLeaves(), TexturedModel.LEAVES, FoliageColor.FOLIAGE_DEFAULT);
 
-        
 
         blockModels.createTrivialCube(Content.SALT_ORE_BLOCK);
 
         for (TreeCrop treeCrop : TreeCrop.TREE_CROPS) {
             blockModels.createCrossBlockWithDefaultItem(treeCrop.getSaplingBlock(), BlockModelGenerators.PlantType.NOT_TINTED);
+            simpleBlockStage1Item(models, treeCrop.asBlock());
         }
 
         for (Tree tree : Tree.copy()) {
             blockModels.createCrossBlockWithDefaultItem(tree.getSaplingBlock(), BlockModelGenerators.PlantType.NOT_TINTED);
         }
     }
-    //i should really datagen these
-    // ava.lang.IllegalStateException: Missing blockstate definitions for: [croptopia:artichoke_crop, croptopia:asparagus_crop, croptopia:barley_crop, croptopia:basil_crop,
-    // croptopia:bellpepper_crop, croptopia:blackbean_crop, croptopia:blackberry_crop, croptopia:blueberry_crop, croptopia:broccoli_crop, croptopia:cabbage_crop, croptopia:cantaloupe_crop,
-    // croptopia:cauliflower_crop, croptopia:celery_crop, croptopia:chile_pepper_crop, croptopia:coffee_crop, croptopia:corn_crop, croptopia:cranberry_crop, croptopia:cucumber_crop,
-    // croptopia:currant_crop, croptopia:eggplant_crop, croptopia:elderberry_crop, croptopia:garlic_crop, croptopia:ginger_crop, croptopia:grape_crop, croptopia:greenbean_crop,
-    // croptopia:greenonion_crop, croptopia:honeydew_crop, croptopia:hops_crop, croptopia:kale_crop, croptopia:kiwi_crop, croptopia:leek_crop, croptopia:lettuce_crop,
-    // croptopia:mustard_crop, croptopia:oat_crop, croptopia:olive_crop, croptopia:onion_crop, croptopia:peanut_crop, croptopia:pepper_crop, croptopia:pineapple_crop,
-    // croptopia:radish_crop, croptopia:raspberry_crop, croptopia:rhubarb_crop, croptopia:rice_crop, croptopia:rutabaga_crop, croptopia:saguaro_crop, croptopia:soybean_crop,
-    // croptopia:spinach_crop, croptopia:squash_crop, croptopia:strawberry_crop, croptopia:sweetpotato_crop, croptopia:tea_crop, croptopia:tomatillo_crop, croptopia:tomato_crop,
-    // croptopia:turmeric_crop, croptopia:turnip_crop, croptopia:vanilla_crop, croptopia:yam_crop, croptopia:zucchini_crop, croptopia:almond_sapling, croptopia:almond_crop,
-    // croptopia:apple_sapling, croptopia:apple_crop, croptopia:apricot_sapling, croptopia:apricot_crop, croptopia:avocado_sapling, croptopia:avocado_crop, croptopia:banana_sapling,
-    // croptopia:banana_crop, croptopia:cashew_sapling, croptopia:cashew_crop, croptopia:cherry_sapling, croptopia:cherry_crop, croptopia:coconut_sapling, croptopia:coconut_crop,
-    // croptopia:date_sapling, croptopia:date_crop, croptopia:dragonfruit_sapling, croptopia:dragonfruit_crop, croptopia:fig_sapling, croptopia:fig_crop, croptopia:grapefruit_sapling,
-    // croptopia:grapefruit_crop, croptopia:kumquat_sapling, croptopia:kumquat_crop, croptopia:lemon_sapling, croptopia:lemon_crop, croptopia:lime_sapling, croptopia:lime_crop,
-    // croptopia:mango_sapling, croptopia:mango_crop, croptopia:nectarine_sapling, croptopia:nectarine_crop, croptopia:nutmeg_sapling, croptopia:nutmeg_crop, croptopia:orange_sapling,
-    // croptopia:orange_crop, croptopia:peach_sapling, croptopia:peach_crop, croptopia:pear_sapling, croptopia:pear_crop, croptopia:pecan_sapling, croptopia:pecan_crop,
-    // croptopia:persimmon_sapling, croptopia:persimmon_crop, croptopia:plum_sapling, croptopia:plum_crop, croptopia:starfruit_sapling, croptopia:starfruit_crop,
-    // croptopia:walnut_sapling, croptopia:walnut_crop, croptopia:cinnamon_log, croptopia:stripped_cinnamon_log, croptopia:cinnamon_wood, croptopia:stripped_cinnamon_wood,
-    // croptopia:cinnamon_sapling, croptopia:salt_ore]
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.client.data.models.ModelProvider$BlockStateGeneratorCollector.validate(ModelProvider.java:129)
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.client.data.models.ModelProvider.run(ModelProvider.java:89)
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.data.HashCache.generateUpdate(HashCache.java:96)
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.data.DataGenerator$Cached.lambda$run$0(DataGenerator.java:116)
-    //	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987)
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.data.DataGenerator$Cached.run(DataGenerator.java:109)
-    //	at TRANSFORMER/neoforge@26.1.0.1-beta/net.neoforged.neoforge.data.event.GatherDataEvent$DataGeneratorConfig.lambda$runAll$1(GatherDataEvent.java:187)
-    //	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:834)
-    //	at TRANSFORMER/neoforge@26.1.0.1-beta/net.neoforged.neoforge.data.event.GatherDataEvent$DataGeneratorConfig.runAll(GatherDataEvent.java:182)
-    //	at TRANSFORMER/neoforge@26.1.0.1-beta/net.neoforged.neoforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:69)
-    //	at TRANSFORMER/minecraft@26.1/net.minecraft.client.data.Main.main(Main.java:53)
-    //	at net.neoforged.fml.startup.DataClient.main(DataClient.java:16)
-    //	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-    //	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-    //	at net.neoforged.devlaunch.Main.main(Main.java:57)
-    //
-    //FAILURE: Build failed with an exception.
 
     @Override
     protected Stream<? extends net.minecraft.core.Holder<Block>> getKnownBlocks() {
@@ -560,7 +491,7 @@ public class CroptopiaItemModelProvider extends ModelProvider {
         }
 
         private void withExistingParent(Item item, Identifier parent) {
-            generator.itemModelOutput.accept(item, ItemModelUtils.plainModel(parent));
+            generator.itemModelOutput.accept(item, ItemModelUtils.tintedModel(parent, ItemModelUtils.constantTint(FoliageColor.FOLIAGE_DEFAULT)));
         }
     }
 
