@@ -20,7 +20,7 @@ public class FabricLootModifiers {
     private static final ResourceKey<LootTable> GLOWING_SQUID_GLOWING_CALAMARI_DROP = createKey("entities/glowing_squid_glowing_calamari_drop");
     private static final ResourceKey<LootTable> SQUID_CALAMARI_DROP = createKey("entities/squid_calamari_drop");
     private static final ResourceKey<LootTable> RAVAGER_MEAT_DROP = createKey("entities/ravager_meat_drop");
-    private static final ResourceKey<LootTable> CROPTOPIA_FISHING_TABLE = createKey("gameplay/fishing");
+    private static final ResourceKey<LootTable> CROPTOPIA_FISHING_TABLE = createKey("gameplay/fishing/fish");
     private static final ResourceKey<LootTable> AQUACULTURE_FISHING_TABLE = createKey("aquaculture", "gameplay/fishing/fish");
     private static final Map<ResourceKey<LootTable>, ResourceKey<LootTable>> ADDITIONS_BY_TARGET = Map.ofEntries(
             Map.entry(BuiltInLootTables.SIMPLE_DUNGEON, TUNA_SANDWICH_LOOT),
@@ -31,7 +31,7 @@ public class FabricLootModifiers {
             Map.entry(createKey("minecraft", "entities/squid"), SQUID_CALAMARI_DROP),
             Map.entry(createKey("minecraft", "entities/ravager"), RAVAGER_MEAT_DROP),
             Map.entry(createKey("minecraft", "entities/glow_squid"), GLOWING_SQUID_GLOWING_CALAMARI_DROP),
-            Map.entry(BuiltInLootTables.FISHING, CROPTOPIA_FISHING_TABLE),
+            Map.entry(BuiltInLootTables.FISHING_FISH, CROPTOPIA_FISHING_TABLE),
             Map.entry(AQUACULTURE_FISHING_TABLE, CROPTOPIA_FISHING_TABLE)
     );
 
