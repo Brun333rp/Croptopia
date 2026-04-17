@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:bellpeppers",
+    "2": "#c:eggplants",
+    "3": "#c:garlic",
+    "4": "#c:chile_peppers",
+    "5": "#c:olive_oils",
+    "6": "#c:salts"
+  },
+  "pattern": [
+    "456",
+    "123"
+  ],
+  "result": {
+    "id": "croptopia:ajvar"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:raisins",
+    "croptopia:oatmeal",
+    "minecraft:sugar",
+    "#c:flour"
+  ],
+  "result": {
+    "count": 4,
+    "id": "croptopia:raisin_oatmeal_cookie"
+  }
+}

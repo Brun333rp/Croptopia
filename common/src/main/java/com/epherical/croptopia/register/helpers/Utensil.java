@@ -1,10 +1,12 @@
 package com.epherical.croptopia.register.helpers;
 
 import com.epherical.croptopia.items.CookingUtensil;
+import com.epherical.croptopia.mixin.CraftingRemainingItemBypassMixin;
 import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.util.ItemConvertibleWithPlural;
 import com.epherical.croptopia.util.RegisterFunction;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStackTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +50,6 @@ public class Utensil implements ItemConvertibleWithPlural {
     }
 
     public void registerItems(RegisterFunction<Item> register) {
-        this.utensil = register.register(createIdentifier(name), () -> new CookingUtensil(createGroup().stacksTo(1)));
+        this.utensil = register.register(createIdentifier(name), (id) -> new CookingUtensil(createGroup(id).stacksTo(1)));
     }
 }

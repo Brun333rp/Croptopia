@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_eggplants": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:eggplants"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:ratatouille"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_eggplants"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:ratatouille"
+    ]
+  }
+}

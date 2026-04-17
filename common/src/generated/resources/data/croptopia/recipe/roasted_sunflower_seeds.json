@@ -2,25 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "item": "minecraft:sunflower"
-    },
-    "2": {
-      "tag": "c:salts"
-    },
-    "3": {
-      "item": "croptopia:pepper"
-    },
-    "4": {
-      "item": "croptopia:frying_pan"
-    }
+    "1": "minecraft:sunflower",
+    "2": "#c:salts",
+    "3": "croptopia:pepper",
+    "4": "croptopia:frying_pan"
   },
   "pattern": [
     "123",
     " 4 "
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:roasted_sunflower_seeds"
   }
 }

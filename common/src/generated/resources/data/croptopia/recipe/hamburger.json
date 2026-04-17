@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "croptopia:frying_pan",
+    "minecraft:beef"
+  ],
+  "result": {
+    "id": "croptopia:hamburger"
+  }
+}

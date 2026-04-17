@@ -50,8 +50,8 @@ public class Juice implements ItemLike {
     }
 
     public void registerItem(RegisterFunction<Item> register) {
-        this.item = register.register(createIdentifier(name), () ->
-                new Drink(createGroup().food(createBuilder(JUICE_5).alwaysEdible().build()).craftRemainder(Items.GLASS_BOTTLE)));
+        this.item = register.register(createIdentifier(name), (id) ->
+                new Drink(createGroup(id).food(createBuilder(JUICE_5).alwaysEdible().build()).craftRemainder(Items.GLASS_BOTTLE)));
     }
 
     public static List<Juice> copy() {

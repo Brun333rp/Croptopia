@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:strawberries"
-    }
+    "#c:strawberries"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:strawberry_seed"
   }
 }

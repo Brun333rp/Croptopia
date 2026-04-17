@@ -1,7 +1,6 @@
 package com.epherical.croptopia.datagen;
 
 
-import com.epherical.croptopia.CroptopiaNeoForge;
 import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.register.helpers.Tree;
 import com.epherical.croptopia.register.helpers.TreeCrop;
@@ -11,14 +10,14 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
+import net.minecraft.data.tags.TagAppender;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -28,13 +27,13 @@ import static com.epherical.croptopia.CroptopiaNeoForge.MODID;
 public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
 
     public CroptopiaItemTagProvider(PackOutput output, ResourceKey<? extends Registry<Item>> registryKey,
-                                    CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, registryKey, lookupProvider, item -> item.builtInRegistryHolder().key(), MODID, existingFileHelper);
+                                    CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, registryKey, lookupProvider, item -> item.builtInRegistryHolder().key(), MODID);
     }
 
 
     @Override
-    protected void addTags(HolderLookup.Provider arg) {
+    protected void addTags(HolderLookup.@NonNull Provider arg) {
         generateSaplings();
         generateBarkLogs();
         // currently, only generates air, but leaves item tag isn't used by vanilla anyway
@@ -56,16 +55,16 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
     }
 
     protected void generateToolsTags(TagKey<Item> key) {
-        IntrinsicTagAppender<Item> tag = tag(key);
+        TagAppender<Item, Item> tag = tag(key);
         for (Utensil utensil : Utensil.copy()) {
             tag.add(utensil.asItem());
         }
-        IntrinsicTagAppender<Item> c = tag(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "tools/knife")));
+        TagAppender<Item, Item> c = tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", "tools/knife")));
         c.add(Content.KNIFE.asItem());
     }
 
     protected void generateSeedsEatenByTag(TagKey<Item> key) {
-        IntrinsicTagAppender<Item> tag = tag(key);
+        TagAppender<Item, Item> tag = tag(key);
         for (Item seed : seeds) {
             tag.add(seed);
         }
@@ -73,7 +72,7 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
 
 
     protected void generateSaplings() {
-        IntrinsicTagAppender<Item> saplings = tag(ItemTags.SAPLINGS);
+        TagAppender<Item, Item> saplings = tag(ItemTags.SAPLINGS);
         for (TreeCrop crop : TreeCrop.copy()) {
             saplings.add(crop.getSaplingItem());
         }
@@ -83,7 +82,7 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
     }
 
     protected void generateBarkLogs() {
-        IntrinsicTagAppender<Item> burnableLog = tag(ItemTags.LOGS_THAT_BURN);
+        TagAppender<Item, Item> burnableLog = tag(ItemTags.LOGS_THAT_BURN);
         for (Tree crop : Tree.copy()) {
             // add different log types to log tag of this crop
             tag(crop.getLogItemTag())
@@ -97,7 +96,7 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
     }
 
     protected void generateLeaves() {
-        IntrinsicTagAppender<Item> leaves = tag(ItemTags.LEAVES);
+        TagAppender<Item, Item> leaves = tag(ItemTags.LEAVES);
         for (TreeCrop crop : TreeCrop.copy()) {
             leaves.add(crop.getLeaves().asItem());
         }
@@ -107,12 +106,12 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
     }
 
     protected void generateMisc() {
-        IntrinsicTagAppender<Item> crops = tag(ItemTags.VILLAGER_PLANTABLE_SEEDS);
+        TagAppender<Item, Item> crops = tag(ItemTags.VILLAGER_PLANTABLE_SEEDS);
         for (Item seed : seeds) {
             crops.add(seed);
         }
         // explicitly used as dolphin food in vanilla
-        IntrinsicTagAppender<Item> fishes = tag(ItemTags.FISHES);
+        TagAppender<Item, Item> fishes = tag(ItemTags.FISHES);
         fishes.add(Content.ANCHOVY.asItem());
         fishes.add(Content.CALAMARI.asItem());
         fishes.add(Content.GLOWING_CALAMARI.asItem());
@@ -123,7 +122,7 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
         fishes.add(Content.SHRIMP.asItem());
         fishes.add(Content.TUNA.asItem());
         // fox food: all berries added by croptopia
-        IntrinsicTagAppender<Item> foxFood = tag(ItemTags.FOX_FOOD);
+        TagAppender<Item, Item> foxFood = tag(ItemTags.FOX_FOOD);
         foxFood.add(Content.BLACKBERRY.asItem());
         foxFood.add(Content.BLUEBERRY.asItem());
         foxFood.add(Content.CRANBERRY.asItem());
@@ -131,7 +130,7 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
         foxFood.add(Content.RASPBERRY.asItem());
         foxFood.add(Content.STRAWBERRY.asItem());
         // piglin food: more cannibalism (which already happens in vanilla)
-        IntrinsicTagAppender<Item> piglinFood = tag(ItemTags.PIGLIN_FOOD);
+        TagAppender<Item, Item> piglinFood = tag(ItemTags.PIGLIN_FOOD);
         piglinFood.add(Content.HAM_SANDWICH);
         piglinFood.add(Content.PEPPERONI);
         piglinFood.add(Content.PORK_AND_BEANS);

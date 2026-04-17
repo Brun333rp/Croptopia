@@ -52,6 +52,6 @@ public record FoodConstructor(int hunger, float satMod) {
     }
 
     public static FoodProperties createFoodBowl(FoodConstructor reg) {
-        return createBuilder(reg).usingConvertsTo(Items.BOWL).build();
+        return createBuilder(reg).build();
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:eggplants",
+    "2": "#c:salts",
+    "3": "#c:olive_oils",
+    "4": "#c:garlic",
+    "5": "croptopia:pepper",
+    "6": "#c:paprika"
+  },
+  "pattern": [
+    "625",
+    "314"
+  ],
+  "result": {
+    "id": "croptopia:grilled_eggplant"
+  }
+}

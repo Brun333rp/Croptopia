@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:tomatoes"
-    }
+    "#c:tomatoes"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:tomato_seed"
   }
 }

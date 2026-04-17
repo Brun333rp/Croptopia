@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chicken",
+    "#c:onions",
+    "croptopia:corn_husk",
+    "#c:flour",
+    "#c:salts",
+    "#c:chile_peppers",
+    "croptopia:cooking_pot"
+  ],
+  "result": {
+    "count": 2,
+    "id": "croptopia:tamales"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:blackbeans",
+    "#c:blackbeans",
+    "#c:tomatoes",
+    "#c:lettuce",
+    "#c:tortillas"
+  ],
+  "result": {
+    "id": "croptopia:tostada"
+  }
+}

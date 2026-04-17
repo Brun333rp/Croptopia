@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:blackbeans"
-    }
+    "#c:blackbeans"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:blackbean_seed"
   }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_peanuts": {
+      "conditions": {
+        "items": [
+          {
+            "items": "croptopia:peanut_butter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:peanut_butter_with_celery"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_peanuts"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:peanut_butter_with_celery"
+    ]
+  }
+}

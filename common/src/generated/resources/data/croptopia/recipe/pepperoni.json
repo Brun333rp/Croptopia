@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:beef",
+    "minecraft:porkchop",
+    "#c:paprika",
+    "#c:chile_peppers"
+  ],
+  "result": {
+    "count": 4,
+    "id": "croptopia:pepperoni"
+  }
+}

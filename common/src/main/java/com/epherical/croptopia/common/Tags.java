@@ -2,7 +2,7 @@ package com.epherical.croptopia.common;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -110,7 +110,7 @@ public class Tags {
     public static final TagKey<Block> FARMLANDS = create("c", "farmlands");
 
     private static TagKey<Block> create(String nm, String key) {
-        return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(nm, key));
+        return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(nm, key));
     }
 
 

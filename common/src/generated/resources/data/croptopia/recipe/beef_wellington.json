@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:beef",
+    "2": "#c:mustard",
+    "3": "croptopia:pepper",
+    "4": "#c:onions",
+    "5": "minecraft:egg",
+    "6": "minecraft:brown_mushroom",
+    "9": "#c:flour",
+    "F": "croptopia:frying_pan"
+  },
+  "pattern": [
+    "94 ",
+    "2F3",
+    "516"
+  ],
+  "result": {
+    "id": "croptopia:beef_wellington"
+  }
+}

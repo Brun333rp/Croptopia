@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:cashews",
+    "minecraft:cooked_chicken",
+    "#c:soy_sauces",
+    "#c:cabbage",
+    "minecraft:carrot"
+  ],
+  "result": {
+    "id": "croptopia:cashew_chicken"
+  }
+}

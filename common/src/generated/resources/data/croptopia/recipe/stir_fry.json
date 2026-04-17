@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:broccoli",
+    "2": "#c:olive_oils",
+    "3": "#c:garlic",
+    "4": "#c:greenonions",
+    "5": "#c:bellpeppers",
+    "6": "minecraft:carrot"
+  },
+  "pattern": [
+    "314",
+    "526"
+  ],
+  "result": {
+    "id": "croptopia:stir_fry"
+  }
+}

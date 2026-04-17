@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:grapes"
-    },
-    {
-      "tag": "c:grapes"
-    },
-    {
-      "tag": "c:grapes"
-    }
+    "#c:grapes",
+    "#c:grapes",
+    "#c:grapes"
   ],
   "result": {
     "count": 2,

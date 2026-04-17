@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "croptopia:knife",
+    "2": "minecraft:porkchop"
+  },
+  "pattern": [
+    " 2",
+    "1 "
+  ],
+  "result": {
+    "id": "croptopia:bacon"
+  }
+}

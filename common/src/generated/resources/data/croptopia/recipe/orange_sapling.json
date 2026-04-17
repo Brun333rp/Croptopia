@@ -2,18 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:oranges"
-    },
-    {
-      "tag": "c:oranges"
-    },
-    {
-      "tag": "minecraft:saplings"
-    }
+    "#c:oranges",
+    "#c:oranges",
+    "#minecraft:saplings"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:orange_sapling"
   }
 }

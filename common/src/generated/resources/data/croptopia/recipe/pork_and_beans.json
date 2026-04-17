@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bowl",
+    "#c:blackbeans",
+    "minecraft:porkchop"
+  ],
+  "result": {
+    "id": "croptopia:pork_and_beans"
+  }
+}

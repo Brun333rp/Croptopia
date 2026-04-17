@@ -1,20 +1,16 @@
 package com.epherical.croptopia.listeners;
 
-import net.minecraft.core.NonNullList;
-import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.village.VillagerTradesEvent;
-import net.neoforged.neoforge.event.village.WandererTradesEvent;
+import net.neoforged.neoforge.event.entity.player.TradeWithVillagerEvent;
 
 import java.util.List;
 
 public class CroptopiaVillagerTrades {
 
     @SubscribeEvent
-    public void initVillager(VillagerTradesEvent event) {
-        List<VillagerTrades.ItemListing> crops = NonNullList.create();
-        List<VillagerTrades.ItemListing> saplings = NonNullList.create();
+    public void initVillager(TradeWithVillagerEvent event) {
+        /*List<VillagerTrades> crops = NonNullList.create();
+        List<VillagerTrades.ItemListing> saplings = NonNullList.create();*/
         /*if (event.getType() == VillagerProfession.FARMER) {
             buyFromUser(crops, ItemRegistry.artichoke, 26, 2, 16, 0.1f);
             buyFromUser(crops, ItemRegistry.asparagus, 26, 2, 16, 0.1f);
@@ -100,9 +96,9 @@ public class CroptopiaVillagerTrades {
         }*/
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public void initWandering(WandererTradesEvent event) {
-       /* List<VillagerTrades.ItemListing> seeds = NonNullList.create();
+       *//* List<VillagerTrades.ItemListing> seeds = NonNullList.create();
         sellToUser(seeds, ItemRegistry.asparagusSeed, 4, 2, 16, 1, 0.5f);
         sellToUser(seeds, ItemRegistry.bellPepperSeed, 4, 2, 16, 1, 0.5f);
         sellToUser(seeds, ItemRegistry.blackBeanSeed, 4, 2, 16, 1, 0.5f);
@@ -151,15 +147,15 @@ public class CroptopiaVillagerTrades {
         sellToUser(seeds, ItemRegistry.zucchiniSeed, 4, 2, 16, 1, 0.5f);
         sellToUser(seeds, ItemRegistry.mustardSeed, 4, 2, 16, 1, 0.5f);
         sellToUser(seeds, ItemRegistry.chilePepperSeed, 4, 2, 16, 1, 0.5f);
-        sellToUser(seeds, ItemRegistry.turmericSeed, 4, 2, 16, 1, 0.5f);*/
+        sellToUser(seeds, ItemRegistry.turmericSeed, 4, 2, 16, 1, 0.5f);*//*
         //event.getGenericTrades().addAll(seeds);
-    }
+    }*/
 
-    private static void buyFromUser(List<VillagerTrades.ItemListing> factory, ItemLike item, int itemCount, int tradeXP, int maxTrades, float priceMultiplier) {
+    /*private static void buyFromUser(List<VillagerTrades.ItemListing> factory, ItemLike item, int itemCount, int tradeXP, int maxTrades, float priceMultiplier) {
         //factory.add((entity, random) -> new MerchantOffer(new ItemStack(item, itemCount), new ItemStack(Items.EMERALD), maxTrades, tradeXP, priceMultiplier));
     }
 
     private static void sellToUser(List<VillagerTrades.ItemListing> factory, ItemLike item, int itemCount, int purchaseAmount, int maxTrades, int tradeXP, float priceMultiplier) {
         //factory.add((entity, random) -> new MerchantOffer(new ItemStack(Items.EMERALD, purchaseAmount), new ItemStack(item, itemCount), maxTrades, tradeXP, priceMultiplier));
-    }
+    }*/
 }

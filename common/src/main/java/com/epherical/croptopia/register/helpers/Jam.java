@@ -44,8 +44,8 @@ public class Jam implements ItemLike {
     }
 
     public void registerItem(RegisterFunction<Item> register) {
-        item = register.register(createIdentifier(name), () ->
-                new Drink(createGroup().craftRemainder(Items.GLASS_BOTTLE).food(createBuilder(JAM_3).alwaysEdible().build())));
+        item = register.register(createIdentifier(name), (id) ->
+                new Drink(createGroup(id).craftRemainder(Items.GLASS_BOTTLE).food(createBuilder(JAM_3).alwaysEdible().build())));
     }
 
     public static List<Jam> copy() {

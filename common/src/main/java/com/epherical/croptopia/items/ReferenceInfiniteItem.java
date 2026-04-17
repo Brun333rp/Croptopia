@@ -1,16 +1,13 @@
 package com.epherical.croptopia.items;
 
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.TooltipDisplay;
 
-import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
 
 public class ReferenceInfiniteItem extends Item {
 
@@ -18,6 +15,7 @@ public class ReferenceInfiniteItem extends Item {
     private int index = 0;
 
     private final Random random = new Random();
+
     public ReferenceInfiniteItem(Properties properties, Component... component) {
         super(properties);
         this.component = component;
@@ -25,17 +23,17 @@ public class ReferenceInfiniteItem extends Item {
     }
 
 
-    @Override
+    /*@Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
         FoodProperties foodproperties = stack.get(DataComponents.FOOD);
         ItemStack itemStack = stack.transmuteCopy(stack.getItem());
         livingEntity.eat(level, itemStack, foodproperties);
         return stack;
-    }
+    }*/
 
     @Override
-    public void appendHoverText(ItemStack item, TooltipContext level, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(item, level, tooltip, flag);
-        tooltip.add(component[index]);
+    public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+        super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        builder.accept(component[index]);
     }
 }

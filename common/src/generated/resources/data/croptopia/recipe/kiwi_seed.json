@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:kiwis"
-    }
+    "#c:kiwis"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:kiwi_seed"
   }
 }

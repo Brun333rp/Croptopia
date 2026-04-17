@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:salsa"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tomatoes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:tomatoes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tomatoes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:salsa"
+    ]
+  }
+}

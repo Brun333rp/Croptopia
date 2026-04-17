@@ -18,29 +18,27 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
+import net.minecraft.data.tags.TagAppender;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagEntry;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
 import static com.epherical.croptopia.CroptopiaNeoForge.MODID;
 
-public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
+public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
 
     public CroptopiaIndependentItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                                               CompletableFuture<TagLookup<Item>> parentProvider,
-                                               CompletableFuture<TagLookup<Block>> blockTags,
-                                               @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, parentProvider, blockTags, MODID, existingFileHelper);
+                                               CompletableFuture<TagsProvider.TagLookup<Item>> parentProvider) {
+        super(output, Registries.ITEM, lookupProvider, parentProvider, item -> item.builtInRegistryHolder().key(), MODID);
     }
 
     @Override
@@ -49,7 +47,7 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider arg) {
+    protected void addTags(HolderLookup.@NonNull Provider arg) {
         generateCrops(arg);
         generateSeedsSaplings();
         generateOtherEnums(arg);
@@ -64,16 +62,16 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
             }
         }
         for (TreeCrop crop : TreeCrop.TREE_CROPS) {
-            createCategoryTag(crop.getTagCategory().getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(),arg);
+            createCategoryTag(crop.getTagCategory().getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(), arg);
             if (crop.getTagCategory() != TagCategory.CROPS) { // don't double only-crops
-                createCategoryTag(TagCategory.CROPS.getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(),arg);
+                createCategoryTag(TagCategory.CROPS.getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(), arg);
             }
             if (crop.getTagCategory() == TagCategory.NUTS) { // nuts are fruits
-                createCategoryTag(TagCategory.FRUITS.getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(),arg);
+                createCategoryTag(TagCategory.FRUITS.getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(), arg);
             }
         }
         for (Tree crop : Tree.copy()) {
-            createCategoryTag(crop.getTagCategory().getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(),arg);
+            createCategoryTag(crop.getTagCategory().getLowerCaseName(), PluralInfo.plural(crop.getLowercaseName(), crop.hasPlural()), crop.asItem(), arg);
         }
         // the following four are all done above with a category tag of crops I believe
 
@@ -269,28 +267,28 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
         createGeneralTag("sweet_crepes", Content.SWEET_CREPES);
         createGeneralTag("the_big_breakfast", Content.THE_BIG_BREAKFAST);
 
-        this.tag(register("water_bottles")).add((Content.WATER_BOTTLE)).add((Items.WATER_BUCKET)).addOptional(ResourceLocation.parse("early_buckets:wooden_water_bucket"));
-        this.tag(register("milks")).add((Content.MILK_BOTTLE)).add((Content.SOY_MILK)).add((Items.MILK_BUCKET)).addOptionalTag(independentTag("milk_buckets"));
+        this.tag(register("water_bottles")).add((Content.WATER_BOTTLE)).add((Items.WATER_BUCKET)).add(TagEntry.optionalElement(Identifier.parse("early_buckets:wooden_water_bucket")));
+        this.tag(register("milks")).add((Content.MILK_BOTTLE)).add((Content.SOY_MILK)).add((Items.MILK_BUCKET)).add(TagEntry.optionalTag(independentTag("milk_buckets")));
         this.tag(register("potatoes")).add((Items.POTATO)).add((Content.SWEETPOTATO.asItem()));
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", id));
+        return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", id));
     }
 
     private void createCategoryTag(String category, String name, Item item, HolderLookup.Provider arg) {
-        String path = (item).builtInRegistryHolder().key().location().getPath();
+        String path = (item).builtInRegistryHolder().key().identifier().getPath();
         TagKey<Item> forgeFriendlyTag = register(category + "/" + path);
-        ResourceLocation independentEntry = independentTag(category + "/" + path);
+        Identifier independentEntry = independentTag(category + "/" + path);
         this.tag(forgeFriendlyTag).add(item); // 1. this is ... "c":vegetables/artichoke if represented in the file, otherwise c/vegetables/artichoke.json
 
         this.tag(register(name)).add(item).add(TagEntry.tag(independentEntry)); // 2. this is ... "c": croptopia:artichoke or // c/artichokes.json
 
-        ResourceLocation entryForGroup = independentTag(name);
+        Identifier entryForGroup = independentTag(name);
         this.tag(register(category)).add(TagEntry.tag(entryForGroup));
     }
 
-    private IntrinsicTagAppender<Item> createGeneralTag(String name, Item item) {
+    private TagAppender<Item, Item> createGeneralTag(String name, Item item) {
         TagKey<Item> pluralTag = register(name);
         FoodProperties foodProperties = item.components().get(DataComponents.FOOD);
         if (foodProperties != null) {
@@ -299,7 +297,7 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
         return this.tag(pluralTag).add(item);
     }
 
-/**
+    /**
      * Special method for forge/fabric differentiations.
      * Forge conventions are sapling:"saplingName" without "sapling" appended ex: forge:saplings/apple
      * In fabric we would just do c:apple_saplings
@@ -311,14 +309,14 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
     private void createSeedSaplingTag(String category, String name, Item item, boolean tree) {
         String pluralSeedName;
         if (item == Content.VANILLA.getSeedItem()) {
-            pluralSeedName = (item).builtInRegistryHolder().key().location().getPath();
+            pluralSeedName = (item).builtInRegistryHolder().key().identifier().getPath();
         } else {
-            pluralSeedName = (item).builtInRegistryHolder().key().location().getPath() + "s";
+            pluralSeedName = (item).builtInRegistryHolder().key().identifier().getPath() + "s";
         }
 
         // Forge tags use seed/cropname, but not including seed name. artichoke good artichoke_seed bad.
         TagKey<Item> forgeFriendlyTag = register(category + "/" + name);
-        ResourceLocation independentEntry = independentTag(category + "/" + name);
+        Identifier independentEntry = independentTag(category + "/" + name);
 
         this.tag(forgeFriendlyTag).add((item));
         this.tag(register(category)).add(TagEntry.tag(independentEntry));
@@ -326,8 +324,8 @@ public class CroptopiaIndependentItemTagProvider extends ItemTagsProvider {
         this.tag(register(pluralSeedName)).add((item)).add(TagEntry.tag(independentEntry));
     }
 
-    private ResourceLocation independentTag(String name) {
-        return ResourceLocation.fromNamespaceAndPath("c", name);
+    private Identifier independentTag(String name) {
+        return Identifier.fromNamespaceAndPath("c", name);
     }
 }
 

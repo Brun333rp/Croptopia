@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sauces": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#croptopia:sauces"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:saucy_chips"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sauces"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:saucy_chips"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "croptopia:cooking_pot",
+    "#c:water_bottles",
+    "#c:salts",
+    "#c:flour"
+  ],
+  "result": {
+    "id": "croptopia:noodle"
+  }
+}

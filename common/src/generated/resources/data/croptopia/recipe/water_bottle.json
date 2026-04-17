@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:water_bucket",
+    "2": "minecraft:glass"
+  },
+  "pattern": [
+    "   ",
+    "212",
+    " 2 "
+  ],
+  "result": {
+    "count": 16,
+    "id": "croptopia:water_bottle"
+  }
+}

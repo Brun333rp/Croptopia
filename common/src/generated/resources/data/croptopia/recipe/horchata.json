@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:rice",
+    "#c:almonds",
+    "#c:limes",
+    "#c:water_bottles",
+    "minecraft:sugar",
+    "croptopia:cinnamon"
+  ],
+  "result": {
+    "id": "croptopia:horchata"
+  }
+}

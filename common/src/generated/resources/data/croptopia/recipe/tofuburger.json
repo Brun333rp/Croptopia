@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "#c:lettuce",
+    "croptopia:frying_pan",
+    "#c:tofu",
+    "#c:onions"
+  ],
+  "result": {
+    "id": "croptopia:tofuburger"
+  }
+}

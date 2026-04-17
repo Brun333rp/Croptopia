@@ -14,6 +14,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -48,7 +49,7 @@ public class LeafCropBlock extends CroptopiaCropBlock {
 
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader $$0, BlockPos $$1, BlockState $$2) {
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(this);
     }
 
@@ -63,10 +64,12 @@ public class LeafCropBlock extends CroptopiaCropBlock {
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos) {
-        int distance = getDistanceFromLog(neighborState) + 1;
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess ticks, BlockPos pos,
+                                     Direction directionToNeighbour, BlockPos neighbourPos, BlockState neighbourState, RandomSource random) {
+
+        int distance = getDistanceFromLog(neighbourState) + 1;
         if (distance != 1 || state.getValue(DISTANCE) != distance) {
-            world.scheduleTick(pos, this, 1);
+            ticks.scheduleTick(pos, this, 1);
         }
 
         return state;
@@ -149,8 +152,9 @@ public class LeafCropBlock extends CroptopiaCropBlock {
         world.setBlock(pos, updateDistanceFromLogs(state, world, pos), Block.UPDATE_ALL);
     }
 
+
     @Override
-    public int getLightBlock(BlockState state, BlockGetter world, BlockPos pos) {
+    protected int getLightDampening(BlockState state) {
         return 1;
     }
 

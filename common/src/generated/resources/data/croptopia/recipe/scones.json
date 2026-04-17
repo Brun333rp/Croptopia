@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "croptopia:frying_pan",
+    "2": "#c:flour",
+    "3": "#c:salts",
+    "4": "minecraft:sugar",
+    "5": "minecraft:egg",
+    "6": "#c:vanilla",
+    "7": "#c:blueberries"
+  },
+  "pattern": [
+    "567",
+    "234",
+    " 1 "
+  ],
+  "result": {
+    "count": 2,
+    "id": "croptopia:scones"
+  }
+}

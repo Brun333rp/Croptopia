@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:doughs",
+    "#c:cheeses",
+    "#c:tomatoes",
+    "#c:bellpeppers",
+    "#c:olives",
+    "#croptopia:meat_replacements",
+    "croptopia:frying_pan"
+  ],
+  "result": {
+    "id": "croptopia:supreme_pizza"
+  }
+}

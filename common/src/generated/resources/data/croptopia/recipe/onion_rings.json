@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:onions",
+    "croptopia:cooking_pot",
+    "#c:salts",
+    "#c:olive_oils",
+    "#c:flour"
+  ],
+  "result": {
+    "id": "croptopia:onion_rings"
+  }
+}

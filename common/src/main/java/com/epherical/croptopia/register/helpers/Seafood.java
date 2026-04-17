@@ -7,6 +7,8 @@ import com.epherical.croptopia.util.RegisterFunction;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,12 +50,14 @@ public class Seafood implements ItemConvertibleWithPlural {
     }
 
     public void registerItem(RegisterFunction<Item> register, FoodConstructor foodConstructor) {
-        item = register.register(createIdentifier(name), () -> {
+        item = register.register(createIdentifier(name), (id) -> {
             if (name.contains("GLOWING")) {
-                return new Item(createGroup().food(FoodConstructor.createBuilder(foodConstructor)
-                        .effect(new MobEffectInstance(MobEffects.GLOWING, 4000, 1), 1.0F).build()));
+                return new Item(createGroup(id).food(FoodConstructor.createBuilder(foodConstructor).build(),
+                        Consumable.builder()
+                                .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.GLOWING, 4000, 1), 1.0F))
+                                .build()));
             } else {
-                return new Item(createGroup().food(FoodConstructor.createFood(foodConstructor)));
+                return new Item(createGroup(id).food(FoodConstructor.createFood(foodConstructor)));
             }
         });
     }

@@ -1,16 +1,10 @@
 package com.epherical.croptopia.client;
 
 import com.epherical.croptopia.register.helpers.TreeCrop;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.client.color.item.ItemColor;
-import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.client.color.block.BlockTintSource;
+import net.minecraft.client.color.block.BlockTintSources;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Consumer;
 
@@ -19,19 +13,16 @@ import static com.epherical.croptopia.CroptopiaCommon.leafBlocks;
 
 public class ClientFunctions {
 
-    public BlockColor registerLeafColors() {
-        return (state, world, pos, tintIndex) ->
-                world != null && pos != null
-                        ? BiomeColors.getAverageFoliageColor(world, pos)
-                        : FoliageColor.getDefaultColor();
+    public BlockTintSource registerLeafColors() {
+        return BlockTintSources.foliage();
     }
 
-    public ItemColor registerItemColors() {
+    /*public ItemColor registerItemColors() {
         return (stack, tintIndex) -> {
             BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
             return Minecraft.getInstance().getBlockColors().getColor(blockstate, null, null, tintIndex);
         };
-    }
+    }*/
 
     public Block[] leaves() {
         return leafBlocks.toArray(Block[]::new);

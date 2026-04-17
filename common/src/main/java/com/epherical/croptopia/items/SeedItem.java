@@ -5,17 +5,17 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 import static com.epherical.croptopia.common.Tags.FARMLANDS;
 
-public class SeedItem extends ItemNameBlockItem {
+public class SeedItem extends BlockItem {
 
     private TagKey<Biome> category;
 
@@ -32,7 +32,7 @@ public class SeedItem extends ItemNameBlockItem {
         BlockPos hitPos = context.getClickedPos();
         Level world = context.getLevel();
         BlockState state = world.getBlockState(hitPos);
-        if (state.is(FARMLANDS) || state.is(FARMLANDS) || (state.getBlock() instanceof FarmBlock && context.getClickedFace() == Direction.UP)) {
+        if (state.is(FARMLANDS) || state.is(FARMLANDS) || (state.getBlock() instanceof FarmlandBlock && context.getClickedFace() == Direction.UP)) {
             return super.useOn(context);
         }
         return InteractionResult.FAIL;

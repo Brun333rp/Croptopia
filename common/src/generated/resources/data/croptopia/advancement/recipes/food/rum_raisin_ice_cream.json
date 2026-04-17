@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_milks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:milks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:rum_raisin_ice_cream"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_milks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:rum_raisin_ice_cream"
+    ]
+  }
+}

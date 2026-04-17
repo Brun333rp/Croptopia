@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:fruits",
+    "2": "minecraft:sugar",
+    "3": "#c:lemons",
+    "4": "#c:pecans",
+    "5": "croptopia:cinnamon",
+    "6": "#c:salts",
+    "7": "#c:nutmegs",
+    "8": "minecraft:egg"
+  },
+  "pattern": [
+    "61 ",
+    "324",
+    "857"
+  ],
+  "result": {
+    "count": 3,
+    "id": "croptopia:fruit_cake"
+  }
+}

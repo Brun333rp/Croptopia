@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:milks",
+    "minecraft:sugar",
+    "#c:flour",
+    "croptopia:cinnamon"
+  ],
+  "result": {
+    "count": 3,
+    "id": "croptopia:churros"
+  }
+}

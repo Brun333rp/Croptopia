@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:egg",
+    "2": "#c:eggplants",
+    "3": "#c:olive_oils",
+    "4": "croptopia:pepper",
+    "5": "#c:cheeses",
+    "6": "#c:basil",
+    "7": "minecraft:bread"
+  },
+  "pattern": [
+    "61 ",
+    "324",
+    " 57"
+  ],
+  "result": {
+    "id": "croptopia:eggplant_parmesan"
+  }
+}

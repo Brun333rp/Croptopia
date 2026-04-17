@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "croptopia:peanut_butter",
+    "2": "#c:celery"
+  },
+  "pattern": [
+    " 2",
+    "1 "
+  ],
+  "result": {
+    "id": "croptopia:peanut_butter_with_celery"
+  }
+}

@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:asparagus"
-    }
+    "#c:asparagus"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:asparagus_seed"
   }
 }

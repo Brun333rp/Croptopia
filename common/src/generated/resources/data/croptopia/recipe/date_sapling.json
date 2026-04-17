@@ -2,18 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:dates"
-    },
-    {
-      "tag": "c:dates"
-    },
-    {
-      "tag": "minecraft:saplings"
-    }
+    "#c:dates",
+    "#c:dates",
+    "#minecraft:saplings"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:date_sapling"
   }
 }

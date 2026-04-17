@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lettuce": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:lettuce"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:veggie_salad"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lettuce"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:veggie_salad"
+    ]
+  }
+}

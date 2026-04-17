@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "item": "minecraft:egg"
-    },
-    "2": {
-      "tag": "c:salts"
-    },
-    "3": {
-      "item": "minecraft:sugar"
-    },
-    "4": {
-      "tag": "c:vanilla"
-    }
+    "1": "minecraft:egg",
+    "2": "#c:salts",
+    "3": "minecraft:sugar",
+    "4": "#c:vanilla"
   },
   "pattern": [
     "243",

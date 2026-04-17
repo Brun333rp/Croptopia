@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:broccoli",
+    "2": "#c:olive_oils",
+    "3": "#c:garlic",
+    "4": "minecraft:beef",
+    "5": "#c:soy_sauces",
+    "6": "minecraft:carrot"
+  },
+  "pattern": [
+    "164",
+    "253"
+  ],
+  "result": {
+    "id": "croptopia:beef_stir_fry"
+  }
+}

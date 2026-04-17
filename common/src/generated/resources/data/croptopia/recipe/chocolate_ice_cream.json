@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:egg",
+    "2": "#c:chocolates",
+    "3": "#c:milk_bottles",
+    "4": "minecraft:sugar",
+    "5": "croptopia:cooking_pot"
+  },
+  "pattern": [
+    " 1 ",
+    "324",
+    " 5 "
+  ],
+  "result": {
+    "id": "croptopia:chocolate_ice_cream"
+  }
+}

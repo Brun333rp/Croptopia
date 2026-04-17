@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:bellpeppers"
-    }
+    "#c:bellpeppers"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:bellpepper_seed"
   }
 }

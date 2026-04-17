@@ -2,18 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:grapefruits"
-    },
-    {
-      "tag": "c:grapefruits"
-    },
-    {
-      "tag": "minecraft:saplings"
-    }
+    "#c:grapefruits",
+    "#c:grapefruits",
+    "#minecraft:saplings"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:grapefruit_sapling"
   }
 }

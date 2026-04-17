@@ -14,8 +14,10 @@ import com.epherical.croptopia.util.RegisterFunction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -118,7 +120,7 @@ public class FarmlandCrop implements ItemConvertibleWithPlural, BlockConvertible
     }*/
 
     public void registerBlock(RegisterFunction<Block> register) {
-        this.cropBlock = register.register(createIdentifier(this.name + "_crop"), () -> new CroptopiaCropBlock(createCropSettings()));
+        this.cropBlock = register.register(createIdentifier(this.name + "_crop"), (id) -> new CroptopiaCropBlock(createCropSettings(id)));
         CroptopiaCommon.cropBlocks.add(this.asBlock());
     }
 
@@ -136,17 +138,17 @@ public class FarmlandCrop implements ItemConvertibleWithPlural, BlockConvertible
     }*/
 
     public void registerItem(RegisterFunction<Item> register) {
-        this.cropItem = register.register(createIdentifier(this.dropName), () -> {
+        this.cropItem = register.register(createIdentifier(this.dropName), (id) -> {
             if (registry == null) {
-                return new CropItem(createGroup());
+                return new CropItem(createGroup(id));
             } else {
-                return new CropItem(createGroup().food(createFood(registry)));
+                return new CropItem(createGroup(id).food(createFood(registry)));
             }
         });
         if (this.name().equals(ItemNamesV2.VANILLA)) {
-            this.seedItem = register.register(createIdentifier(this.name + "_seeds"), () -> new SeedItem(cropBlock, createGroup(), biomes));
+            this.seedItem = register.register(createIdentifier(this.name + "_seeds"), (id) -> new SeedItem(cropBlock, createGroup(id).useItemDescriptionPrefix(), biomes));
         } else {
-            this.seedItem = register.register(createIdentifier(this.name + "_seed"), () -> new SeedItem(cropBlock, createGroup(), biomes));
+            this.seedItem = register.register(createIdentifier(this.name + "_seed"), (id) -> new SeedItem(cropBlock, createGroup(id).useItemDescriptionPrefix(), biomes));
         }
         cropItems.add(this.asItem());
         seeds.add(this.seedItem);

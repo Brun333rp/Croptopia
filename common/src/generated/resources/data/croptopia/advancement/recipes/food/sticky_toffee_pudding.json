@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:sticky_toffee_pudding"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_waterbottles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:water_bottles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_waterbottles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:sticky_toffee_pudding"
+    ]
+  }
+}

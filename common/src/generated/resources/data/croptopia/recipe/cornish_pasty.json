@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "croptopia:frying_pan",
+    "2": "#c:flour",
+    "3": "minecraft:beef",
+    "4": "minecraft:potato",
+    "5": "#c:onions",
+    "6": "#c:rutabagas",
+    "7": "croptopia:pepper"
+  },
+  "pattern": [
+    "567",
+    "234",
+    " 1 "
+  ],
+  "result": {
+    "id": "croptopia:cornish_pasty"
+  }
+}

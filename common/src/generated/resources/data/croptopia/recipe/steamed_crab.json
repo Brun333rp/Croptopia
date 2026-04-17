@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "tag": "c:crabs"
-    },
-    "2": {
-      "tag": "c:water_bottles"
-    },
-    "3": {
-      "item": "croptopia:cooking_pot"
-    }
+    "1": "#c:crabs",
+    "2": "#c:water_bottles",
+    "3": "croptopia:cooking_pot"
   },
   "pattern": [
     "1",
@@ -18,7 +12,6 @@
     "3"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:steamed_crab"
   }
 }

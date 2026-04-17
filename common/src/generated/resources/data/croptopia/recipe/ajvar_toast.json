@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "croptopia:ajvar",
+    "2": "croptopia:toast"
+  },
+  "pattern": [
+    "1",
+    "2"
+  ],
+  "result": {
+    "id": "croptopia:ajvar_toast"
+  }
+}

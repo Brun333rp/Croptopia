@@ -9,19 +9,20 @@ import com.epherical.croptopia.register.helpers.TreeCrop;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
 
 import java.util.List;
@@ -29,7 +30,8 @@ import java.util.List;
 public class CroptopiaWorldGeneration {
 
 
-    public CroptopiaWorldGeneration() {}
+    public CroptopiaWorldGeneration() {
+    }
 
 
     public void addConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -60,7 +62,10 @@ public class CroptopiaWorldGeneration {
                 NoiseThresholdCountPlacement.of(-0.7, 0, 8),
                 RarityFilter.onAverageOnceEvery(5),
                 InSquarePlacement.spread(),
+                CountPlacement.of(6),
+                RandomOffsetPlacement.horizontal(UniformInt.of(-3, 3)),
                 PlacementUtils.HEIGHTMAP,
+                PlacementUtils.isEmpty(),
                 BiomeFilter.biome());
     }
 
@@ -68,8 +73,7 @@ public class CroptopiaWorldGeneration {
         return new SimpleBlockConfiguration(SimpleStateProvider.simple(block.defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7)));
     }
 
-    private ConfiguredFeature<RandomPatchConfiguration,?> createCropPatch(Block block) {
-        return new ConfiguredFeature<>(Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(6,
-                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, createCropConfiguration(block))));
+    private ConfiguredFeature<SimpleBlockConfiguration, ?> createCropPatch(Block block) {
+        return new ConfiguredFeature<>(Feature.SIMPLE_BLOCK, createCropConfiguration(block));
     }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lemons": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:lemons"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:stuffed_artichoke"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lemons"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:stuffed_artichoke"
+    ]
+  }
+}

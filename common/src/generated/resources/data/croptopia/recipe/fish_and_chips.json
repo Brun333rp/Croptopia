@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:potato",
+    "2": "#c:salts",
+    "3": "croptopia:pepper",
+    "4": "#c:flour",
+    "5": "#croptopia:fishes",
+    "F": "croptopia:frying_pan"
+  },
+  "pattern": [
+    " 4 ",
+    "2F3",
+    "51 "
+  ],
+  "result": {
+    "id": "croptopia:fish_and_chips"
+  }
+}

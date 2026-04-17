@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:barley"
-    }
+    "#c:barley"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:barley_seed"
   }
 }

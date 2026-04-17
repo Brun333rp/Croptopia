@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-15T17:42:24.8250373	Loot Tables
+// 26.1	2026-04-16T17:24:45.1556251	Loot Tables
 35eced2d7928a1240d5d9246e518f56438fa1d33 data/croptopia/loot_table/blocks/almond_crop.json
 8e42a1453e5e83bbe99d3ba599a3ef4f9172bba6 data/croptopia/loot_table/blocks/almond_sapling.json
 7e5931c928841486e85edf2811420c88dea9adba data/croptopia/loot_table/blocks/apple_crop.json
@@ -27,7 +27,7 @@ cb9f6e4946565c50e3bba242777b70e64662c3a2 data/croptopia/loot_table/blocks/caulif
 d49224de7578f87e19094a67ae4ff0249aa75c84 data/croptopia/loot_table/blocks/cherry_crop.json
 a7bdcb0679d287a2a59ae2332e1ce9918d0521d7 data/croptopia/loot_table/blocks/cherry_sapling.json
 dee0bc649599664d060e276deab2dec91cdfd8a1 data/croptopia/loot_table/blocks/chile_pepper_crop.json
-8e2bb5568fc9679ea671aeb16358bbebfcdb495e data/croptopia/loot_table/blocks/cinnamon_leaves.json
+1eeb4e3cd712485e0c013e218530bacccce6af0b data/croptopia/loot_table/blocks/cinnamon_leaves.json
 6198ba9b1d9a6e56135b1f1d2a06c74435430391 data/croptopia/loot_table/blocks/cinnamon_log.json
 58f5129c0ebad34c73f35f6ebbefc49e67a141b6 data/croptopia/loot_table/blocks/cinnamon_sapling.json
 9554a4026f14f6d0c819e73e6f19835c4e272efb data/croptopia/loot_table/blocks/cinnamon_wood.json

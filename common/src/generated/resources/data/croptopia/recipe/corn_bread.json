@@ -2,15 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "tag": "c:corn"
-    }
+    "1": "#c:corn"
   },
   "pattern": [
     "111"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:corn_bread"
   }
 }

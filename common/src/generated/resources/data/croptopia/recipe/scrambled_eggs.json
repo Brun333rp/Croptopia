@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "croptopia:frying_pan",
+    "minecraft:egg",
+    "#c:cheeses"
+  ],
+  "result": {
+    "id": "croptopia:scrambled_eggs"
+  }
+}

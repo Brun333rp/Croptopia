@@ -2,18 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:peaches"
-    },
-    {
-      "tag": "c:peaches"
-    },
-    {
-      "tag": "minecraft:saplings"
-    }
+    "#c:peaches",
+    "#c:peaches",
+    "#minecraft:saplings"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:peach_sapling"
   }
 }

@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:turnips"
-    }
+    "#c:turnips"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:turnip_seed"
   }
 }

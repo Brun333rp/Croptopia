@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:rice",
+    "croptopia:cooking_pot",
+    "#c:salts",
+    "#c:water_bottles"
+  ],
+  "result": {
+    "id": "croptopia:steamed_rice"
+  }
+}

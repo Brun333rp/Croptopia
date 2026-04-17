@@ -2,18 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:plums"
-    },
-    {
-      "tag": "c:plums"
-    },
-    {
-      "tag": "minecraft:saplings"
-    }
+    "#c:plums",
+    "#c:plums",
+    "#minecraft:saplings"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:plum_sapling"
   }
 }

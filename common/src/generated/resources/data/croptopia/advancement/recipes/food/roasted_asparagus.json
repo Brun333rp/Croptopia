@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_asparagus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:asparagus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:roasted_asparagus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_asparagus"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:roasted_asparagus"
+    ]
+  }
+}

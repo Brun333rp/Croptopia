@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "tag": "c:butters"
-    },
-    "2": {
-      "tag": "c:garlic"
-    },
-    "3": {
-      "tag": "c:salts"
-    },
-    "4": {
-      "item": "croptopia:pepper"
-    },
-    "5": {
-      "tag": "c:clams"
-    },
-    "7": {
-      "item": "croptopia:frying_pan"
-    }
+    "1": "#c:butters",
+    "2": "#c:garlic",
+    "3": "#c:salts",
+    "4": "croptopia:pepper",
+    "5": "#c:clams",
+    "7": "croptopia:frying_pan"
   },
   "pattern": [
     "123",

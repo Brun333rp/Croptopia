@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:roasted_turnips"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_turnips": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:turnips"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_turnips"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:roasted_turnips"
+    ]
+  }
+}

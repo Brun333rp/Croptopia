@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gingers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:gingers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:buttered_green_beans"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gingers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:buttered_green_beans"
+    ]
+  }
+}

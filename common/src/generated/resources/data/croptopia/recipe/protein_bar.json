@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:nuts",
+    "#c:nuts",
+    "minecraft:sugar",
+    "#c:caramel",
+    "#c:chocolates",
+    "#c:salts"
+  ],
+  "result": {
+    "count": 3,
+    "id": "croptopia:protein_bar"
+  }
+}

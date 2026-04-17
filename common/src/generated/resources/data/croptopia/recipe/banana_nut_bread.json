@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "croptopia:cinnamon"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "tag": "c:flour"
-    },
-    {
-      "tag": "c:bananas"
-    },
-    {
-      "tag": "c:nuts"
-    }
+    "croptopia:cinnamon",
+    "minecraft:sugar",
+    "#c:flour",
+    "#c:bananas",
+    "#c:nuts"
   ],
   "result": {
     "count": 2,

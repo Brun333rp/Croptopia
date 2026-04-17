@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:corn",
+    "#c:corn",
+    "#c:corn",
+    "#c:corn"
+  ],
+  "result": {
+    "count": 8,
+    "id": "croptopia:corn_husk"
+  }
+}

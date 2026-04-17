@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:elderberries"
-    }
+    "#c:elderberries"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:elderberry_seed"
   }
 }

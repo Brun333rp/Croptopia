@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:honeydew"
-    }
+    "#c:honeydew"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:honeydew_seed"
   }
 }

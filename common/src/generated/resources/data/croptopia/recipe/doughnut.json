@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:flour",
+    "#c:flour",
+    "#c:milks",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "croptopia:doughnut"
+  }
+}

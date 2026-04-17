@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "item": "minecraft:nether_star"
-    },
-    "2": {
-      "item": "croptopia:dough"
-    },
-    "4": {
-      "item": "minecraft:sugar"
-    }
+    "1": "minecraft:nether_star",
+    "2": "croptopia:dough",
+    "4": "minecraft:sugar"
   },
   "pattern": [
     " 1 ",
@@ -18,7 +12,6 @@
     "444"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:nether_star_cake"
   }
 }

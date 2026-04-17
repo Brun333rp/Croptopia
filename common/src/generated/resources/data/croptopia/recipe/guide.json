@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:crops",
+    "#c:crops",
+    "minecraft:book"
+  ],
+  "result": {
+    "id": "croptopia:guide"
+  }
+}

@@ -1,13 +1,10 @@
 {
   "type": "minecraft:smelting",
-  "category": "misc",
+  "category": "food",
   "cookingtime": 800,
   "experience": 0.1,
-  "ingredient": {
-    "item": "croptopia:water_bottle"
-  },
+  "ingredient": "croptopia:water_bottle",
   "result": {
-    "count": 1,
     "id": "croptopia:salt"
   }
 }

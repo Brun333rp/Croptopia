@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:tea"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_water_bottles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:water_bottles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_water_bottles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:tea"
+    ]
+  }
+}

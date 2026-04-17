@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bowl",
+    "#c:cucumbers",
+    "#c:lettuce",
+    "#c:spinach"
+  ],
+  "result": {
+    "id": "croptopia:cucumber_salad"
+  }
+}

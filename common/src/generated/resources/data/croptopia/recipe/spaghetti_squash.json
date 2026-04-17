@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:squashes",
+    "#c:chile_peppers",
+    "#c:olive_oils",
+    "croptopia:frying_pan"
+  ],
+  "result": {
+    "id": "croptopia:spaghetti_squash"
+  }
+}

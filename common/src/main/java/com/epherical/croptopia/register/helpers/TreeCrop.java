@@ -13,7 +13,7 @@ import com.epherical.croptopia.util.FoodConstructor;
 import com.epherical.croptopia.util.ItemConvertibleWithPlural;
 import com.epherical.croptopia.util.RegisterFunction;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -164,17 +164,17 @@ public class TreeCrop implements ItemConvertibleWithPlural, BlockConvertible {
 
     public void registerItem(RegisterFunction<Item> register) {
         if (!Objects.equals(name(), ItemNamesV2.APPLE)) {
-            item = register.register(createIdentifier(name()), () -> new CropItem(createGroup().food(createFood(constructor))));
+            item = register.register(createIdentifier(name()), (id) -> new CropItem(createGroup(id).food(createFood(constructor))));
             cropItems.add(asItem());
         } else {
             item = Items.APPLE;
         }
-        saplingItem = register.register(createIdentifier(name() + "_sapling"), () -> new CroptopiaSaplingItem(saplingBlock, leaves, leafType, createGroup()));
-        leavesItem = register.register(createIdentifier(name() + "_crop"), () -> new BlockItem(leaves, createGroup()));
+        saplingItem = register.register(createIdentifier(name() + "_sapling"), (id) -> new CroptopiaSaplingItem(saplingBlock, leaves, leafType, createGroup(id).useItemDescriptionPrefix()));
+        leavesItem = register.register(createIdentifier(name() + "_crop"), (id) -> new BlockItem(leaves, createGroup(id)));
     }
 
     public void registerBlock(RegisterFunction<Block> register) {
-        saplingBlock = register.register(createIdentifier(name() + "_sapling"), () -> new CroptopiaSaplingBlock(createTree(configuredFeatureKey), createSaplingSettings()));
+        saplingBlock = register.register(createIdentifier(name() + "_sapling"), (id) -> new CroptopiaSaplingBlock(createTree(configuredFeatureKey), createSaplingSettings(id)));
         leaves = register.register(createIdentifier(name() + "_crop"), CroptopiaCommon::createLeavesBlock);
 
         cropBlocks.add(asBlock());
@@ -183,7 +183,7 @@ public class TreeCrop implements ItemConvertibleWithPlural, BlockConvertible {
     }
 
     private static TreeGrower createTree(ResourceKey<ConfiguredFeature<?, ?>> key) {
-        return new TreeGrower(key.location().toString(), Optional.empty(), Optional.of(key), Optional.empty());
+        return new TreeGrower(key.identifier().toString(), Optional.empty(), Optional.of(key), Optional.empty());
     }
 
     public static List<TreeCrop> copy() {
@@ -194,7 +194,7 @@ public class TreeCrop implements ItemConvertibleWithPlural, BlockConvertible {
         return new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 SimpleStateProvider.simple(logType.defaultBlockState()),
                 new StraightTrunkPlacer(i, j, k),
-                new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(leafType.defaultBlockState(), 90).add(leafCrop.defaultBlockState().setValue(LeafCropBlock.AGE, 3), 20).build()),
+                new WeightedStateProvider(WeightedList.<BlockState>builder().add(leafType.defaultBlockState(), 90).add(leafCrop.defaultBlockState().setValue(LeafCropBlock.AGE, 3), 20).build()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
     }

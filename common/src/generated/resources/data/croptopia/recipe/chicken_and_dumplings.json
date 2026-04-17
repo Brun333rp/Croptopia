@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:doughs",
+    "#c:chile_peppers",
+    "minecraft:chicken",
+    "croptopia:cooking_pot"
+  ],
+  "result": {
+    "id": "croptopia:chicken_and_dumplings"
+  }
+}

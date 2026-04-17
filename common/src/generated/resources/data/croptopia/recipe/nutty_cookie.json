@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:nuts",
+    "#c:nuts",
+    "minecraft:sugar",
+    "#c:flour"
+  ],
+  "result": {
+    "count": 4,
+    "id": "croptopia:nutty_cookie"
+  }
+}

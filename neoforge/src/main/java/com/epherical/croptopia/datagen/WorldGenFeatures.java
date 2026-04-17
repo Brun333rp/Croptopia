@@ -8,11 +8,10 @@ import com.epherical.croptopia.register.helpers.TreeCrop;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,9 +20,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
-import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
@@ -32,6 +30,7 @@ import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.NoiseThresholdCountPlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.minecraft.world.level.levelgen.placement.SurfaceWaterDepthFilter;
 import net.minecraft.world.level.material.Fluids;
@@ -46,7 +45,7 @@ public class WorldGenFeatures {
     public static final Map<ResourceKey<PlacedFeature>, List<PlacementModifier>> datagenModifierLists = new HashMap<>();
 
     public static final SimpleBlockConfiguration config = (new SimpleBlockConfiguration(
-            new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder()
+            new WeightedStateProvider(WeightedList.<BlockState>builder()
                     .add(Content.ARTICHOKE.asBlock().defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7), 10)
                     .add(Content.ASPARAGUS.asBlock().defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7), 10)
                     .add(Content.BARLEY.asBlock().defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7), 10)
@@ -107,15 +106,17 @@ public class WorldGenFeatures {
                     .add(Content.TEA_LEAVES.asBlock().defaultBlockState().setValue(CroptopiaCropBlock.AGE, 7), 10)
                     .build())));
 
-    public static final ConfiguredFeature<RandomPatchConfiguration, ?> RANDOM_CROP = register(Feature.RANDOM_PATCH,
-            FeatureUtils.simpleRandomPatchConfiguration(6, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, config)));
+    public static final ConfiguredFeature<SimpleBlockConfiguration, ?> RANDOM_CROP = register(Feature.SIMPLE_BLOCK, config);
 
     public static final Holder<PlacedFeature> RANDOM_CROP_PLACED = register(PlacedFeatureKeys.ARTICHOKE_CROP_PLACED_KEY, RANDOM_CROP,
             CountPlacement.of(3),
             InSquarePlacement.spread(),
-            BiomeFilter.biome(),
+            CountPlacement.of(6),
+            RandomOffsetPlacement.horizontal(UniformInt.of(-3, 3)),
             NoiseThresholdCountPlacement.of(-0.8, 5, 10),
-            PlacementUtils.HEIGHTMAP_WORLD_SURFACE);
+            PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+            PlacementUtils.isEmpty(),
+            BiomeFilter.biome());
 
     public static final Holder<PlacedFeature> APPLE_TREE_CONFIGURED = register(PlacedFeatureKeys.APPLE_TREE_PLACED_KEY, Content.APPLE,
             RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(Blocks.OAK_SAPLING.defaultBlockState(), BlockPos.ZERO)), BiomeFilter.biome());
@@ -199,7 +200,7 @@ public class WorldGenFeatures {
             PlacementUtils.countExtra(1, 0.1F, 6), InSquarePlacement.spread(), SurfaceWaterDepthFilter.forMaxDepth(0), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(Blocks.OAK_SAPLING.defaultBlockState(), BlockPos.ZERO)), BiomeFilter.biome());
 
     public static final ConfiguredFeature<DiskConfiguration, ?> DISK_SALT = register(Feature.DISK,
-            ((new DiskConfiguration(RuleBasedBlockStateProvider.simple(Content.SALT_ORE_BLOCK),
+            ((new DiskConfiguration(BlockStateProvider.simple(Content.SALT_ORE_BLOCK),
                     BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.GRASS_BLOCK)),
                     UniformInt.of(2, 4), 2))));
 
@@ -215,19 +216,19 @@ public class WorldGenFeatures {
         return new ConfiguredFeature<>(feature, config);
     }
 
-    public static Holder<PlacedFeature> register(ResourceLocation id, ConfiguredFeature<?, ?> holder, List<PlacementModifier> modifiers) {
+    public static Holder<PlacedFeature> register(Identifier id, ConfiguredFeature<?, ?> holder, List<PlacementModifier> modifiers) {
         ResourceKey<PlacedFeature> key = ResourceKey.create(Registries.PLACED_FEATURE, id);
         return register(key, holder, modifiers);
     }
 
     public static Holder<PlacedFeature> register(ResourceKey<PlacedFeature> key, ConfiguredFeature<?, ?> holder, List<PlacementModifier> modifiers) {
-        keyMap.put(key.location().getPath(), key);
+        keyMap.put(key.identifier().getPath(), key);
         Holder<PlacedFeature> direct = Holder.direct(new PlacedFeature(Holder.direct(holder), modifiers));
         datagenModifierLists.put(key, modifiers);
         return direct;
     }
 
-    public static Holder<PlacedFeature> register(ResourceLocation id, ConfiguredFeature<?, ?> feature, PlacementModifier... modifiers) {
+    public static Holder<PlacedFeature> register(Identifier id, ConfiguredFeature<?, ?> feature, PlacementModifier... modifiers) {
         return register(id, feature, List.of(modifiers));
     }
 
@@ -243,7 +244,7 @@ public class WorldGenFeatures {
         return register(key, tree.getTreeGen(), List.of(modifiers));
     }
 
-    public static Holder<PlacedFeature> register(ResourceLocation id, TreeCrop crop, PlacementModifier... modifiers) {
+    public static Holder<PlacedFeature> register(Identifier id, TreeCrop crop, PlacementModifier... modifiers) {
         return register(id, crop.getTreeConfig(), List.of(modifiers));
     }
 

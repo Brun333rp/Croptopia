@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "item": "minecraft:egg"
-    },
-    "2": {
-      "tag": "c:flour"
-    },
-    "3": {
-      "tag": "c:milks"
-    },
-    "5": {
-      "tag": "c:spinach"
-    },
-    "6": {
-      "tag": "c:cheeses"
-    },
-    "7": {
-      "item": "croptopia:frying_pan"
-    }
+    "1": "minecraft:egg",
+    "2": "#c:flour",
+    "3": "#c:milks",
+    "5": "#c:spinach",
+    "6": "#c:cheeses",
+    "7": "croptopia:frying_pan"
   },
   "pattern": [
     "121",
@@ -27,7 +15,6 @@
     " 7 "
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:baked_crepes"
   }
 }

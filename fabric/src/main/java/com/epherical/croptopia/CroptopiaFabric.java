@@ -20,7 +20,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -54,7 +54,7 @@ public class CroptopiaFabric implements ModInitializer {
 
     private static void loadConfig() {
         //config.addSerializer(TreeConfiguration.class, TreeConfiguration.Serializer.INSTANCE);
-        //config.addSerializer(ResourceLocation.class, IdentifierSerializer.INSTANCE);
+        //config.addSerializer(Identifier.class, IdentifierSerializer.INSTANCE);
         //config.loadConfig(MiscNames.MOD_ID);
     }
 

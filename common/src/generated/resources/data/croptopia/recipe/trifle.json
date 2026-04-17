@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:egg",
+    "2": "#c:milks",
+    "3": "#c:vanilla",
+    "4": "#c:wines",
+    "5": "#c:strawberries",
+    "6": "minecraft:bread",
+    "7": "#c:butters"
+  },
+  "pattern": [
+    " 5 ",
+    "647",
+    "123"
+  ],
+  "result": {
+    "id": "croptopia:trifle"
+  }
+}

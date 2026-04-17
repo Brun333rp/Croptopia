@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-15T17:12:52.5967834	Global Loot Modifiers : croptopia
+// 26.1	2026-04-16T17:24:45.1596254	Global Loot Modifiers : croptopia
 c267d18b47e8afdce0ed181831d80092e1ee886d data/croptopia/loot_modifiers/add_calamari_to_squid.json
 0be38c5fe1a181e377daf354e1b67778b025b129 data/croptopia/loot_modifiers/add_croptopia_fish_to_aquaculture.json
 946d5e32bd19cba5f2aa683aed01a1f249907086 data/croptopia/loot_modifiers/add_croptopia_fish_to_minecraft.json
@@ -9,4 +9,4 @@ be619ce95b76ddc80a0a600a599bd7578d8ce871 data/croptopia/loot_modifiers/add_glowi
 2421699b59432ef7597f294506dbd2871c245ba7 data/croptopia/loot_modifiers/add_roe_to_salmon.json
 9832cd18d4c414dff7b8112963ac25ecadf4333c data/croptopia/loot_modifiers/add_roe_to_tropical_fish.json
 8afd6913adb4bf0aa6d2508a8f085004ad61bbbc data/croptopia/loot_modifiers/add_tuna_to_dungeon.json
-a37e78d26f77fd92d4ed99891557ad15b0f6e517 data/neoforge/loot_modifiers/global_loot_modifiers.json
+3b5f5a7b1bf51d298ed362dbb7e6d62813b90a4e data/neoforge/loot_modifiers/global_loot_modifiers.json

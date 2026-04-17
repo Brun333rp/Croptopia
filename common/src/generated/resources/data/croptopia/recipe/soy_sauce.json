@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "croptopia:food_press",
+    "#c:soybeans",
+    "#c:water_bottles"
+  ],
+  "result": {
+    "id": "croptopia:soy_sauce"
+  }
+}

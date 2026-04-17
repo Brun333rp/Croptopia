@@ -82,9 +82,10 @@ public class CroptopiaCropBlock extends CropBlock {
         return InteractionResult.PASS;
     }
 
+
     @Override
-    public void fallOn(Level world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        super.fallOn(world, state, pos, entity, fallDistance);
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
+        super.fallOn(level, state, pos, entity, fallDistance);
     }
 
     @Override

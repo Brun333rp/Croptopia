@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:nuts",
+    "#c:nuts",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:egg",
+    "minecraft:egg"
+  ],
+  "result": {
+    "count": 2,
+    "id": "croptopia:nougat"
+  }
+}

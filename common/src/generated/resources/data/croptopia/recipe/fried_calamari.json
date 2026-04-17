@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "1": {
-      "tag": "c:calamari"
-    },
-    "2": {
-      "tag": "c:lemons"
-    },
-    "3": {
-      "tag": "c:olive_oils"
-    },
-    "4": {
-      "tag": "c:flour"
-    },
-    "5": {
-      "item": "croptopia:frying_pan"
-    },
-    "6": {
-      "tag": "c:sea_lettuce"
-    }
+    "1": "#c:calamari",
+    "2": "#c:lemons",
+    "3": "#c:olive_oils",
+    "4": "#c:flour",
+    "5": "croptopia:frying_pan",
+    "6": "#c:sea_lettuce"
   },
   "pattern": [
     "123",

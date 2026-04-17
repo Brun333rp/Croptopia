@@ -2,12 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:mustard"
-    }
+    "#c:mustard"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:mustard_seed"
   }
 }

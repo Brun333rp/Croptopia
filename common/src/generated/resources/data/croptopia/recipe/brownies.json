@@ -2,27 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:egg"
-    },
-    {
-      "item": "croptopia:frying_pan"
-    },
-    {
-      "tag": "c:flour"
-    },
-    {
-      "tag": "c:milks"
-    },
-    {
-      "tag": "c:chocolates"
-    }
+    "minecraft:sugar",
+    "minecraft:egg",
+    "croptopia:frying_pan",
+    "#c:flour",
+    "#c:milks",
+    "#c:chocolates"
   ],
   "result": {
-    "count": 1,
     "id": "croptopia:brownies"
   }
 }

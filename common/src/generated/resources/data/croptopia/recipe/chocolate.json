@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:cocoa_beans",
+    "#c:butters",
+    "croptopia:cooking_pot"
+  ],
+  "result": {
+    "count": 4,
+    "id": "croptopia:chocolate"
+  }
+}

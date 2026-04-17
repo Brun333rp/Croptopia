@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:toasts",
+    "#c:jams"
+  ],
+  "result": {
+    "id": "croptopia:toast_with_jam"
+  }
+}

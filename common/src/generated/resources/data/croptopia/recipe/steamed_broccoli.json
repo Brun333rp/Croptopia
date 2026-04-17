@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:broccoli",
+    "2": "#c:water_bottles"
+  },
+  "pattern": [
+    "121"
+  ],
+  "result": {
+    "id": "croptopia:steamed_broccoli"
+  }
+}

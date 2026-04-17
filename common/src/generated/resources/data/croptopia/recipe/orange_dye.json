@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:turmeric"
-    },
-    {
-      "tag": "c:turmeric"
-    },
-    {
-      "tag": "c:turmeric"
-    }
+    "#c:turmeric",
+    "#c:turmeric",
+    "#c:turmeric"
   ],
   "result": {
     "count": 2,

@@ -3,13 +3,13 @@ package com.epherical.croptopia.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jspecify.annotations.NonNull;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static com.epherical.croptopia.CroptopiaNeoForge.MODID;
@@ -17,19 +17,18 @@ import static com.epherical.croptopia.common.Tags.*;
 import static net.minecraft.world.level.biome.Biomes.*;
 
 
-public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
+public class CroptopiaBiomeTagProvider extends BiomeTagsProvider {
 
 
-    public CroptopiaBiomeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider,
-                                     @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, Registries.BIOME, provider, MODID, existingFileHelper);
+    public CroptopiaBiomeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+        super(output, provider, MODID);
     }
 
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
-        addCrops(provider);
-        addTrees(provider);
+    protected void addTags(HolderLookup.@NonNull Provider provider) {
+        addCrops();
+        addTrees();
 
         tag(HAS_SALT)
                 .addTag(Tags.Biomes.IS_RIVER)
@@ -48,7 +47,7 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
 
     }
 
-    private void addTrees(HolderLookup.Provider provider) {
+    private void addTrees() {
         tag(HAS_ORANGE)
                 .add(FLOWER_FOREST, PLAINS, FOREST, SUNFLOWER_PLAINS, WINDSWEPT_FOREST)
                 .addOptional(bopID("orchard"))
@@ -342,7 +341,7 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
 
     }
 
-    private void addCrops(HolderLookup.Provider provider) {
+    private void addCrops() {
         tag(HAS_ARTICHOKE)
                 .add(SWAMP)
                 .addOptional(key("biomeswevegone:cypress_swamplands"))
@@ -755,7 +754,7 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
                 .addOptional(key("biomesoplenty:scrubland"))
                 .addOptional(key("biomesoplenty:wooded_scrubland"));
         tag(HAS_GRAPE)
-                .add(FOREST,FLOWER_FOREST,BIRCH_FOREST, DARK_FOREST, OLD_GROWTH_BIRCH_FOREST, GROVE)
+                .add(FOREST, FLOWER_FOREST, BIRCH_FOREST, DARK_FOREST, OLD_GROWTH_BIRCH_FOREST, GROVE)
                 .addOptional(key("terralith:birch_taiga"))
                 .addOptional(key("terralith:cloud_forest"))
                 .addOptional(key("terralith:lavender_forest"))
@@ -1018,7 +1017,7 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
                 .addOptional(key("biomesoplenty:woodland"));
         tag(HAS_RASPBERRY)
                 .add(FOREST, FLOWER_FOREST, BIRCH_FOREST, DARK_FOREST,
-                        OLD_GROWTH_BIRCH_FOREST,OLD_GROWTH_PINE_TAIGA, OLD_GROWTH_SPRUCE_TAIGA,
+                        OLD_GROWTH_BIRCH_FOREST, OLD_GROWTH_PINE_TAIGA, OLD_GROWTH_SPRUCE_TAIGA,
                         TAIGA, SNOWY_TAIGA, GROVE)
                 .addOptional(key("biomeswevegone:aspen_forest"))
                 .addOptional(key("biomeswevegone:black_forest"))
@@ -1198,7 +1197,7 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
                 .addOptional(key("biomesoplenty:maple_woods"))
                 .addOptional(key("biomesoplenty:tundra"));
         tag(HAS_STRAWBERRY)
-                .add(FOREST,FLOWER_FOREST,BIRCH_FOREST, DARK_FOREST, OLD_GROWTH_BIRCH_FOREST, OLD_GROWTH_PINE_TAIGA,
+                .add(FOREST, FLOWER_FOREST, BIRCH_FOREST, DARK_FOREST, OLD_GROWTH_BIRCH_FOREST, OLD_GROWTH_PINE_TAIGA,
                         OLD_GROWTH_SPRUCE_TAIGA, TAIGA, SNOWY_TAIGA, GROVE)
                 .addOptional(key("terralith:alpine_highlands"))
                 .addOptional(key("terralith:birch_taiga"))
@@ -1373,16 +1372,11 @@ public class CroptopiaBiomeTagProvider extends TagsProvider<Biome> {
                 .addOptional(key("biomesoplenty:wooded_scrubland"));
     }
 
-    private static ResourceLocation key(String name) {
-        return ResourceLocation.parse(name);
+    private static ResourceKey<Biome> key(String name) {
+        return ResourceKey.create(Registries.BIOME, Identifier.parse(name));
     }
 
-
-    private static ResourceLocation biomeswevegoneID(String name) {
-        return ResourceLocation.fromNamespaceAndPath("biomeswevegone", name);
-    }
-
-    private static ResourceLocation bopID(String name) {
-        return ResourceLocation.fromNamespaceAndPath("biomesoplenty", name);
+    private static ResourceKey<Biome> bopID(String name) {
+        return ResourceKey.create(Registries.BIOME, Identifier.fromNamespaceAndPath("biomesoplenty", name));
     }
 }
