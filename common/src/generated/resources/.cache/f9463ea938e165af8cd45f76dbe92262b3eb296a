@@ -1,4 +1,4 @@
-// 26.1	2026-04-16T19:16:30.4236815	Croptopia Recipes
+// 26.1	2026-04-20T19:22:26.181306	Croptopia Recipes
 ae884da91ef6749c8d39bd8252f65cf517efdcd0 data/croptopia/advancement/recipes/food/ajvar.json
 7a154eccae18f3ba374d7bdc9721c25265570f0b data/croptopia/advancement/recipes/food/ajvar_toast.json
 00503c28945633cd89fa2b3b8316b2a62f6173d6 data/croptopia/advancement/recipes/food/almond_brittle.json
@@ -209,7 +209,7 @@ ddb425ee6060c2ae5089225d7bff46a30577eca7 data/croptopia/advancement/recipes/food
 1fd0b10369e0cc5edb4a0ca0c216ed0ad82c3303 data/croptopia/advancement/recipes/food/tortilla.json
 c597de11894f34b3f2659437498b7fb487b129b0 data/croptopia/advancement/recipes/food/tostada.json
 ef62358c507b077d13887cc3eda5dda35395da54 data/croptopia/advancement/recipes/food/trail_mix.json
-6afaf2204c460b69b010667d118360e0f553dfe5 data/croptopia/advancement/recipes/food/transcendental_breakfast.json
+5eecf7f2933bf3ae1799b64574f532d1c23dff53 data/croptopia/advancement/recipes/food/transcendental_breakfast.json
 290c028020f96b0e06d412581b628b44a3c84b6d data/croptopia/advancement/recipes/food/treacle_tart.json
 f6e83b88bc8ea2dff3adad0932f803ff66cb0538 data/croptopia/advancement/recipes/food/tres_leche_cake.json
 23fcd9c47f870e92eebab900f3f61d2b24ae59e5 data/croptopia/advancement/recipes/food/trifle.json

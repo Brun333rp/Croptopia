@@ -6,6 +6,7 @@ import com.epherical.croptopia.common.MiscNames;
 import com.epherical.croptopia.config.CroptopiaConfig;
 import com.epherical.croptopia.config.TreeConfiguration;
 import com.epherical.croptopia.datagen.CroptopiaBiomeTagProvider;
+import com.epherical.croptopia.datagen.CroptopiaAdvancementProvider;
 import com.epherical.croptopia.datagen.CroptopiaBlockTagProvider;
 import com.epherical.croptopia.datagen.CroptopiaIndependentItemTagProvider;
 import com.epherical.croptopia.datagen.CroptopiaItemModelProvider;
@@ -22,7 +23,6 @@ import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.register.helpers.FarmlandCrop;
 import com.epherical.croptopia.register.helpers.TreeCrop;
 import com.epherical.croptopia.register.helpers.Utensil;
-import com.epherical.epherolib.EpheroLibForge;
 import com.epherical.epherolib.libs.org.spongepowered.configurate.hocon.HoconConfigurationLoader;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.MapCodec;
@@ -33,7 +33,6 @@ import net.minecraft.core.component.DataComponentInitializers;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.network.chat.Component;
@@ -46,7 +45,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -198,6 +196,8 @@ public class CroptopiaNeoForge {
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             }
+
+            generator.addProvider(true, CroptopiaAdvancementProvider.create(output, lookupProvider));
 
             CroptopiaItemTagProvider itemProvider = generator.addProvider(true,
                     new CroptopiaItemTagProvider(output, Registries.ITEM, lookupProvider));
