@@ -461,36 +461,30 @@ public class Content {
     public static Item SWEET_CREPES;
     public static Item THE_BIG_BREAKFAST;
 
-    // V-3.0.0
-    /*public static final Item CARROT_CAKE;
-    public static final Item PICKLED_CUCUMBER;
-    public static final Item PICKLED_BEETS;
-    public static final Item PICKLED_RADISH;
-    public static final Item PICKLED_GARLIC;
-    public static final Item PICKLED_ONIONS;
-    public static final Item PICKLED_GINGER;
-    public static final Item KIMCHI;
-    public static final Item SAUERKRAUT;
-    public static final Item PICKLED_ANCHOVIES;
-    public static final Item PICKLED_EGGS;
+    public static Item CARROT_CAKE; // SHAPED sugar, milk, 3x carrots, flour, result 1 cake
+    public static Item PICKLED_CUCUMBER; // shapeless, water bottle from croptopia, salt, 2x cucumber. Result 2 pickled cucumber
+    public static Item PICKLED_BEETS; // shapeless, water bottle from croptopai, salt, 2x MINECRAFT beets. Result 2 pickled beets
+    public static Item PICKLED_RADISH; // shapeless water bottle from croptopia, salt, 2x radish, result 2 pickled radish
+    public static Item PICKLED_GARLIC; // shapeless water btotle from croptopia, salt, 2x garlic, result 2 pickled garlic
+    public static Item PICKLED_ONIONS; // shapeless water bottle from croptopia, salt, 2x onion, result 2 pickled onion
+    public static Item PICKLED_GINGER; // shapeless water bottle from croptopia, salt, 2x ginger, result 2 pickled ginger
+    public static Item KIMCHI; // shapeless water bottle from croptopia, salt, 2x cabbage, result 2 kimchi
+    public static Item SAUERKRAUT; // shapeless milk bottle from croptopia, salt, 2x cabbage, result 2 sauerkraut
+    public static Item PICKLED_ANCHOVIES; // shapeless water bottle from croptopia, salt 2x anchovy, result 2 pickled anchovie
+    public static Item PICKLED_EGGS; // shapeless water bottle from croptopia, salt, 2x MINECRAFT eggs, result 2 pickled eggs
+    public static Item BIBIMBAP; // SHAPED rice, vegetable tag, sunny side eggs, beef, soy sauce result 1 bibimbap
+    public static Item TTEOKBOKKI; // no recipe.
+    public static Item BIBIM_NENGMYUM; // Shaped noodles, wheat, cucumber, pickled radish, egg. result 1.
+    public static Item EGG_FRIED_RICE; // rice, egg, soy sauce, salt,
+    public static Item FRIED_RICE; // rice, soy sauce, <MIXED INGREDIENT (beef, pork, shrimp, tofu) (create tag)>, salt,
+    public static Item VEGGIE_FRIED_RICE; // rice, soy sauce, green onion, carrot, green beans, salt
+    public static Item SESAME_CHICKEN; // no recipe
+    public static Item ORANGE_CHICKEN; // SHAPED, 1x orange, 1x minecraft chicken, pepper.
+    public static Item PINEAPPLE_CHICKEN; // Shaped 1x pineapple, 1x minecraft chicken
+    public static Item TERYAKI_CHICKEN; // 1x Chicken, 1x soy sauce, pepper
+    public static Item COOKING_OIL; // crafted by using (avocado/walnut/almond/corn/vegetables/w/e else for oils). Create a tag called converts_to_cooking_oil and add all those crops to it.
 
-    public static final Item BIBIMBAP;
-    public static final Item TTEOKBOKKI;
-    public static final Item BIBIM_NENGMYUM;
 
-    public static final Item EGG_FRIED_RICE; // rice, egg, soy sauce, salt,
-    public static final Item FRIED_RICE; // rice, soy sauce, <MIXED INGREDIENT (beef, pork, shrimp, tofu)>, salt,
-    public static final Item VEGGIE_FRIED_RICE; // rice, soy sauce, green onion, carrot, green beans, salt
-
-    public static final Item SESAME_CHICKEN;
-    public static final Item ORANGE_CHICKEN;
-    public static final Item PINEAPPLE_CHICKEN;
-    public static final Item BEEF_AND_BROCCOLI;
-    public static final Item EGG_FU_YUNG;
-    public static final Item TERYAKI_CHICKEN;
-
-    public static final Item COOKING_OIL; // crafted by using (avocado/walnut/almond/corn/vegetables/w/e else for oils)
-    public static final FarmlandCrop FLAX;*/
 
     public static Furnace COOKED_RAVAGER_MEAT = new Furnace(ItemNamesV2.COOKED_RAVAGER_MEAT, false, REG_10);
     public static Item DRAGON_EGG_OMELETTE;
@@ -711,6 +705,30 @@ public class Content {
         SWEET_CREPES = register.register(createIdentifier(ItemNamesV2.SWEET_CREPES), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_8))));
         THE_BIG_BREAKFAST = register.register(createIdentifier(ItemNamesV2.THE_BIG_BREAKFAST), (id) -> new ReferenceItem(createGroup(id).food(FoodConstructor.createFood(REG_20)),
                 Component.literal("Patricia! Daddy want the Big Breakfast").setStyle(Style.EMPTY.withColor(ChatFormatting.GRAY))));
+
+        CARROT_CAKE = register.register(createIdentifier(ItemNamesV2.CARROT_CAKE), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_14))));
+        PICKLED_CUCUMBER = register.register(createIdentifier(ItemNamesV2.PICKLED_CUCUMBER), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_4))));
+        PICKLED_BEETS = register.register(createIdentifier(ItemNamesV2.PICKLED_BEETS), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_4))));
+        PICKLED_RADISH = register.register(createIdentifier(ItemNamesV2.PICKLED_RADISH), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_4))));
+        PICKLED_GARLIC = register.register(createIdentifier(ItemNamesV2.PICKLED_GARLIC), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_3))));
+        PICKLED_ONIONS = register.register(createIdentifier(ItemNamesV2.PICKLED_ONIONS), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_4))));
+        PICKLED_GINGER = register.register(createIdentifier(ItemNamesV2.PICKLED_GINGER), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_3))));
+        KIMCHI = register.register(createIdentifier(ItemNamesV2.KIMCHI), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_5))));
+        SAUERKRAUT = register.register(createIdentifier(ItemNamesV2.SAUERKRAUT), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_5))));
+        PICKLED_ANCHOVIES = register.register(createIdentifier(ItemNamesV2.PICKLED_ANCHOVIES), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_5))));
+        PICKLED_EGGS = register.register(createIdentifier(ItemNamesV2.PICKLED_EGGS), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_6))));
+        BIBIMBAP = register.register(createIdentifier(ItemNamesV2.BIBIMBAP), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_16))));
+        TTEOKBOKKI = register.register(createIdentifier(ItemNamesV2.TTEOKBOKKI), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_12))));
+        BIBIM_NENGMYUM = register.register(createIdentifier(ItemNamesV2.BIBIM_NENGMYUM), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_10))));
+        EGG_FRIED_RICE = register.register(createIdentifier(ItemNamesV2.EGG_FRIED_RICE), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_10))));
+        FRIED_RICE = register.register(createIdentifier(ItemNamesV2.FRIED_RICE), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_12))));
+        VEGGIE_FRIED_RICE = register.register(createIdentifier(ItemNamesV2.VEGGIE_FRIED_RICE), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_10))));
+        SESAME_CHICKEN = register.register(createIdentifier(ItemNamesV2.SESAME_CHICKEN), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_14))));
+        ORANGE_CHICKEN = register.register(createIdentifier(ItemNamesV2.ORANGE_CHICKEN), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_12))));
+        PINEAPPLE_CHICKEN = register.register(createIdentifier(ItemNamesV2.PINEAPPLE_CHICKEN), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_12))));
+        TERYAKI_CHICKEN = register.register(createIdentifier(ItemNamesV2.TERYAKI_CHICKEN), (id) -> new Item(createGroup(id).food(FoodConstructor.createFood(REG_12))));
+        COOKING_OIL = register.register(createIdentifier(ItemNamesV2.COOKING_OIL), (id) ->
+                new Item(createGroup(id).food(FoodConstructor.createBuilder(REG_1).alwaysEdible().build())));
 
         DRAGON_EGG_OMELETTE = register.register(createIdentifier(ItemNamesV2.DRAGON_EGG_OMELETTE), (id) ->
                 new ReferenceItem(createGroup(id).food(FoodConstructor.createBuilder(REG_20)

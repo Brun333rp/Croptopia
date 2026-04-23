@@ -19,6 +19,7 @@ import com.epherical.croptopia.items.CookingUtensil;
 import com.epherical.croptopia.items.SeedItem;
 import com.epherical.croptopia.listeners.BlockBreakEvent;
 import com.epherical.croptopia.mixin.CraftingRemainingItemBypassMixin;
+import com.epherical.croptopia.register.Composter;
 import com.epherical.croptopia.register.Content;
 import com.epherical.croptopia.register.helpers.FarmlandCrop;
 import com.epherical.croptopia.register.helpers.TreeCrop;
@@ -45,6 +46,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -65,6 +67,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 import org.slf4j.Logger;
 
 import java.util.Collections;
@@ -253,6 +256,7 @@ public class CroptopiaNeoForge {
                     }
                     return item;
                 });
+                //Composter.init(); lame lame lame lame lame
             } else if (event.getRegistryKey() == Registries.BLOCK) {
                 Content.registerBlocks((id, supplier) -> {
                     Block block = supplier.apply(id);

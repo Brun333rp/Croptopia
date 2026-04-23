@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:noodles",
+    "2": "minecraft:wheat",
+    "3": "#c:cucumbers",
+    "4": "croptopia:pickled_radish",
+    "5": "minecraft:egg"
+  },
+  "pattern": [
+    "123",
+    " 45"
+  ],
+  "result": {
+    "id": "croptopia:bibim_naengmyeon"
+  }
+}

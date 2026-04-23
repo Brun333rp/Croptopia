@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:tools/knives"
+            "items": "croptopia:knife"
           }
         ]
       },

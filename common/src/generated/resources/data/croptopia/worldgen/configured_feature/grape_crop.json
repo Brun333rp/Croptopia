@@ -22,12 +22,12 @@
       ],
       "noise": {
         "amplitudes": [
-          3.041586419125405
+          1.120815682066611
         ],
         "firstOctave": 0
       },
       "scale": 0.005,
-      "seed": 13903,
+      "seed": 6651209,
       "threshold": -0.8
     }
   }

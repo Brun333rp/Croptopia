@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:rice",
+    "2": "#c:vegetables",
+    "3": "minecraft:beef",
+    "4": "croptopia:sunny_side_eggs",
+    "5": "croptopia:soy_sauce"
+  },
+  "pattern": [
+    "123",
+    " 45"
+  ],
+  "result": {
+    "id": "croptopia:bibimbap"
+  }
+}

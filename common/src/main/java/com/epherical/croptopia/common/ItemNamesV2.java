@@ -348,5 +348,30 @@ public class ItemNamesV2 {
     public static final String NETHER_STAR_CAKE = "nether_star_cake";
     public static final String RAW_RAVAGER_MEAT = "raw_ravager_meat";
     public static final String TRANSCENDENTAL_BREAKFAST = "transcendental_breakfast";
+
+    public static final String CARROT_CAKE = "carrot_cake";
+    public static final String PICKLED_CUCUMBER = "pickled_cucumber";
+    public static final String PICKLED_BEETS = "pickled_beets";
+    public static final String PICKLED_RADISH = "pickled_radish";
+    public static final String PICKLED_GARLIC = "pickled_garlic";
+    public static final String PICKLED_ONIONS = "pickled_onion";
+    public static final String PICKLED_GINGER = "pickled_ginger";
+    public static final String KIMCHI = "kimchi";
+    public static final String SAUERKRAUT = "sauerkraut";
+    public static final String PICKLED_ANCHOVIES = "pickled_anchovy";
+    public static final String PICKLED_EGGS = "pickled_eggs";
+    public static final String BIBIMBAP = "bibimbap";
+    public static final String TTEOKBOKKI = "tteokbokki";
+    public static final String BIBIM_NENGMYUM = "bibim_naengmyeon";
+    public static final String EGG_FRIED_RICE = "egg_fried_rice";
+    public static final String FRIED_RICE = "fried_rice";
+    public static final String VEGGIE_FRIED_RICE = "veggie_fried_rice";
+    public static final String SESAME_CHICKEN = "sesame_chicken";
+    public static final String ORANGE_CHICKEN = "orange_chicken";
+    public static final String PINEAPPLE_CHICKEN = "pineapple_chicken";
+    public static final String BEEF_AND_BROCCOLI = "beef_and_broccoli";
+    public static final String EGG_FU_YUNG = "egg_fu_yung";
+    public static final String TERYAKI_CHICKEN = "teriyaki_chicken";
+    public static final String COOKING_OIL = "cooking_oil";
 }
 

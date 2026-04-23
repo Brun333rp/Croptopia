@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:oranges",
+    "2": "minecraft:chicken",
+    "3": "croptopia:pepper"
+  },
+  "pattern": [
+    "12",
+    " 3"
+  ],
+  "result": {
+    "id": "croptopia:orange_chicken"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chicken",
+    "#c:soy_sauces",
+    "croptopia:pepper"
+  ],
+  "result": {
+    "id": "croptopia:teriyaki_chicken"
+  }
+}

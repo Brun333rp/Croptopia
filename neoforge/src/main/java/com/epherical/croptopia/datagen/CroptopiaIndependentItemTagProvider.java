@@ -266,6 +266,43 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         createGeneralTag("sunny_side_eggs", Content.SUNNY_SIDE_EGGS);
         createGeneralTag("sweet_crepes", Content.SWEET_CREPES);
         createGeneralTag("the_big_breakfast", Content.THE_BIG_BREAKFAST);
+        createGeneralTag("carrot_cakes", Content.CARROT_CAKE);
+        createGeneralTag("pickled_cucumbers", Content.PICKLED_CUCUMBER);
+        createGeneralTag("pickled_beets", Content.PICKLED_BEETS);
+        createGeneralTag("pickled_radishes", Content.PICKLED_RADISH);
+        createGeneralTag("pickled_garlic", Content.PICKLED_GARLIC);
+        createGeneralTag("pickled_onions", Content.PICKLED_ONIONS);
+        createGeneralTag("pickled_gingers", Content.PICKLED_GINGER);
+        createGeneralTag("kimchi", Content.KIMCHI);
+        createGeneralTag("sauerkraut", Content.SAUERKRAUT);
+        createGeneralTag("pickled_anchovies", Content.PICKLED_ANCHOVIES);
+        createGeneralTag("pickled_eggs", Content.PICKLED_EGGS);
+        createGeneralTag("bibimbap", Content.BIBIMBAP);
+        createGeneralTag("tteokbokki", Content.TTEOKBOKKI);
+        createGeneralTag("bibim_nengmyum", Content.BIBIM_NENGMYUM);
+        createGeneralTag("egg_fried_rices", Content.EGG_FRIED_RICE);
+        createGeneralTag("fried_rices", Content.FRIED_RICE);
+        createGeneralTag("veggie_fried_rices", Content.VEGGIE_FRIED_RICE);
+        createGeneralTag("sesame_chickens", Content.SESAME_CHICKEN);
+        createGeneralTag("orange_chickens", Content.ORANGE_CHICKEN);
+        createGeneralTag("pineapple_chickens", Content.PINEAPPLE_CHICKEN);
+        createGeneralTag("teriyaki_chickens", Content.TERYAKI_CHICKEN);
+        createGeneralTag("cooking_oils", Content.COOKING_OIL);
+
+        this.tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "fried_rice_ingredients")))
+                .add(Items.BEEF)
+                .add(Items.PORKCHOP)
+                .add(Content.SHRIMP.asItem())
+                .add(Content.TOFU);
+        this.tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "converts_to_cooking_oil")))
+                .add(Content.ALMOND.asItem())
+                .add(Content.AVOCADO.asItem())
+                .add(Content.COCONUT.asItem())
+                .add(Content.CORN.asItem())
+                .add(Content.OLIVE.asItem())
+                .add(Content.PEANUT.asItem())
+                .add(Content.SOYBEAN.asItem())
+                .add(Content.WALNUT.asItem());
 
         this.tag(register("water_bottles")).add((Content.WATER_BOTTLE)).add((Items.WATER_BUCKET)).add(TagEntry.optionalElement(Identifier.parse("early_buckets:wooden_water_bucket")));
         this.tag(register("milks")).add((Content.MILK_BOTTLE)).add((Content.SOY_MILK)).add((Items.MILK_BUCKET)).add(TagEntry.optionalTag(independentTag("milk_buckets")));

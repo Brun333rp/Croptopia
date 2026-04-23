@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:milks",
+    "#c:salts",
+    "#c:cabbage",
+    "#c:cabbage"
+  ],
+  "result": {
+    "count": 2,
+    "id": "croptopia:sauerkraut"
+  }
+}

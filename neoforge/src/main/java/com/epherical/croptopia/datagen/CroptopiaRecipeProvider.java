@@ -2169,6 +2169,194 @@ public class CroptopiaRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_milks", has(independentTag("milks")))
                 .save(exporter);
 
+
+        shaped(FOOD, CARROT_CAKE)
+                .pattern("111")
+                .pattern("232")
+                .pattern(" 4 ")
+                .define('1', Items.CARROT)
+                .define('2', Items.SUGAR)
+                .define('3', independentTag("milks"))
+                .define('4', independentTag("flour"))
+                .unlockedBy("has_carrot", has(Items.CARROT))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_CUCUMBER, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("cucumbers"))
+                .requires(independentTag("cucumbers"))
+                .unlockedBy("has_cucumbers", has(independentTag("cucumbers")))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_BEETS, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(Items.BEETROOT)
+                .requires(Items.BEETROOT)
+                .unlockedBy("has_beetroot", has(Items.BEETROOT))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_RADISH, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("radishes"))
+                .requires(independentTag("radishes"))
+                .unlockedBy("has_radishes", has(independentTag("radishes")))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_GARLIC, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("garlic"))
+                .requires(independentTag("garlic"))
+                .unlockedBy("has_garlic", has(independentTag("garlic")))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_ONIONS, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("onions"))
+                .requires(independentTag("onions"))
+                .unlockedBy("has_onions", has(independentTag("onions")))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_GINGER, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("gingers"))
+                .requires(independentTag("gingers"))
+                .unlockedBy("has_gingers", has(independentTag("gingers")))
+                .save(exporter);
+
+
+        shapeless(FOOD, KIMCHI, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("cabbage"))
+                .requires(independentTag("cabbage"))
+                .unlockedBy("has_cabbage", has(independentTag("cabbage")))
+                .save(exporter);
+
+
+        shapeless(FOOD, SAUERKRAUT, 2)
+                .requires(independentTag("milks"))
+                .requires(independentTag("salts"))
+                .requires(independentTag("cabbage"))
+                .requires(independentTag("cabbage"))
+                .unlockedBy("has_cabbage", has(independentTag("cabbage")))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_ANCHOVIES, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(ANCHOVY)
+                .requires(ANCHOVY)
+                .unlockedBy("has_anchovy", has(ANCHOVY))
+                .save(exporter);
+
+
+        shapeless(FOOD, PICKLED_EGGS, 2)
+                .requires(independentTag("water_bottles"))
+                .requires(independentTag("salts"))
+                .requires(Items.EGG)
+                .requires(Items.EGG)
+                .unlockedBy("has_egg", has(Items.EGG))
+                .save(exporter);
+
+
+        shaped(FOOD, BIBIMBAP)
+                .pattern("123")
+                .pattern(" 45")
+                .define('1', independentTag("rice"))
+                .define('2', independentTag("vegetables"))
+                .define('3', Items.BEEF)
+                .define('4', SUNNY_SIDE_EGGS)
+                .define('5', SOY_SAUCE)
+                .unlockedBy("has_sunny_side_eggs", has(SUNNY_SIDE_EGGS))
+                .save(exporter);
+
+
+        shaped(FOOD, BIBIM_NENGMYUM)
+                .pattern("123")
+                .pattern(" 45")
+                .define('1', independentTag("noodles"))
+                .define('2', Items.WHEAT)
+                .define('3', independentTag("cucumbers"))
+                .define('4', PICKLED_RADISH)
+                .define('5', Items.EGG)
+                .unlockedBy("has_pickled_radish", has(PICKLED_RADISH))
+                .save(exporter);
+
+
+        shapeless(FOOD, EGG_FRIED_RICE)
+                .requires(independentTag("rice"))
+                .requires(Items.EGG)
+                .requires(independentTag("soy_sauces"))
+                .requires(independentTag("salts"))
+                .unlockedBy("has_rice", has(independentTag("rice")))
+                .save(exporter);
+
+
+        shapeless(FOOD, FRIED_RICE)
+                .requires(independentTag("rice"))
+                .requires(independentTag("soy_sauces"))
+                .requires(croptopia("fried_rice_ingredients"))
+                .requires(independentTag("salts"))
+                .unlockedBy("has_fried_rice_ingredient", has(croptopia("fried_rice_ingredients")))
+                .save(exporter);
+
+
+        shapeless(FOOD, VEGGIE_FRIED_RICE)
+                .requires(independentTag("rice"))
+                .requires(independentTag("soy_sauces"))
+                .requires(independentTag("greenonions"))
+                .requires(Items.CARROT)
+                .requires(independentTag("greenbeans"))
+                .requires(independentTag("salts"))
+                .unlockedBy("has_greenbeans", has(independentTag("greenbeans")))
+                .save(exporter);
+
+
+        shaped(FOOD, ORANGE_CHICKEN)
+                .pattern("12")
+                .pattern(" 3")
+                .define('1', independentTag("oranges"))
+                .define('2', Items.CHICKEN)
+                .define('3', PEPPER)
+                .unlockedBy("has_chicken", has(Items.CHICKEN))
+                .save(exporter);
+
+
+        shaped(FOOD, PINEAPPLE_CHICKEN)
+                .pattern("12")
+                .define('1', independentTag("pineapples"))
+                .define('2', Items.CHICKEN)
+                .unlockedBy("has_pineapple", has(independentTag("pineapples")))
+                .save(exporter);
+
+        shapeless(FOOD, TERYAKI_CHICKEN)
+                .requires(Items.CHICKEN)
+                .requires(independentTag("soy_sauces"))
+                .requires(PEPPER)
+                .unlockedBy("has_soy_sauce", has(independentTag("soy_sauces")))
+                .save(exporter);
+
+
+        shapeless(FOOD, COOKING_OIL)
+                .requires(croptopia("converts_to_cooking_oil"))
+                .requires(croptopia("converts_to_cooking_oil"))
+                .requires(FOOD_PRESS)
+                .unlockedBy("has_oil_crop", has(croptopia("converts_to_cooking_oil")))
+                .save(exporter);
+
     }
 
     private TagKey<Item> croptopia(String name) {

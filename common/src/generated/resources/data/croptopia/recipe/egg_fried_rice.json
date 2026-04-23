@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:rice",
+    "minecraft:egg",
+    "#c:soy_sauces",
+    "#c:salts"
+  ],
+  "result": {
+    "id": "croptopia:egg_fried_rice"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:rice",
+    "#c:soy_sauces",
+    "#croptopia:fried_rice_ingredients",
+    "#c:salts"
+  ],
+  "result": {
+    "id": "croptopia:fried_rice"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "minecraft:carrot",
+    "2": "minecraft:sugar",
+    "3": "#c:milks",
+    "4": "#c:flour"
+  },
+  "pattern": [
+    "111",
+    "232",
+    " 4 "
+  ],
+  "result": {
+    "id": "croptopia:carrot_cake"
+  }
+}

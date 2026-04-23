@@ -441,6 +441,28 @@ public class CroptopiaItemModelProvider extends ModelProvider {
         provider.basicItem(Content.SUNNY_SIDE_EGGS);
         provider.basicItem(Content.SWEET_CREPES);
         provider.basicItem(Content.THE_BIG_BREAKFAST);
+        provider.basicItem(Content.CARROT_CAKE);
+        provider.basicItem(Content.PICKLED_CUCUMBER);
+        provider.basicItem(Content.PICKLED_BEETS);
+        provider.basicItem(Content.PICKLED_RADISH);
+        provider.basicItem(Content.PICKLED_GARLIC);
+        provider.basicItem(Content.PICKLED_ONIONS);
+        provider.basicItem(Content.PICKLED_GINGER);
+        provider.basicItem(Content.KIMCHI);
+        provider.basicItem(Content.SAUERKRAUT);
+        provider.basicItem(Content.PICKLED_ANCHOVIES);
+        provider.basicItem(Content.PICKLED_EGGS);
+        provider.basicItem(Content.BIBIMBAP);
+        provider.basicItem(Content.TTEOKBOKKI);
+        provider.basicItem(Content.BIBIM_NENGMYUM);
+        provider.basicItem(Content.EGG_FRIED_RICE);
+        provider.basicItem(Content.FRIED_RICE);
+        provider.basicItem(Content.VEGGIE_FRIED_RICE);
+        provider.basicItem(Content.SESAME_CHICKEN);
+        provider.basicItem(Content.ORANGE_CHICKEN);
+        provider.basicItem(Content.PINEAPPLE_CHICKEN);
+        provider.basicItem(Content.TERYAKI_CHICKEN);
+        provider.basicItem(Content.COOKING_OIL);
 
         provider.basicItem(Content.COOKED_RAVAGER_MEAT.asItem());
         provider.basicItem(Content.DRAGON_EGG_OMELETTE);

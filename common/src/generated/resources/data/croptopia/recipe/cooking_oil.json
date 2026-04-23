@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#croptopia:converts_to_cooking_oil",
+    "#croptopia:converts_to_cooking_oil",
+    "croptopia:food_press"
+  ],
+  "result": {
+    "id": "croptopia:cooking_oil"
+  }
+}

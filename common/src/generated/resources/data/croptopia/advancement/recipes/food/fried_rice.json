@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fried_rice_ingredient": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#croptopia:fried_rice_ingredients"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "croptopia:fried_rice"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fried_rice_ingredient"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "croptopia:fried_rice"
+    ]
+  }
+}

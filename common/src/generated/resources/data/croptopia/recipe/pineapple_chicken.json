@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": "#c:pineapples",
+    "2": "minecraft:chicken"
+  },
+  "pattern": [
+    "12"
+  ],
+  "result": {
+    "id": "croptopia:pineapple_chicken"
+  }
+}

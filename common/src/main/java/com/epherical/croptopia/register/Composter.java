@@ -9,7 +9,7 @@ import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class Composter {
 
-    public void init() {
+    public static void init() {
         for (FarmlandCrop crop : FarmlandCrop.FARMLAND_CROPS) {
             registerCompostableItem(0.65F, crop.asItem());
             registerCompostableItem(0.3F, crop.getSeedItem());
@@ -24,7 +24,7 @@ public class Composter {
         }
     }
 
-    public void registerCompostableItem(float levelIncreaseChance, ItemLike item) {
+    public static void registerCompostableItem(float levelIncreaseChance, ItemLike item) {
         COMPOSTABLES.put(item.asItem(), levelIncreaseChance);
     }
 }

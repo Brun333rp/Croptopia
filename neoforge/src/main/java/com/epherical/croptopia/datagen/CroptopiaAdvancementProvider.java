@@ -82,7 +82,7 @@ public final class CroptopiaAdvancementProvider {
 
             AdvancementHolder knife = advancement(Content.KNIFE, title("knife"), description("knife"), null, AdvancementType.TASK, true, true, false)
                     .parent(mortarAndPestle)
-                    .addCriterion("knife", hasTaggedItem(items, "c", "tools/knives"))
+                    .addCriterion("knife", has(Content.KNIFE))
                     .save(output, id("knife"));
 
             AdvancementHolder cookingPot = advancement(Content.COOKING_POT, title("pot"), description("pot"), null, AdvancementType.TASK, true, true, false)

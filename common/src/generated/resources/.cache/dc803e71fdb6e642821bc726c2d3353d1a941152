@@ -1,4 +1,4 @@
-// 26.1	2026-04-16T19:50:21.2908824	Model Definitions - croptopia
+// 26.1	2026-04-21T21:53:00.2401614	Model Definitions - croptopia
 77c867da228feb8336ed367cebbf8c50ff5cfd2b assets/croptopia/blockstates/almond_sapling.json
 ec9d3e36b8c2e478476fa3fc49eefa0dc1054fbc assets/croptopia/blockstates/apple_sapling.json
 d3e530e6fa77321217edfcf64794e4204f0cde9a assets/croptopia/blockstates/apricot_sapling.json
@@ -76,6 +76,8 @@ d7b9377a73e0f690da89297f7e3b542a404327a6 assets/croptopia/items/beef_wellington.
 5870bfa8f40745ef87041fbcea6f597888a2586f assets/croptopia/items/beetroot_salad.json
 3e40ef1f8f432c250d005f2168253d6502858c5a assets/croptopia/items/bellpepper.json
 055aed884f42ec83df2bff8a2492e0ad4de7a6e4 assets/croptopia/items/bellpepper_seed.json
+f19e635b6f99a2ccf729143b2fde224f2618803e assets/croptopia/items/bibimbap.json
+15e8e3d2157c13d76a3b63e96ed42a5adbfd1b62 assets/croptopia/items/bibim_naengmyeon.json
 bce2e2f6f88b34dcc4c46895b1b0742d0d072668 assets/croptopia/items/blackbean.json
 4b68bd50b5640184e594317ec995bf66acfaaf58 assets/croptopia/items/blackbean_seed.json
 aa3675ac17964e031ab567cbcaf04bed13c80537 assets/croptopia/items/blackberry.json
@@ -105,6 +107,7 @@ d19ea129b44ac2dea5a53ad64fdacb40a54b1642 assets/croptopia/items/candied_nuts.jso
 1003825e274503943cfd40de7247ef612787ddcf assets/croptopia/items/cantaloupe_seed.json
 26a63dee67ba1a347fad7e860bcdccff381d4ffa assets/croptopia/items/caramel.json
 36e92c746ce215e34959668fbe29459103c51bcc assets/croptopia/items/carnitas.json
+c03ea0c8079ba0c5b4cd1c319794a3bbdf34f0bf assets/croptopia/items/carrot_cake.json
 dc908fa88ce3bd46818f97bcf1b72ff52a0af114 assets/croptopia/items/cashew.json
 bc5de12b0bbd886817f0efdb47738170ef6ef555 assets/croptopia/items/cashew_chicken.json
 b9d53f69211cfe41938ccbeabd7b3b57bd1fed92 assets/croptopia/items/cashew_crop.json
@@ -153,6 +156,7 @@ bd170e971af68033b292033bd7aaefe7faa30afe assets/croptopia/items/cooked_calamari.
 80a8908bb5c71fcfd2b29b34d8339647223d3782 assets/croptopia/items/cooked_ravager_meat.json
 d450e60ed9ef8bd8ef591d47e1aa39bcb16fd7ba assets/croptopia/items/cooked_shrimp.json
 a83fb77eede92135847ccf7f3a4ea7c8b65583ef assets/croptopia/items/cooked_tuna.json
+a7aa26aae22c405a636b7edddb1d923c0f5af4d1 assets/croptopia/items/cooking_oil.json
 68d47d2ee5c1c840e75466340bfc06b1732f3a3a assets/croptopia/items/cooking_pot.json
 feb4c8e12bd61d77ef855de9f112a33f470fc7ce assets/croptopia/items/corn.json
 c21c9561d9b9189e9eb875be5507d72042f78f10 assets/croptopia/items/cornish_pasty.json
@@ -186,6 +190,7 @@ d8a898d29f232aa906955e578c996044204e84f9 assets/croptopia/items/dragonfruit_sapl
 81c0ae231ffbb45eac488699f26822d82de26374 assets/croptopia/items/eggplant.json
 e0360275f30acb65ec4d4bdaba2b6bed21f97d4d assets/croptopia/items/eggplant_parmesan.json
 9955dc580c7a698c5cf4b4962e09c73c82dcf507 assets/croptopia/items/eggplant_seed.json
+45db380e167d5b8e2fc0886e0461f6edd10e08a3 assets/croptopia/items/egg_fried_rice.json
 a3d1929f9cce73fd9ef71a9972bbc55fd519b471 assets/croptopia/items/egg_roll.json
 6fffdc5c04a2ad18d67aeaf6c909e8097173faf4 assets/croptopia/items/elderberry.json
 07bf716bdc05a22b13c8c1dee499d07cccfcda14 assets/croptopia/items/elderberry_jam.json
@@ -204,6 +209,7 @@ b5cf488d5c9e5b487dd2da4d35fc0aaf8a578a28 assets/croptopia/items/food_press.json
 6dc80562f43a49ee585f2fd2b30ef72a4ddc0e89 assets/croptopia/items/fried_calamari.json
 ae412dc2a7e54d73d6bb9635916a5409f9c33e7a assets/croptopia/items/fried_chicken.json
 966627d02479d705298c0bd30d3dcacadd05d644 assets/croptopia/items/fried_frog_legs.json
+2f06b301846c3080d7d2f621992031a01e861dad assets/croptopia/items/fried_rice.json
 ecc6b8d0747146d68b0e5ad8a86505ab0b7752cf assets/croptopia/items/frog_legs.json
 2d011a8ddafefdcc68b65b5eae2594846ee88bac assets/croptopia/items/fruit_cake.json
 6e7b891c765bd7a8ea721a1617c803f694094e6d assets/croptopia/items/fruit_salad.json
@@ -243,6 +249,7 @@ e56d103d341851b6aefc32de6665933138a12ba3 assets/croptopia/items/kale.json
 8274de1d8f215e0a73c5b07b3f522fc79f5fb007 assets/croptopia/items/kale_chips.json
 3b2f573fb7771b2638468010306430ed9fe31d6a assets/croptopia/items/kale_seed.json
 6de09af67285c941cc11fdbc2a837e4af2baa495 assets/croptopia/items/kale_smoothie.json
+0adbcf36d9b3c41f541d308ff0381502134e54c8 assets/croptopia/items/kimchi.json
 2626c681b653cc4dc9d2ee8083e64c8df025acd3 assets/croptopia/items/kiwi.json
 b9f25f8a6437b0f16dc3bfb9c343ec137e2a0a08 assets/croptopia/items/kiwi_seed.json
 18eafdef220937f6f465b06cf85380f1a9976c4e assets/croptopia/items/kiwi_sorbet.json
@@ -302,6 +309,7 @@ ff1b854cde279c4bfba3b91806cf4733a52464e9 assets/croptopia/items/olive_oil.json
 6f50afa7a7f04ec7c61807beb0f55a28207a8f41 assets/croptopia/items/onion_rings.json
 58cfb38c621983de83b7e617dbf1ae9922a2994a assets/croptopia/items/onion_seed.json
 efc55f36e9ea16aea9700d64bf3e483d96d35e64 assets/croptopia/items/orange.json
+b0143c5ac751445a6cf3cf4a99f8ca099cf71c2d assets/croptopia/items/orange_chicken.json
 c61cc3eb0ae77792788938cfeefed53ed0c68d81 assets/croptopia/items/orange_crop.json
 5487d761fd47f65853fc7c1ef703c3cd09ffc3fd assets/croptopia/items/orange_juice.json
 2def390157242bd5340837cd77dbc9298881c148 assets/croptopia/items/orange_sapling.json
@@ -330,7 +338,16 @@ e477eb55168157fdd6454c275dc8b3fcf3470369 assets/croptopia/items/pepper_seed.json
 94ef1365d8f00c3d71ac335f70cba55488044d98 assets/croptopia/items/persimmon.json
 980b67413e10e114683a2a35bec64131dbf87ae8 assets/croptopia/items/persimmon_crop.json
 79956c8446f85216358f08af3770513c476b41e2 assets/croptopia/items/persimmon_sapling.json
+2405691aebb5df2600848309ebc50fe71ca04d90 assets/croptopia/items/pickled_anchovy.json
+83393a0ddbb5c306d244f8ef5b1ce60ee53ec766 assets/croptopia/items/pickled_beets.json
+2c90d9d8b693671f4b9ee8b8ea20754d37e49dba assets/croptopia/items/pickled_cucumber.json
+2916878f240d5e3e288b8b7e12ccb87d79e27644 assets/croptopia/items/pickled_eggs.json
+97ae76fb29292021f06287c402955814107bc5d1 assets/croptopia/items/pickled_garlic.json
+646b9a19c5448408e4356928a2cb47059be89027 assets/croptopia/items/pickled_ginger.json
+4e43a91058198fd75156f4f523834539f2664404 assets/croptopia/items/pickled_onion.json
+c14e0a9a00b2822f3d88bca4d558e575674e403f assets/croptopia/items/pickled_radish.json
 89c68853d2268312af080b5cdd694b6c4211f3c7 assets/croptopia/items/pineapple.json
+bd5e785a328fef783a58f1252267bb53ef05e20e assets/croptopia/items/pineapple_chicken.json
 aaeac6ff292a906386cc47c58da8ef9f403d9bfd assets/croptopia/items/pineapple_juice.json
 7f2ff4eaeec8d7f8377b78818de666e1fbef5649 assets/croptopia/items/pineapple_pepperoni_pizza.json
 09418b63a7839b97fd4379fd0bdb234d3bdb4c30 assets/croptopia/items/pineapple_seed.json
@@ -385,10 +402,12 @@ d828d17a70b91982c1143189fa73f42b3386bdc6 assets/croptopia/items/saguaro_seed.jso
 622a70c36d7aaceb438f547877a704cc39a25b99 assets/croptopia/items/salt.json
 5874e5ec79e0d78b68eac74440c03255a31adaa5 assets/croptopia/items/salt_ore.json
 b28a853f89a67d70c5888cfc19bf217a731fcdb7 assets/croptopia/items/saucy_chips.json
+bea9b586573df4ab2698776796cb8af5eeec10a5 assets/croptopia/items/sauerkraut.json
 4d89929cfe3b1876fd23b7ff9b7b7812101c1c59 assets/croptopia/items/sausage.json
 771df5e5549af3f05a072b4c39c5280e35e51d71 assets/croptopia/items/scones.json
 3115550b85b5f1866671fa134c439fe5803570c1 assets/croptopia/items/scrambled_eggs.json
 dedfdb0ce8584c19312b2d288de06bad46762b34 assets/croptopia/items/sea_lettuce.json
+1b314bd38ed42dc405559e2642cda019a94fa7c8 assets/croptopia/items/sesame_chicken.json
 2b3fb7c8172434ec6092cfd32ff46ee2a9e801a8 assets/croptopia/items/shepherds_pie.json
 3e35668ac369a4e502f426c9aa1e6a5ec55edf15 assets/croptopia/items/shrimp.json
 18f3b2b3908b8e09b5f1a84427feb7547cf90be1 assets/croptopia/items/snicker_doodle.json
@@ -432,6 +451,7 @@ e0aab33a9252f352c3bf79d56d604e904a0ef69d assets/croptopia/items/sweet_crepes.jso
 72f2b73f0da99078d7626b92c28a7a7f1761e282 assets/croptopia/items/tea.json
 351a6bc4c4885a1898435a4815e02aaaec231811 assets/croptopia/items/tea_leaves.json
 546fe233abad6c76bf179c5054c91e4afe58470c assets/croptopia/items/tea_seed.json
+4585c07fb7f272f7c71ecc4d37e361ce1997310f assets/croptopia/items/teriyaki_chicken.json
 6c4c2a75150bc21b874ce67ab3a4bfc135cf8be2 assets/croptopia/items/the_big_breakfast.json
 2afd1a7c194a99aa5706faf453fb207da22a8217 assets/croptopia/items/toast.json
 fc9f0725c2a0da9041cbf380a2968b42cae801dc assets/croptopia/items/toast_sandwich.json
@@ -451,6 +471,7 @@ c6d24995947227b33377e68b13bab2b9c84e0202 assets/croptopia/items/transcendental_b
 2d14c0865074fd513ca7d73cb400b61f758af8bf assets/croptopia/items/treacle_tart.json
 68472766031ec6621d02ed714078f2eb1a794336 assets/croptopia/items/tres_leche_cake.json
 8fda8155a726e939a7a1b7f31bccf312835d29ab assets/croptopia/items/trifle.json
+5999b15e7a85e60c0010a6cd24a97f6396eb0563 assets/croptopia/items/tteokbokki.json
 6ed2996b1e18ac2f9fca898b714a969cccafad45 assets/croptopia/items/tuna.json
 09ae9dd0a4b9043095b96a0222a03c63a4f63012 assets/croptopia/items/tuna_roll.json
 d060bbe8d26739a402638202af7f4908809b50a0 assets/croptopia/items/tuna_sandwich.json
@@ -461,6 +482,7 @@ d060bbe8d26739a402638202af7f4908809b50a0 assets/croptopia/items/tuna_sandwich.js
 28f4745f64ca48d552f7e8454f548c0e7830acb5 assets/croptopia/items/vanilla.json
 5ec9686164e06d015d37518d241dce3caf1d8e04 assets/croptopia/items/vanilla_ice_cream.json
 387438e301615b918def2163532f278dbe79506e assets/croptopia/items/vanilla_seeds.json
+d8f143836a70c485b2f6aeec14e37c137c15f517 assets/croptopia/items/veggie_fried_rice.json
 6f6817e199695ebe9276a5ca75457bc95da3472e assets/croptopia/items/veggie_salad.json
 872f5aa26f8b4d76480c8b8e5550dcb22b4d48d9 assets/croptopia/items/walnut.json
 28f2199a3af74d1f0a9df86fe07cf34cee426c9c assets/croptopia/items/walnut_crop.json
@@ -546,6 +568,8 @@ b01fd60247f54c64474296b3e07541b509f26cf4 assets/croptopia/models/item/beef_stew.
 bdbf8390727a79fbaf7a6740c2197c4c43e97606 assets/croptopia/models/item/beetroot_salad.json
 8d4e427e99f0fa2381a14f95e1feedb727fe5e4f assets/croptopia/models/item/bellpepper.json
 8ab3ca13febd04a87dcccba9bd5d4b04d2729e53 assets/croptopia/models/item/bellpepper_seed.json
+571edbdcb49513add8e2d4369f5bbc56991184ff assets/croptopia/models/item/bibimbap.json
+328357066b4ec5f388c58e91ba36698520635b47 assets/croptopia/models/item/bibim_naengmyeon.json
 9758a44d837051fec3fd8b4a80e3a94715ab0380 assets/croptopia/models/item/blackbean.json
 65ed0a73de408ac7e6baa45d9d720ba12e50be48 assets/croptopia/models/item/blackbean_seed.json
 de03a185873ac32e532b5fe6fe5f477e5bfbef54 assets/croptopia/models/item/blackberry.json
@@ -575,6 +599,7 @@ ec0d0c2e2df2d8f654c65cbcbfb0c17f7e30cc18 assets/croptopia/models/item/candy_corn
 b58714d3a98643c27cd926edefbc5e4aaa273104 assets/croptopia/models/item/cantaloupe_seed.json
 0e6f70fd2c4db517b8dd560601ba0b479b4f928b assets/croptopia/models/item/caramel.json
 88b5fc89d8094be6a373b5c6e4369de8304e0bc7 assets/croptopia/models/item/carnitas.json
+6333ba2ad4ab29b9fc302210d9d9518451ad2515 assets/croptopia/models/item/carrot_cake.json
 539acc0ca74e60f5c3e07adffe07c4007021d8a3 assets/croptopia/models/item/cashew.json
 f5283e99eff1b2a23e4300375f2b6553bef88ec2 assets/croptopia/models/item/cashew_chicken.json
 bf08509f586e6628bcaeb4b7dea8b55c1115ebb2 assets/croptopia/models/item/cashew_sapling.json
@@ -617,6 +642,7 @@ dfc0941be810625c3edc7805ba2a806c3dad0f09 assets/croptopia/models/item/cooked_bac
 39cb5b49509187f20d892e387311c43391332a6a assets/croptopia/models/item/cooked_ravager_meat.json
 417a51398b08711068deec5b72c16e1c5d3544f3 assets/croptopia/models/item/cooked_shrimp.json
 810c8ed95c18f09cb2260389804e6151d0b51da7 assets/croptopia/models/item/cooked_tuna.json
+5eae36ad5edc111c1b6d41b15245aa1436d7f902 assets/croptopia/models/item/cooking_oil.json
 35c6158744dd8ec899a06cb175555acb6f04014f assets/croptopia/models/item/cooking_pot.json
 ba5206d751294fd1d9cafeb3629d9ee6d4ecfd06 assets/croptopia/models/item/corn.json
 17de80258613370385f3fe61faaf3d883d594c0e assets/croptopia/models/item/cornish_pasty.json
@@ -648,6 +674,7 @@ d853730883177c210cb4ba20a222ec8e81ae6747 assets/croptopia/models/item/dragon_egg
 8a83936303ee89e59635e0e4122cfe898abc308e assets/croptopia/models/item/eggplant.json
 a07ba7ae3df512dffe65d46b0a1b8262daff9d98 assets/croptopia/models/item/eggplant_parmesan.json
 5504b10ff58a69113a9df7e5327a9dd9cc5fdeaa assets/croptopia/models/item/eggplant_seed.json
+ec7ff9f1d2f66a4b56e5e545f0a69bac46cf0d55 assets/croptopia/models/item/egg_fried_rice.json
 eeb6024c6c85a00c9d32de735385a439fcb5a840 assets/croptopia/models/item/egg_roll.json
 494effa06b9f43be3fc60044429c625cdbe9e6a7 assets/croptopia/models/item/elderberry.json
 1c82f85e4965efc8a4bf9f361e80987ebf5b6554 assets/croptopia/models/item/elderberry_jam.json
@@ -665,6 +692,7 @@ ab90d3a79340eb70a5aadf4d6d47976f3d893d57 assets/croptopia/models/item/food_press
 c26ff580337649e479c946b817bf593118aff9ec assets/croptopia/models/item/fried_calamari.json
 360b148a928d5aa525e91e82d0e8505dfef5171b assets/croptopia/models/item/fried_chicken.json
 1991429b1d7cdda758eb7f699caa81439391948d assets/croptopia/models/item/fried_frog_legs.json
+3b8d0adb341c3ad7177d983a7fdd805b24efa0df assets/croptopia/models/item/fried_rice.json
 872a6b1fc2e1be6ba6c37bd5b7c7e979fcd68e93 assets/croptopia/models/item/frog_legs.json
 3cb4039b2c19d340032f87bd1ca73ae5b01e2c7a assets/croptopia/models/item/fruit_cake.json
 8fb711a72e437fb67fc47ade079ff34d48913baf assets/croptopia/models/item/fruit_salad.json
@@ -703,6 +731,7 @@ e4204b8141b0ab4b7b64a0f67493b9f48e0dfd81 assets/croptopia/models/item/honeydew_s
 744a49709a17e18bfb5389d9a2f2977f4e25ac2f assets/croptopia/models/item/kale_chips.json
 b5b98434eb77ce4adae22adb0f6195aa203f5a74 assets/croptopia/models/item/kale_seed.json
 d07ddfbe2b908f207dfd1f46d232e6518514270f assets/croptopia/models/item/kale_smoothie.json
+c842c57e634fcc6e202c62b217839b1b2adc89c7 assets/croptopia/models/item/kimchi.json
 07b61f7bf7b16aa401ca93530b8f4543ac1b2a4b assets/croptopia/models/item/kiwi.json
 422d1b8f6e665af7f1dcc632f3e49bb5187c8f48 assets/croptopia/models/item/kiwi_seed.json
 0a3ffa144d9cc721a78ba944451e9a0548b073f3 assets/croptopia/models/item/kiwi_sorbet.json
@@ -756,6 +785,7 @@ acb711f34831fe59947dba3b7401c91e96257fbf assets/croptopia/models/item/onion.json
 8ad2f657a63db7c2bf5a66c2df1077432b76ea49 assets/croptopia/models/item/onion_rings.json
 d10e933e203d951d8acea07e72ba02be441b4bb0 assets/croptopia/models/item/onion_seed.json
 e0b1f620ba2cb7f6d7d0ac3cf8356e6183bbb986 assets/croptopia/models/item/orange.json
+c3e23e8d18693b281d8431f33c66e48b5960c37b assets/croptopia/models/item/orange_chicken.json
 5fb8a74231644b6bcc00bdc50d7356eab09b9a0f assets/croptopia/models/item/orange_juice.json
 2f699a17d32db16f445ab697acd308979494246b assets/croptopia/models/item/orange_sapling.json
 4ed2fddb4e3babd2f9ea6d02cc8aee4aafd89b98 assets/croptopia/models/item/oyster.json
@@ -779,7 +809,16 @@ efa042807865e62f96e301a2b608832753572e63 assets/croptopia/models/item/pear.json
 b2a22e1769f09785bf32b75a531087fcd63cb2ff assets/croptopia/models/item/pepper_seed.json
 a01a411a7c299f330ec2c26b05ce040b65844b3a assets/croptopia/models/item/persimmon.json
 f39743a4e5d9ef7846050d2b58da0bc1a4a3fc8f assets/croptopia/models/item/persimmon_sapling.json
+97ff08f899c3453489aa3964cd6dbf3d6e5e860f assets/croptopia/models/item/pickled_anchovy.json
+6922a443c5b86db39aa30d4853f416f16f8ee1b2 assets/croptopia/models/item/pickled_beets.json
+eadd0471aa9b921e848b6d79f87d35505e87abcf assets/croptopia/models/item/pickled_cucumber.json
+cc48280f670b1476403080ea25127639c853a2ef assets/croptopia/models/item/pickled_eggs.json
+5f00cf5286aa9e2f351e893975cfd78cb8dfb949 assets/croptopia/models/item/pickled_garlic.json
+b014d7f9146fe3d44aa63d81cfc9f2fb7e48b168 assets/croptopia/models/item/pickled_ginger.json
+22c810eb39ef56810f301a23c1638aa967e06ea2 assets/croptopia/models/item/pickled_onion.json
+b891d5a6e8ba74b49061229211bb714b7b3c300b assets/croptopia/models/item/pickled_radish.json
 d14b275f19f20a0100959a342c4a7ca010583b25 assets/croptopia/models/item/pineapple.json
+5d19b0f153188718675b0b009097c726d294da99 assets/croptopia/models/item/pineapple_chicken.json
 d64c0af6006449981ea2fa6663532fae44102ae1 assets/croptopia/models/item/pineapple_juice.json
 fde26a389fcd53a6ce78dc9d49e33bb7316878c0 assets/croptopia/models/item/pineapple_pepperoni_pizza.json
 73b91f4d1d62b0882c20effc0a245e59bd39bd84 assets/croptopia/models/item/pineapple_seed.json
@@ -832,10 +871,12 @@ ae6097e7fc7e1c24cd77771d1c9b8dd5b105f1fb assets/croptopia/models/item/saguaro_ju
 824f7d353479af2f855c3fbd558e9e6cc5cdd2bb assets/croptopia/models/item/salsa.json
 37fad88e36f27bc9b9d348f7c5121248313d5220 assets/croptopia/models/item/salt.json
 7215a9ac889fbd28fdb4ebff7e2afc11b5bbea0d assets/croptopia/models/item/saucy_chips.json
+5bd163b26bc07eacfbae5ba18ee2570e4ba51a28 assets/croptopia/models/item/sauerkraut.json
 1a1ef540d3ffb89994a4439ff3aaf7656b88e373 assets/croptopia/models/item/sausage.json
 9f3a9f1244f356a2c67f0bf06f29a0f388fedf1a assets/croptopia/models/item/scones.json
 afdccbda3a4f8566a018d2ef6b2fdc4ba80179c6 assets/croptopia/models/item/scrambled_eggs.json
 24b9ca1b2a829fdd663ba66be4eb8d1200137ba9 assets/croptopia/models/item/sea_lettuce.json
+8c8987eef454164acd41f4f5b873e73442b6a67c assets/croptopia/models/item/sesame_chicken.json
 f00297aadf07b3d8eaa461227595a41f6e789660 assets/croptopia/models/item/shepherds_pie.json
 bf86d4c957a69520d301219257f2b08dc51144cd assets/croptopia/models/item/shrimp.json
 ac18d460b9a0ce77035652e67d3813e34287dfc9 assets/croptopia/models/item/snicker_doodle.json
@@ -876,6 +917,7 @@ ddd2c607814e8c3b5d40c723035ed0cec6cc325f assets/croptopia/models/item/tamales.js
 0e6986a3006874ad9000d73b4e2b6a6a7350bc7c assets/croptopia/models/item/tea.json
 14feb94b43a1517903dd8c750f75ee09d48d530e assets/croptopia/models/item/tea_leaves.json
 9b07de6592c844cc119823b37ef5a1e8d073e431 assets/croptopia/models/item/tea_seed.json
+197a4a86aa027aada0c7dd63c9b450a79be4d8fe assets/croptopia/models/item/teriyaki_chicken.json
 813c9f5c10d72930f1c96943da00b1b662c3c6f8 assets/croptopia/models/item/the_big_breakfast.json
 bddd026004d63043a828448e97c063879edb5244 assets/croptopia/models/item/toast.json
 dd87aec5c9172a2d77dbd992593654eb706e23d2 assets/croptopia/models/item/toast_sandwich.json
@@ -895,6 +937,7 @@ af29cea0f426d29253884327d4e259f79fa099c5 assets/croptopia/models/item/tortilla.j
 f8bfd6ca5dcf37d2078ad89c75bc8978b7d8b3a9 assets/croptopia/models/item/treacle_tart.json
 73a4719215508798522232921fca5e5a517ff0fd assets/croptopia/models/item/tres_leche_cake.json
 fc9e963b81cb4b9e6280e256e3d7e69c37dfabf5 assets/croptopia/models/item/trifle.json
+97fdaf57139a2a08064a2e8c56bd89f06bd3b05a assets/croptopia/models/item/tteokbokki.json
 9374fdbe4bd1e615284dec3fd0b97a8a217a0187 assets/croptopia/models/item/tuna.json
 cc1ab25fdc4218ce488a3d453f5f87568b5c4d2d assets/croptopia/models/item/tuna_roll.json
 73068e6ce517661423dd10d01d4f938897019990 assets/croptopia/models/item/tuna_sandwich.json
@@ -905,6 +948,7 @@ cdca3984e7cd677af365345000869607eab16364 assets/croptopia/models/item/turmeric.j
 e3df4863979bac2cc495b11cb4047a1e504f384f assets/croptopia/models/item/vanilla.json
 7f2d214d90e7a5bbf16277899128799da94c5ba5 assets/croptopia/models/item/vanilla_ice_cream.json
 1d347bff231887bd3b7642856cb4406f33a7c836 assets/croptopia/models/item/vanilla_seeds.json
+435afbb9695c644e0377b64fe9402342671a3d86 assets/croptopia/models/item/veggie_fried_rice.json
 5911ad45f306cec163214782cba71b5816a56f95 assets/croptopia/models/item/veggie_salad.json
 0bb91750a11bad018f7f7dfed03f28f5dd70779c assets/croptopia/models/item/walnut.json
 10fc53a35f5257cbefe736c4a27fa4a9eecbbad3 assets/croptopia/models/item/walnut_sapling.json

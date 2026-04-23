@@ -1,4 +1,6 @@
-// 26.1	2026-04-16T17:24:45.1376251	Croptopia Independent Tags
+// 26.1	2026-04-21T21:53:00.2331619	Croptopia Independent Tags
+6a08d7d66b846f109c5b3fb1e57a5a94cf54d18c data/croptopia/tags/item/converts_to_cooking_oil.json
+7dbcede26fa76bc7aa5a95a150ffe34712b4910d data/croptopia/tags/item/fried_rice_ingredients.json
 d5d511b3d7d6049c372d47ab52aac9e52d48d0d8 data/c/tags/item/almond.json
 f454e50d496ac4bf6c316fc997c1472ee59e0110 data/c/tags/item/almonds.json
 ded9bb7cd733eb505b138baa2746638bb8c5d0b9 data/c/tags/item/almond_brittles.json
@@ -44,6 +46,8 @@ a126ef34ba64423ff1e7b5fdb9fd36245eddbb17 data/c/tags/item/beef_jerkies.json
 95ee1a785b98b16b2477818b5dbf96fe3f30fecc data/c/tags/item/bellpepper.json
 a8c40033a21699420d5138603837a54a1c024933 data/c/tags/item/bellpeppers.json
 95ee1a785b98b16b2477818b5dbf96fe3f30fecc data/c/tags/item/bellpepper_seeds.json
+ff12c03314031ab1a6979d5aa2de62e98ec9863a data/c/tags/item/bibimbap.json
+7e9b73e9fccbb7c8158ae40707787f623abbad94 data/c/tags/item/bibim_nengmyum.json
 8141abe66bdbd6bb27353f80fad052f45e2c498c data/c/tags/item/blackbean.json
 7aa9d4ee014e399007410a88dedae26bfaa05e57 data/c/tags/item/blackbeans.json
 8141abe66bdbd6bb27353f80fad052f45e2c498c data/c/tags/item/blackbean_seeds.json
@@ -74,6 +78,7 @@ c781add848e7064536438cf7aa6988909b97dcc0 data/c/tags/item/cantaloupe.json
 eca635061924f9789015470f3d9bc65d90826e4d data/c/tags/item/cantaloupes.json
 c781add848e7064536438cf7aa6988909b97dcc0 data/c/tags/item/cantaloupe_seeds.json
 0253a5c771e96384c71bbeb0c4a6cc225acbe5f8 data/c/tags/item/caramel.json
+7aaab9cf00957f5527be2628446ccee4a59dd8f4 data/c/tags/item/carrot_cakes.json
 a9652463d07636e1925e9e0036b9a2761b0cb756 data/c/tags/item/cashew.json
 676f5fbf8eaffa0316b79fa2441822d0405210c1 data/c/tags/item/cashews.json
 0fdd5701d1659ed45c5b0b93f206a10a4a21c436 data/c/tags/item/cashew_chickens.json
@@ -115,6 +120,7 @@ d63568beb3f36a46ba23c248a83255d8e9a84687 data/c/tags/item/cooked_bacon.json
 6cfddc72f42273552b84504640d753c380d39f8a data/c/tags/item/cooked_ravager_meat.json
 2414c33914c07f88d86f23a1d409f63f25cafbc5 data/c/tags/item/cooked_shrimp.json
 12a507432af48449e259ea557be4e64684abfa11 data/c/tags/item/cooked_tuna.json
+c9cc76a0bab64888afef900c363b73bad712614d data/c/tags/item/cooking_oils.json
 a5f1aa44b645281048dff358981ec2570b8828e9 data/c/tags/item/cooking_pots.json
 2334118ab6a5f763a0fc5135293b4871bb2bef88 data/c/tags/item/corn.json
 deebe501f51fa27cd693a5000211a5ec9e8fb6ae data/c/tags/item/cornish_pasty.json
@@ -234,6 +240,7 @@ f609d3bc280f7a299d9502d48632a7d03d16677f data/c/tags/item/doughnuts.json
 d93a8d60fdee95af7269c460486898d0cd83bde8 data/c/tags/item/eggplant.json
 aed2de05d5798beda3ef2fab88ee7b6fefc51bf2 data/c/tags/item/eggplants.json
 d93a8d60fdee95af7269c460486898d0cd83bde8 data/c/tags/item/eggplant_seeds.json
+2d7b75ad1348bea666ea88762fad0c6062e214bd data/c/tags/item/egg_fried_rices.json
 f6e603134e7eb993eebe689fc3e2e69d51a08ba5 data/c/tags/item/egg_rolls.json
 6185b9c6d96f9c6348c8711888cd41ae58951a36 data/c/tags/item/elderberries.json
 262042edf34b6bb933cce6f7611e01f30d5f4146 data/c/tags/item/elderberry.json
@@ -246,12 +253,13 @@ f6e603134e7eb993eebe689fc3e2e69d51a08ba5 data/c/tags/item/egg_rolls.json
 797b6694923de4b6d771bcd6fbd5adc776b8f39e data/c/tags/item/fig_saplings.json
 6cd3e8ef967ac3c121cebae7abcdbfa7c41c4818 data/c/tags/item/fish_and_chips.json
 fd734af59d946f606ce95869c1bc32705933fb59 data/c/tags/item/flour.json
-506f996e8587deb59eed6e1daeed1a6c035b1a77 data/c/tags/item/foods.json
+35e456c40373506fa88321a74be76bb90e6e9c95 data/c/tags/item/foods.json
 91e0e45a45820e23ae1cdbe610ba5d0a14de5d3a data/c/tags/item/food_press.json
 9919ad751fec357d3ddebb6da3b0c9db1c513cf3 data/c/tags/item/french_fries.json
 3411473a1144bc0883d78c87c739d764f49e6443 data/c/tags/item/fried_calamari.json
 4eb9ed112c53aa9abd203e356fd5cf310d10c3e6 data/c/tags/item/fried_chickens.json
 6df8165869c48a8ac8aca520a49dc29a60d7e947 data/c/tags/item/fried_frog_legs.json
+888a55b83f1a44bcba56d82613c0cc8678686d59 data/c/tags/item/fried_rices.json
 b8ddf361b69170b5774cbb26a459895f81ea6b6a data/c/tags/item/frog_legs.json
 74e42a42688e32e6a5b8df6ebb5546d308a1aba3 data/c/tags/item/fruits.json
 2961625001b98b78be881f66c1bd2436f0f8283a data/c/tags/item/fruits/almond.json
@@ -355,6 +363,7 @@ f7dcc9da345cca11553efee5fb8044e501b32f26 data/c/tags/item/juices/tomato_juice.js
 2b5db6edb17b55e8bd1a260e3a715ed12688ab5b data/c/tags/item/kale_chips.json
 ade0cc00699d26073c5de955a6cc47999677560d data/c/tags/item/kale_seeds.json
 cd23f4f8caa8f9863bfc90c8cedd106d123dc0ab data/c/tags/item/kale_smoothies.json
+7e5f3788fc7da7c6d1e6aa10e598b5bb0a9660a8 data/c/tags/item/kimchi.json
 c45ed2c7d1d16ee58eed4e249e353538cfe07dca data/c/tags/item/kiwi.json
 2b5df18ad6c96f57393dc0d810143e03251d55fd data/c/tags/item/kiwis.json
 c45ed2c7d1d16ee58eed4e249e353538cfe07dca data/c/tags/item/kiwi_seeds.json
@@ -418,6 +427,7 @@ d3dd7069fcbd8ab3d3a4d73559f61b0acceec36e data/c/tags/item/onion_rings.json
 081fa7a5d336ebec1f7123f10f6dcaf8e05106ab data/c/tags/item/onion_seeds.json
 d6987b24c13b4d20837ada27a65f89a645384721 data/c/tags/item/orange.json
 ad4f8eb10f5b5c247bd5841e99de3c393559d30c data/c/tags/item/oranges.json
+621c28a27fcb3998666f1e2265e24e797a79d731 data/c/tags/item/orange_chickens.json
 1e22d9e9f366445dddbf1db485b403842a75b028 data/c/tags/item/orange_juices.json
 d6987b24c13b4d20837ada27a65f89a645384721 data/c/tags/item/orange_saplings.json
 2d12d2c70340078e19882530bd3c0746cec4f224 data/c/tags/item/oysters.json
@@ -444,8 +454,17 @@ ae4ef6e3321b31e8c773c787de5c3196c49ba0f1 data/c/tags/item/pecan_ice_creams.json
 dfa60eebff6c484be7d5b9c26c0a895f04f3dbb5 data/c/tags/item/persimmon.json
 244c4f4edf0d6cf0d23c424dfeada4a6c9612bbc data/c/tags/item/persimmons.json
 dfa60eebff6c484be7d5b9c26c0a895f04f3dbb5 data/c/tags/item/persimmon_saplings.json
+9af409744ad8959ffb8e0d16a75d088414c88819 data/c/tags/item/pickled_anchovies.json
+2fcdaceadb1f8eba38d48b2c09d93d1fcb876612 data/c/tags/item/pickled_beets.json
+018abfee1ebb8f6a4f6385cbdbea2b76b7da0112 data/c/tags/item/pickled_cucumbers.json
+f1023d105e92d4c5af35bb34d148fe73ba87bb1b data/c/tags/item/pickled_eggs.json
+5da5f83b76b7474bd920041a3d0c0b7097500fa4 data/c/tags/item/pickled_garlic.json
+9801689089b9175b1b0b4235c6d533516485528a data/c/tags/item/pickled_gingers.json
+d42028e24ac3d698faa0ee8b75c2e42503421783 data/c/tags/item/pickled_onions.json
+1eefa9814ec6452168eca5864f8de7ba56501307 data/c/tags/item/pickled_radishes.json
 6d0377ac9aa0172a349201618a73812d510dc1cc data/c/tags/item/pineapple.json
 064862b36dcb73e25f54e9b5331dfa0b193c018c data/c/tags/item/pineapples.json
+5ce13445c854c1f0b842e98921c11db17bf79664 data/c/tags/item/pineapple_chickens.json
 1beeb2afeff4a0dac91b94aff346dca5aa894f9d data/c/tags/item/pineapple_juices.json
 45957a542063ec73e6bf0c81d81624843e16d8c4 data/c/tags/item/pineapple_pepperoni_pizzas.json
 6d0377ac9aa0172a349201618a73812d510dc1cc data/c/tags/item/pineapple_seeds.json
@@ -522,6 +541,7 @@ c53ba2a0c7307be9f38c5aed94eaf56c350fc0fd data/c/tags/item/saplings/orange.json
 3d030de3930e00bb42432fe60abb372c6e85592d data/c/tags/item/saplings/starfruit.json
 240bff4fd1301b7b33a798e6c6f390dd5d52c590 data/c/tags/item/saplings/walnut.json
 4966cc447dd9543990b2150604f672705ac60eb4 data/c/tags/item/saucy_chips.json
+fd9929cf0f8d90f4bbb1714de461b8f6bca82e11 data/c/tags/item/sauerkraut.json
 9a22dd54752de31c8f171e7a8fe4a9601765bf42 data/c/tags/item/sausages.json
 9fcdf543249e374f4656606e93193044e7755fdc data/c/tags/item/scones.json
 d96b406347cef770e9aa454ff7228a4f4187cff6 data/c/tags/item/scrambled_eggs.json
@@ -585,6 +605,7 @@ e1113e2b5252f6fc60bc01cae8a6a640ecc9e6d2 data/c/tags/item/seeds/turnip.json
 05c22472563ea4dc742666a4522fc094f5226c3a data/c/tags/item/seeds/vanilla.json
 5cea132eb5e18887bcf2206ba24ae2e32e72b628 data/c/tags/item/seeds/yam.json
 4ce5ad8cdd5def327e5727e0381e05d806a728a8 data/c/tags/item/seeds/zucchini.json
+10e1adeb94eb5c30dc50ff1b294bc77a29c667a7 data/c/tags/item/sesame_chickens.json
 2c8a170ef70a6287e602f2352dc9178deca68730 data/c/tags/item/shepherds_pie.json
 6342bb0ca63df290751b2bc4cd0cf2eb502635fe data/c/tags/item/shrimp.json
 677ce8af85aab6e414feeeba5cff48e7b060a8e0 data/c/tags/item/snicker_doodles.json
@@ -624,6 +645,7 @@ b2c3dc263218b91df44a934b3b141c7420cb573f data/c/tags/item/sweet_potato_friess.js
 16b21e329c4a342e2bb810f9d895a3e26c9c3c81 data/c/tags/item/tea.json
 97aaba08761a864a85c3ab66f2767a35a43b0c89 data/c/tags/item/tea_leaves.json
 fb2eb263c379c70b4566eefb78551d311ed06983 data/c/tags/item/tea_seeds.json
+75367f6891e445c10a7c686bcdd9d9045c87cce8 data/c/tags/item/teriyaki_chickens.json
 330d14792257419ceef973f49775f45e52885228 data/c/tags/item/the_big_breakfast.json
 31550c4ccdad3ef8e8d1aa32530a784b472caa76 data/c/tags/item/toasts.json
 0743c00c0adff01e52272f40f79f1ae02e3424ff data/c/tags/item/toast_with_jam.json
@@ -641,6 +663,7 @@ ae238f529a4d7138b3339d07a178dc4514abf5d8 data/c/tags/item/tortillas.json
 7b41d392bdf923b3f4be56febbda026acda28e76 data/c/tags/item/trail_mixes.json
 c389b53eeb57f65c4477cf100d577aa6c617c3d2 data/c/tags/item/treacle_tarts.json
 92a5f460133901db70a15a3c2970f5c23092f81a data/c/tags/item/trifle.json
+4a4a705923ae19ce27094a8b5bf1a39a7e005e2e data/c/tags/item/tteokbokki.json
 ea1daadf4fd8fa00902d532d5ef1a87c9ad2e39d data/c/tags/item/tuna.json
 d504860f7713c43abe8e114a183330f05740c1a1 data/c/tags/item/tuna_rolls.json
 626fe2f58c657ffeaa498e7339530360d70d3963 data/c/tags/item/tuna_sandwiches.json
@@ -682,6 +705,7 @@ e3dc0cf5ae1ee145551919f127aad4557f5beea9 data/c/tags/item/vegetables/spinach.jso
 31d181ba9e09599baf8d23991400747a1b46a0df data/c/tags/item/vegetables/turnip.json
 6fe0bed26e1a29f3954732988cf4de9f4956860c data/c/tags/item/vegetables/yam.json
 9e5c4daa378ebd26722077b3d4e85ae46b5a4200 data/c/tags/item/vegetables/zucchini.json
+aad10b484635de683626e55c6d2a8355d355eefe data/c/tags/item/veggie_fried_rices.json
 792fce880d8c504362f118e128b9d3ca89dedd8e data/c/tags/item/veggie_salads.json
 b2520a88b887043d97e8e99d7eb78a8a97d7a4e6 data/c/tags/item/walnut.json
 0a70320979eafeefe3747d96c771c54d8eafa10f data/c/tags/item/walnuts.json
