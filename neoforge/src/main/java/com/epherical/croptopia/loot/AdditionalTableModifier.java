@@ -44,8 +44,8 @@ public class AdditionalTableModifier extends LootModifier {
      *
      * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
      */
-    protected AdditionalTableModifier(LootItemCondition[] conditionsIn, String tableID, float chanceToRefer) {
-        super(conditionsIn);
+    protected AdditionalTableModifier(LootItemCondition[] conditionsIn, int prio, String tableID, float chanceToRefer) {
+        super(conditionsIn, 100);
         this.referChance = chanceToRefer;
         this.tableID = tableID;
         ResourceKey<LootTable> croptopia = ResourceKey.create(Registries.LOOT_TABLE, Identifier.fromNamespaceAndPath("croptopia", "gameplay/fishing/fish"));

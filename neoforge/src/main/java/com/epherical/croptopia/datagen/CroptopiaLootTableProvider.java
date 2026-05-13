@@ -246,43 +246,43 @@ public class CroptopiaLootTableProvider extends BlockLootSubProvider {
             add("add_tuna_to_dungeon", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(BuiltInLootTables.SIMPLE_DUNGEON.identifier()).build()
-                    }, TUNA_SANDWICH_LOOT));
+                    }, 100, TUNA_SANDWICH_LOOT));
             add("add_mountain_salt_to_shipwreck", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(BuiltInLootTables.SHIPWRECK_TREASURE.identifier()).build()
-                    }, MOUNTAIN_SALT_LOOT));
+                    }, 100, MOUNTAIN_SALT_LOOT));
             add("add_roe_to_cod", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/cod")).build()
-                    }, COD_ROE_DROP));
+                    }, 100, COD_ROE_DROP));
             add("add_roe_to_salmon", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/salmon")).build()
-                    }, SALMON_ROE_DROP));
+                    }, 100, SALMON_ROE_DROP));
             add("add_roe_to_tropical_fish", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/tropical_fish")).build()
-                    }, TROPICAL_ROE_DROP));
+                    }, 100, TROPICAL_ROE_DROP));
             add("add_calamari_to_squid", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/squid")).build()
-                    }, SQUID_CALAMARI_DROP));
+                    }, 100, SQUID_CALAMARI_DROP));
             add("add_ravager_meat_to_ravager", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/ravager")).build()
-                    }, RAVAGER_MEAT_DROP));
+                    }, 100, RAVAGER_MEAT_DROP));
             add("add_glowing_calamari_to_glowing_squid", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("minecraft", "entities/glow_squid")).build()
-                    }, GLOWING_SQUID_GLOW_CALAMARI));
+                    }, 100, GLOWING_SQUID_GLOW_CALAMARI));
             add("add_croptopia_fish_to_aquaculture", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(Identifier.fromNamespaceAndPath("aquaculture", "gameplay/fishing/fish")).build()
-                    }, CROPTOPIA_FISHING_TABLE));
+                    }, 100, CROPTOPIA_FISHING_TABLE));
             add("add_croptopia_fish_to_minecraft", new AddTableLootModifier(
                     new LootItemCondition[]{
                             LootTableIdCondition.builder(BuiltInLootTables.FISHING_FISH.identifier()).build()
-                    }, CROPTOPIA_FISHING_TABLE));
+                    }, 100, CROPTOPIA_FISHING_TABLE));
         }
     }
 }

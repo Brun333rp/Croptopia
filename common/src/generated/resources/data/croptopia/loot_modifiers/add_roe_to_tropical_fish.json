@@ -6,5 +6,6 @@
       "loot_table_id": "minecraft:entities/tropical_fish"
     }
   ],
+  "priority": 100,
   "table": "croptopia:entities/tropical_roe_drop"
 }

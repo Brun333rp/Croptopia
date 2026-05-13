@@ -63,6 +63,7 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.internal.RegistrationEvents;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
@@ -80,7 +81,6 @@ import java.util.concurrent.ExecutionException;
 import static com.epherical.croptopia.CroptopiaCommon.createGroup;
 import static com.epherical.croptopia.common.MiscNames.MOD_ID;
 import static net.minecraft.SharedConstants.IS_RUNNING_IN_IDE;
-import static net.neoforged.neoforge.internal.RegistrationEvents.collectComponentModifiers;
 
 @Mod(CroptopiaNeoForge.MODID)
 public class CroptopiaNeoForge {
@@ -190,7 +190,7 @@ public class CroptopiaNeoForge {
 
             try {
                 IS_RUNNING_IN_IDE = false;
-                collectComponentModifiers();
+                //collectComponentModifiers();
                 BuiltInRegistries.DATA_COMPONENT_INITIALIZERS.build(lookupProvider.get())
                         .forEach(pendingComponents -> pendingComponents.apply());
                 IS_RUNNING_IN_IDE = true;

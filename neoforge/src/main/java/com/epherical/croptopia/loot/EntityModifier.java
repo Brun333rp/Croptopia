@@ -44,8 +44,8 @@ public class EntityModifier extends LootModifier {
      *
      * @param conditionsIn the ILootConditions that need to be matched before the loot is modified.
      */
-    protected EntityModifier(LootItemCondition[] conditionsIn, Item item, int weight, int min, int max) {
-        super(conditionsIn);
+    protected EntityModifier(LootItemCondition[] conditionsIn, int prio, Item item, int weight, int min, int max) {
+        super(conditionsIn, prio);
         this.item = item;
         this.weight = weight;
         this.min = min;

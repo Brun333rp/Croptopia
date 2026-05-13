@@ -38,8 +38,8 @@ public class SpawnChestModifier extends LootModifier {
      *
      * @param conditionsIn the LootItemCondition that need to be matched before the loot is modified.
      */
-    protected SpawnChestModifier(LootItemCondition[] conditionsIn) {
-        super(conditionsIn);
+    protected SpawnChestModifier(LootItemCondition[] conditionsIn, int prio) {
+        super(conditionsIn, prio);
         LootPool.Builder builder = new LootPool.Builder();
         builder.setRolls(ConstantValue.exactly(1));
         builder.setBonusRolls(ConstantValue.exactly(0));
