@@ -15,14 +15,14 @@ import com.epherical.croptopia.register.helpers.TreeCrop;
 import com.epherical.croptopia.register.helpers.Utensil;
 import com.epherical.croptopia.util.PluralInfo;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.Identifier;
-import net.minecraft.tags.TagEntry;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -34,16 +34,11 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.epherical.croptopia.CroptopiaNeoForge.MODID;
 
-public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
+public abstract class CroptopiaIndependentItemTagProvider extends TagsProvider<Item> {
 
-    public CroptopiaIndependentItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                                               CompletableFuture<TagsProvider.TagLookup<Item>> parentProvider) {
-        super(output, Registries.ITEM, lookupProvider, parentProvider, item -> item.builtInRegistryHolder().key(), MODID);
-    }
-
-    @Override
-    public String getName() {
-        return "Croptopia Independent Tags";
+    protected CroptopiaIndependentItemTagProvider(PackOutput output, ResourceKey<? extends Registry<Item>> registryKey,
+                                                  CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, registryKey, lookupProvider);
     }
 
     @Override
@@ -51,7 +46,7 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         generateCrops(arg);
         generateSeedsSaplings();
         generateOtherEnums(arg);
-        generateMisc();
+        generateIndependentMisc();
     }
 
     protected void generateCrops(HolderLookup.Provider arg) {
@@ -126,7 +121,7 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         }
     }
 
-    protected void generateMisc() {
+    private void generateIndependentMisc() {
         createGeneralTag("almond_brittles", Content.ALMOND_BRITTLE);
         createGeneralTag("artichoke_dips", Content.ARTICHOKE_DIP);
         createGeneralTag("banana_cream_pies", Content.BANANA_CREAM_PIE);
@@ -290,23 +285,30 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         createGeneralTag("cooking_oils", Content.COOKING_OIL);
 
         this.tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "fried_rice_ingredients")))
-                .add(Items.BEEF)
-                .add(Items.PORKCHOP)
-                .add(Content.SHRIMP.asItem())
-                .add(Content.TOFU);
+                .add(key(Items.BEEF))
+                .add(key(Items.PORKCHOP))
+                .add(key(Content.SHRIMP.asItem()))
+                .add(key(Content.TOFU));
         this.tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "converts_to_cooking_oil")))
-                .add(Content.ALMOND.asItem())
-                .add(Content.AVOCADO.asItem())
-                .add(Content.COCONUT.asItem())
-                .add(Content.CORN.asItem())
-                .add(Content.OLIVE.asItem())
-                .add(Content.PEANUT.asItem())
-                .add(Content.SOYBEAN.asItem())
-                .add(Content.WALNUT.asItem());
+                .add(key(Content.ALMOND.asItem()))
+                .add(key(Content.AVOCADO.asItem()))
+                .add(key(Content.COCONUT.asItem()))
+                .add(key(Content.CORN.asItem()))
+                .add(key(Content.OLIVE.getSeedItem()))
+                .add(key(Content.PEANUT.asItem()))
+                .add(key(Content.SOYBEAN.asItem()))
+                .add(key(Content.WALNUT.asItem()));
 
-        this.tag(register("water_bottles")).add((Content.WATER_BOTTLE)).add((Items.WATER_BUCKET)).add(TagEntry.optionalElement(Identifier.parse("early_buckets:wooden_water_bucket")));
-        this.tag(register("milks")).add((Content.MILK_BOTTLE)).add((Content.SOY_MILK)).add((Items.MILK_BUCKET)).add(TagEntry.optionalTag(independentTag("milk_buckets")));
-        this.tag(register("potatoes")).add((Items.POTATO)).add((Content.SWEETPOTATO.asItem()));
+        this.tag(register("water_bottles"))
+                .add(key(Content.WATER_BOTTLE))
+                .add(key(Items.WATER_BUCKET))
+                .addOptional(ResourceKey.create(Registries.ITEM, Identifier.parse("early_buckets:wooden_water_bucket")));
+        this.tag(register("milks"))
+                .add(key(Content.MILK_BOTTLE))
+                .add(key(Content.SOY_MILK))
+                .add(key(Items.MILK_BUCKET))
+                .addOptionalTag(register("milk_buckets"));
+        this.tag(register("potatoes")).add(key(Items.POTATO)).add(key(Content.SWEETPOTATO.asItem()));
     }
 
     private static TagKey<Item> register(String id) {
@@ -317,21 +319,21 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         String path = (item).builtInRegistryHolder().key().identifier().getPath();
         TagKey<Item> forgeFriendlyTag = register(category + "/" + path);
         Identifier independentEntry = independentTag(category + "/" + path);
-        this.tag(forgeFriendlyTag).add(item); // 1. this is ... "c":vegetables/artichoke if represented in the file, otherwise c/vegetables/artichoke.json
+        this.tag(forgeFriendlyTag).add(key(item)); // 1. this is ... "c":vegetables/artichoke if represented in the file, otherwise c/vegetables/artichoke.json
 
-        this.tag(register(name)).add(item).add(TagEntry.tag(independentEntry)); // 2. this is ... "c": croptopia:artichoke or // c/artichokes.json
+        this.tag(register(name)).add(key(item)).addTag(TagKey.create(Registries.ITEM, independentEntry)); // 2. this is ... "c": croptopia:artichoke or // c/artichokes.json
 
         Identifier entryForGroup = independentTag(name);
-        this.tag(register(category)).add(TagEntry.tag(entryForGroup));
+        this.tag(register(category)).addTag(TagKey.create(Registries.ITEM, entryForGroup));
     }
 
-    private TagAppender<Item, Item> createGeneralTag(String name, Item item) {
+    private TagAppender<Item> createGeneralTag(String name, Item item) {
         TagKey<Item> pluralTag = register(name);
         FoodProperties foodProperties = item.components().get(DataComponents.FOOD);
         if (foodProperties != null) {
-            this.tag(Tags.Items.FOODS).add(item);
+            this.tag(Tags.Items.FOODS).add(key(item));
         }
-        return this.tag(pluralTag).add(item);
+        return this.tag(pluralTag).add(key(item));
     }
 
     /**
@@ -355,14 +357,19 @@ public class CroptopiaIndependentItemTagProvider extends IntrinsicHolderTagsProv
         TagKey<Item> forgeFriendlyTag = register(category + "/" + name);
         Identifier independentEntry = independentTag(category + "/" + name);
 
-        this.tag(forgeFriendlyTag).add((item));
-        this.tag(register(category)).add(TagEntry.tag(independentEntry));
-        this.tag(register(name)).add(item).add(TagEntry.tag(independentEntry)); // 2. this is ... "c": croptopia:artichoke or // c/artichokes.json
-        this.tag(register(pluralSeedName)).add((item)).add(TagEntry.tag(independentEntry));
+        TagKey<Item> independentTag = TagKey.create(Registries.ITEM, independentEntry);
+        this.tag(forgeFriendlyTag).add(key(item));
+        this.tag(register(category)).addTag(independentTag);
+        this.tag(register(name)).add(key(item)).addTag(independentTag); // 2. this is ... "c": croptopia:artichoke or // c/artichokes.json
+        this.tag(register(pluralSeedName)).add(key(item)).addTag(independentTag);
     }
 
     private Identifier independentTag(String name) {
         return Identifier.fromNamespaceAndPath("c", name);
+    }
+
+    private static ResourceKey<Item> key(Item item) {
+        return item.builtInRegistryHolder().key();
     }
 }
 

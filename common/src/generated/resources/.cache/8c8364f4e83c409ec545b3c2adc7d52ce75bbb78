@@ -1,5 +1,7 @@
-// 26.1.2	2026-05-13T18:44:47.7314799	Croptopia Independent Tags
-6a08d7d66b846f109c5b3fb1e57a5a94cf54d18c data/croptopia/tags/item/converts_to_cooking_oil.json
+// 26.2	2026-07-30T20:51:41.9189152	Tags for minecraft:item mod id vanilla
+ebc5a0db8b384dde8b108fe0e4ab36a70eb93c63 data/croptopia/tags/item/advancements_food_crafted.json
+e1869b0a6def5b71118a163d67616deb2661391d data/croptopia/tags/item/cinnamon_logs.json
+49c3f2f2679d036a84f513dfc3d7cb759603f9de data/croptopia/tags/item/converts_to_cooking_oil.json
 7dbcede26fa76bc7aa5a95a150ffe34712b4910d data/croptopia/tags/item/fried_rice_ingredients.json
 d5d511b3d7d6049c372d47ab52aac9e52d48d0d8 data/c/tags/item/almond.json
 f454e50d496ac4bf6c316fc997c1472ee59e0110 data/c/tags/item/almonds.json
@@ -659,6 +661,8 @@ e290e5e572d2e45ba200ec5e905b77746dd00f33 data/c/tags/item/tomatillo_seeds.json
 8635d764f7c36f50cf969068877b97c1495c31a9 data/c/tags/item/tomatoes.json
 f55df2065205d5762f4ad84c8185932869433c97 data/c/tags/item/tomato_juices.json
 5ab8ef01d20f837260c079c51e10a6f839b4584c data/c/tags/item/tomato_seeds.json
+377963c3573987647169510d9e85a380e8bf305b data/c/tags/item/tools.json
+d7d97907c7851ecf96b59c14f5986ef0a092ec09 data/c/tags/item/tools/knife.json
 ae238f529a4d7138b3339d07a178dc4514abf5d8 data/c/tags/item/tortillas.json
 7b41d392bdf923b3f4be56febbda026acda28e76 data/c/tags/item/trail_mixes.json
 c389b53eeb57f65c4477cf100d577aa6c617c3d2 data/c/tags/item/treacle_tarts.json
@@ -719,3 +723,13 @@ b8bc6fb87f448bcf3ca87bb9b179c0cd4a77ac22 data/c/tags/item/wines.json
 c520eb00d7b47e48dd722c404445218491755e9f data/c/tags/item/yoghurts.json
 33798bb84f39f0f95cbfd46fa4821c4a6e649b34 data/c/tags/item/zucchini.json
 1e1661e7057c90c6a9a3d7ece15d0a8c2db50bdf data/c/tags/item/zucchini_seeds.json
+b6dca38e55a491ee52c75f670baeada8462a65f8 data/minecraft/tags/item/chicken_food.json
+6c01b4d2996fa14e007fd5216024aeb686546ea4 data/minecraft/tags/item/cow_food.json
+f1c33af3c16b3b7b711b966d20533ed9b30d4516 data/minecraft/tags/item/fishes.json
+f0db1a43071e1118cf33024f08ae8a067eef7f2a data/minecraft/tags/item/fox_food.json
+c94d6f79ce59608453ea70f72ef154084a5b9b13 data/minecraft/tags/item/logs_that_burn.json
+b6dca38e55a491ee52c75f670baeada8462a65f8 data/minecraft/tags/item/parrot_food.json
+f9138aa662f6baccc40a83f06b20b87e90424c2e data/minecraft/tags/item/piglin_food.json
+31e328fe87438131481c16daabe74dcece549270 data/minecraft/tags/item/pig_food.json
+c9c457d7127a94df94f45ae2591496e3cb9ad793 data/minecraft/tags/item/saplings.json
+b6dca38e55a491ee52c75f670baeada8462a65f8 data/minecraft/tags/item/villager_plantable_seeds.json

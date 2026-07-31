@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "1": "croptopia:mountain_salt",
     "2": "croptopia:nether_star_cake",

@@ -8,7 +8,6 @@ import com.epherical.croptopia.config.TreeConfiguration;
 import com.epherical.croptopia.datagen.CroptopiaBiomeTagProvider;
 import com.epherical.croptopia.datagen.CroptopiaAdvancementProvider;
 import com.epherical.croptopia.datagen.CroptopiaBlockTagProvider;
-import com.epherical.croptopia.datagen.CroptopiaIndependentItemTagProvider;
 import com.epherical.croptopia.datagen.CroptopiaItemModelProvider;
 import com.epherical.croptopia.datagen.CroptopiaItemTagProvider;
 import com.epherical.croptopia.datagen.CroptopiaLootTableProvider;
@@ -202,8 +201,7 @@ public class CroptopiaNeoForge {
 
             generator.addProvider(true, CroptopiaAdvancementProvider.create(output, lookupProvider));
 
-            CroptopiaItemTagProvider itemProvider = generator.addProvider(true,
-                    new CroptopiaItemTagProvider(output, Registries.ITEM, lookupProvider));
+            generator.addProvider(true, new CroptopiaItemTagProvider(output, Registries.ITEM, lookupProvider));
             generator.addProvider(true,
                     new DatapackBuiltinEntriesProvider(output, lookupProvider, builder, Set.of(MODID)));
             generator.addProvider(true,
@@ -223,8 +221,6 @@ public class CroptopiaNeoForge {
 
             generator.addProvider(true, lootProvider);
 
-            CroptopiaIndependentItemTagProvider provider = new CroptopiaIndependentItemTagProvider(output, lookupProvider, itemProvider.contentsGetter());
-            generator.addProvider(true, provider);
         }
     }
 

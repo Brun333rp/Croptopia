@@ -12,10 +12,10 @@ import com.epherical.croptopia.register.helpers.Tree;
 import com.epherical.croptopia.register.helpers.TreeCrop;
 import com.epherical.croptopia.util.ItemConvertibleWithPlural;
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.predicates.ItemPredicate;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
+import net.minecraft.advancements.triggers.Criterion;
+import net.minecraft.advancements.triggers.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -331,18 +331,18 @@ public class CroptopiaRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_kumquat", has(KUMQUAT))
                 .save(exporter);
 
-        shapeless(MISC, Items.ORANGE_DYE, 2)
+        shapeless(MISC, Items.DYE.orange(), 2)
                 .requires(turmericTag)
                 .requires(turmericTag)
                 .requires(turmericTag)
                 .unlockedBy("has_turmeric", has(TURMERIC))
-                .save(exporter, "croptopia:" + getItemName(Items.ORANGE_DYE));
-        shapeless(MISC, Items.PURPLE_DYE, 2)
+                .save(exporter, "croptopia:" + getItemName(Items.DYE.orange()));
+        shapeless(MISC, Items.DYE.purple(), 2)
                 .requires(grapeTag)
                 .requires(grapeTag)
                 .requires(grapeTag)
                 .unlockedBy("has_grape", has(GRAPE))
-                .save(exporter, "croptopia:" + getItemName(Items.PURPLE_DYE));
+                .save(exporter, "croptopia:" + getItemName(Items.DYE.purple()));
     }
 
     protected void generateMiscShaped(RecipeOutput exporter) {

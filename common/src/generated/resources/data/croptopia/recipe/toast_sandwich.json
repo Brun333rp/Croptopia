@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "1": "minecraft:bread",
     "2": "croptopia:buttered_toast"

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "1": "#croptopia:pork_replacements",
     "2": "#c:onions",

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "1": "#c:water_bottles",
     "2": "#c:tea_leaves"

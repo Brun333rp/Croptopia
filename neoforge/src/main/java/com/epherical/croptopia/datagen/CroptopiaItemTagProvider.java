@@ -12,10 +12,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -23,20 +23,22 @@ import net.neoforged.neoforge.common.Tags;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 import static com.epherical.croptopia.CroptopiaCommon.seeds;
 import static com.epherical.croptopia.CroptopiaNeoForge.MODID;
 
-public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
+public class CroptopiaItemTagProvider extends CroptopiaIndependentItemTagProvider {
 
     public CroptopiaItemTagProvider(PackOutput output, ResourceKey<? extends Registry<Item>> registryKey,
                                     CompletableFuture<HolderLookup.Provider> lookupProvider) {
-        super(output, registryKey, lookupProvider, item -> item.builtInRegistryHolder().key(), MODID);
+        super(output, registryKey, lookupProvider);
     }
 
 
     @Override
     protected void addTags(HolderLookup.@NonNull Provider arg) {
+        super.addTags(arg);
         generateSaplings();
         generateBarkLogs();
         generateAdvancementFoodCrafted();
@@ -47,116 +49,116 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
         generateSeedsEatenByTag(ItemTags.PARROT_FOOD);
 
         tag(ItemTags.PIG_FOOD)
-                .add(Content.YAM.asItem())
-                .add(Content.SWEETPOTATO.asItem());
+                .add(key(Content.YAM.asItem()))
+                .add(key(Content.SWEETPOTATO.asItem()));
 
         tag(ItemTags.COW_FOOD)
-                .add(Content.BARLEY.asItem())
-                .add(Content.CORN.asItem());
+                .add(key(Content.BARLEY.asItem()))
+                .add(key(Content.CORN.asItem()));
 
         generateToolsTags(Tags.Items.TOOLS);
 
     }
 
     protected void generateToolsTags(TagKey<Item> key) {
-        TagAppender<Item, Item> tag = tag(key);
+        TagAppender<Item> tag = tag(key);
         for (Utensil utensil : Utensil.copy()) {
-            tag.add(utensil.asItem());
+            tag.add(key(utensil.asItem()));
         }
-        TagAppender<Item, Item> c = tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", "tools/knife")));
-        c.add(Content.KNIFE.asItem());
+        TagAppender<Item> c = tag(TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", "tools/knife")));
+        c.add(key(Content.KNIFE.asItem()));
     }
 
     protected void generateSeedsEatenByTag(TagKey<Item> key) {
-        TagAppender<Item, Item> tag = tag(key);
+        TagAppender<Item> tag = tag(key);
         for (Item seed : seeds) {
-            tag.add(seed);
+            tag.add(key(seed));
         }
     }
 
 
     protected void generateSaplings() {
-        TagAppender<Item, Item> saplings = tag(ItemTags.SAPLINGS);
+        TagAppender<Item> saplings = tag(BlockItemTags.SAPLINGS.item());
         for (TreeCrop crop : TreeCrop.copy()) {
-            saplings.add(crop.getSaplingItem());
+            saplings.add(key(crop.getSaplingItem()));
         }
         for (Tree crop : Tree.copy()) {
-            saplings.add(crop.getSapling());
+            saplings.add(key(crop.getSapling()));
         }
     }
 
     protected void generateBarkLogs() {
-        TagAppender<Item, Item> burnableLog = tag(ItemTags.LOGS_THAT_BURN);
+        TagAppender<Item> burnableLog = tag(BlockItemTags.LOGS_THAT_BURN.item());
         for (Tree crop : Tree.copy()) {
             // add different log types to log tag of this crop
             tag(crop.getLogItemTag())
-                    .add((crop.getLog().asItem()))
-                    .add((crop.getStrippedLog().asItem()))
-                    .add((crop.getWood().asItem()))
-                    .add((crop.getStrippedWood().asItem()));
+                    .add(key(crop.getLog().asItem()))
+                    .add(key(crop.getStrippedLog().asItem()))
+                    .add(key(crop.getWood().asItem()))
+                    .add(key(crop.getStrippedWood().asItem()));
             // make this crop log burnable
             burnableLog.addTag(crop.getLogItemTag());
         }
     }
 
     protected void generateLeaves() {
-        TagAppender<Item, Item> leaves = tag(ItemTags.LEAVES);
+        TagAppender<Item> leaves = tag(BlockItemTags.LEAVES.item());
         for (TreeCrop crop : TreeCrop.copy()) {
-            leaves.add(crop.getLeaves().asItem());
+            leaves.add(key(crop.getLeaves().asItem()));
         }
         for (Tree crop : Tree.copy()) {
-            leaves.add(crop.getLeaves().asItem());
+            leaves.add(key(crop.getLeaves().asItem()));
         }
     }
 
     protected void generateMisc() {
-        TagAppender<Item, Item> crops = tag(ItemTags.VILLAGER_PLANTABLE_SEEDS);
+        TagAppender<Item> crops = tag(ItemTags.VILLAGER_PLANTABLE_SEEDS);
         for (Item seed : seeds) {
-            crops.add(seed);
+            crops.add(key(seed));
         }
         // explicitly used as dolphin food in vanilla
-        TagAppender<Item, Item> fishes = tag(ItemTags.FISHES);
-        fishes.add(Content.ANCHOVY.asItem());
-        fishes.add(Content.CALAMARI.asItem());
-        fishes.add(Content.GLOWING_CALAMARI.asItem());
-        fishes.add(Content.CLAM.asItem());
-        fishes.add(Content.CRAB.asItem());
-        fishes.add(Content.OYSTER.asItem());
-        fishes.add(Content.ROE.asItem());
-        fishes.add(Content.SHRIMP.asItem());
-        fishes.add(Content.TUNA.asItem());
+        TagAppender<Item> fishes = tag(ItemTags.FISHES);
+        fishes.add(key(Content.ANCHOVY.asItem()));
+        fishes.add(key(Content.CALAMARI.asItem()));
+        fishes.add(key(Content.GLOWING_CALAMARI.asItem()));
+        fishes.add(key(Content.CLAM.asItem()));
+        fishes.add(key(Content.CRAB.asItem()));
+        fishes.add(key(Content.OYSTER.asItem()));
+        fishes.add(key(Content.ROE.asItem()));
+        fishes.add(key(Content.SHRIMP.asItem()));
+        fishes.add(key(Content.TUNA.asItem()));
         // fox food: all berries added by croptopia
-        TagAppender<Item, Item> foxFood = tag(ItemTags.FOX_FOOD);
-        foxFood.add(Content.BLACKBERRY.asItem());
-        foxFood.add(Content.BLUEBERRY.asItem());
-        foxFood.add(Content.CRANBERRY.asItem());
-        foxFood.add(Content.ELDERBERRY.asItem());
-        foxFood.add(Content.RASPBERRY.asItem());
-        foxFood.add(Content.STRAWBERRY.asItem());
+        TagAppender<Item> foxFood = tag(ItemTags.FOX_FOOD);
+        foxFood.add(key(Content.BLACKBERRY.asItem()));
+        foxFood.add(key(Content.BLUEBERRY.asItem()));
+        foxFood.add(key(Content.CRANBERRY.asItem()));
+        foxFood.add(key(Content.ELDERBERRY.asItem()));
+        foxFood.add(key(Content.RASPBERRY.asItem()));
+        foxFood.add(key(Content.STRAWBERRY.asItem()));
         // piglin food: more cannibalism (which already happens in vanilla)
-        TagAppender<Item, Item> piglinFood = tag(ItemTags.PIGLIN_FOOD);
-        piglinFood.add(Content.HAM_SANDWICH);
-        piglinFood.add(Content.PEPPERONI);
-        piglinFood.add(Content.PORK_AND_BEANS);
-        piglinFood.add(Content.PORK_JERKY);
-        piglinFood.add(Content.RAW_BACON);
-        piglinFood.add(Content.COOKED_BACON.asItem());
+        TagAppender<Item> piglinFood = tag(ItemTags.PIGLIN_FOOD);
+        piglinFood.add(key(Content.HAM_SANDWICH));
+        piglinFood.add(key(Content.PEPPERONI));
+        piglinFood.add(key(Content.PORK_AND_BEANS));
+        piglinFood.add(key(Content.PORK_JERKY));
+        piglinFood.add(key(Content.RAW_BACON));
+        piglinFood.add(key(Content.COOKED_BACON.asItem()));
     }
 
     protected void generateAdvancementFoodCrafted() {
-        TagAppender<Item, Item> craftedFoods = tag(croptopiaTag("advancements_food_crafted"));
+        TagAppender<Item> craftedFoods = tag(croptopiaTag("advancements_food_crafted"));
 
         for (Jam jam : Jam.copy()) {
-            craftedFoods.add(jam.asItem());
+            craftedFoods.add(key(jam.asItem()));
         }
         for (IceCream iceCream : IceCream.copy()) {
-            craftedFoods.add(iceCream.asItem());
+            craftedFoods.add(key(iceCream.asItem()));
         }
         for (Pie pie : Pie.copy()) {
-            craftedFoods.add(pie.asItem());
+            craftedFoods.add(key(pie.asItem()));
         }
 
-        craftedFoods.add(
+        craftedFoods.addAll(Stream.of(
                 Content.ALMOND_BRITTLE,
                 Content.ARTICHOKE_DIP,
                 Content.BANANA_CREAM_PIE,
@@ -338,11 +340,15 @@ public class CroptopiaItemTagProvider extends IntrinsicHolderTagsProvider<Item> 
                 Content.PINEAPPLE_CHICKEN,
                 Content.TERYAKI_CHICKEN,
                 Content.COOKING_OIL
-        );
+        ).map(CroptopiaItemTagProvider::key));
     }
 
     private static TagKey<Item> croptopiaTag(String name) {
         return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, name));
+    }
+
+    private static ResourceKey<Item> key(Item item) {
+        return item.builtInRegistryHolder().key();
     }
 
 }
